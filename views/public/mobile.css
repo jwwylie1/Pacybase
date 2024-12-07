@@ -1,0 +1,1350 @@
+
+@font-face {
+	font-family: "DIN Pro Cond Medium";
+	src: url("../files@font-face/f95b71a1cea90a338e422527918d6383.eot");
+	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#DIN Pro Cond Medium") format("svg");
+}
+body {
+	color:#fdfdfa;
+  background-color: #24262d;
+  background-image: url('../files/imgs/bg2.png');
+  background-repeat: repeat-y;
+  background-size: 100%;
+  margin: 25vw 0 0 0;
+  overflow-x: hidden;
+}
+
+a:visited, a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.betactr {
+  width: 80vw;
+  margin-left: 10vw;
+  background-color: #4EF7F2ee;
+  border-radius: 16px;
+  color: #24262d;
+  margin-top: 8vw;
+}
+
+.betactr:hover, .betactr:active {
+  background-color: #75f8f4;
+}
+
+.betamsg {
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+  font-family: Dosis;
+  margin-bottom:3vw;
+  padding-top: 2vw;
+}
+
+.betabody {
+  width: 80%;
+  margin: 1vw 0 0 10%;
+  text-align: center;
+  font-size: 3.5vw;
+  font-family: Dosis;
+  padding-bottom: 3vw;
+}
+
+.cardctr {
+	/*28:33 ratio*/
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+  height: 23.57vw;
+  font-family: 'DIN Pro Cond Medium';
+  display: inline-block;
+  margin: -1.7vw 0 0 .5vw;
+}
+
+.name {
+	font-size: 2vw;
+	position: relative;
+	top: 17.7vw;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+  z-index: 5;
+  letter-spacing: 0px;
+}
+
+.cardbar {
+  margin: 3.24vw 0 0 3.05vw;
+  height: 11.08vw;
+  width: 4vw;
+  z-index: 10;
+}
+
+.overall {
+	position: relative;
+	font-size: 20.95vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+  height: 2.36vw;
+  line-height: 2.36vw;
+  z-index: 5;
+}
+
+.position {
+	position: relative;
+	font-size: 1.89vw;
+  width: 100%;
+  height: 2.12vw;
+  line-height: 2.12vw;
+	text-align: center;
+	padding: 0;
+  z-index: 5;
+}
+
+.cardflagctr {
+	position: relative;
+	height: 2.12vw;
+  line-height: 2.12vw;
+	width: 100%;
+	text-align: center;
+	bottom: .47vw;
+	padding: 0;
+  z-index: 5;
+}
+
+.cardflag {
+	height: 100%;
+}
+
+.cardbadgectr {
+	position: relative;
+	height: 3.54vw;
+  line-height: 3.54vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin-top: .7vw;
+	z-index: 5;
+}
+
+.cardbadge {
+	height: 100%;
+}
+
+.cardstd {
+	height: 50%;
+  float: left;
+  margin: -11.1vw 0 0 5.66vw;
+	z-index: 1;
+}
+
+.carddyn {
+	width: 70%;
+	position: relative;
+	left: 17%;
+	bottom: 12.5vw;
+	z-index: 1;
+}
+
+.coinsName {
+	font-size: 3.25vw;
+	position: relative;
+	top: 7.8vw;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+  font-family: 'DIN Pro Cond Medium';
+  color: #ffff9e;
+  text-shadow: 0 0 3px yellow;
+}
+
+.coinsNameT {
+	font-size: 4vw;
+  height: 5vw;
+  line-height: 5vw;
+	position: relative;
+	top: 9.5vw;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+  font-family: 'DIN Pro Cond Medium';
+  color: #ffff9e;
+  text-shadow: 0 0 3px yellow;
+}
+
+
+.newSearchBar {
+  width: 75vw;
+  margin: 5vw 0 0 10vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 50px;
+  height: 10vw;
+  background-color: #202127;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  padding-left: 5vw;
+  font-size: 4vw;
+  display: none;
+}
+
+.newSearchTable {
+  width: 80vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  margin: 3vw 0 8vw 10vw;
+  padding: 0;
+  max-height: 48vw;
+  overflow-y: scroll;
+  display: none;
+  z-index: 100;
+  position: relative;
+}
+
+.searchRow {
+  display: block;
+  height: 8vw;
+  line-height: 8vw;
+  background-color: #24262d;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.searchRow:hover, .searchRow:active {
+  background-color: #1c1e27;
+  cursor: pointer;
+}
+
+.searchPlayerCtr {
+  height: 8vw;
+  margin: 0;
+  width: 8vw;
+  float: left;
+}
+
+.searchPlayer {
+  height: 100%;
+  margin: 0;
+}
+
+.searchTeams {
+  width: 5.3vw;
+  float: left;
+  margin: 0;
+  height: 8vw;
+}
+
+.searchNation {
+  display: block;
+  width: 100%;
+  height: 4vw;
+  margin: -1.5vw 0 0 0;
+}
+
+.searchClub {
+  display: block;
+  width: 100%;
+  height: 4vw;
+  margin: 0;
+}
+
+.searchFlag {
+  width: 70%;
+  margin: 0 0 0 15%;
+  overflow-y: hidden;
+}
+
+.searchBadge {
+  width: 70%;
+  margin: 0 0 0 15%;
+  overflow-y: clip;
+}
+
+.displayName {
+  font-family: 'DIN Pro Cond Medium';
+  letter-spacing: .05vw;
+  font-weight: 500;
+  color: #fdfdfa;
+  height: 3vw;
+  margin: 0 0 0 2%;
+  width: 60%;
+  font-size: 3vw;
+  float: left;
+}
+
+.searchName {
+  display: none;
+}
+
+.searchOvr {
+  margin: 0;
+  height: 8vw;
+  line-height: 8vw;
+  font-family: 'DIN Pro Cond Medium';
+  font-weight: 600;
+  font-size: 3.2vw;
+  width: 6.8vw;
+  text-align: center;
+  background-repeat: no-repeat;
+	background-size: 100%;
+  float: right;
+}
+
+#newPostBox {
+  width: 90vw;
+  margin: 5vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  background-color: #202127;
+}
+
+.usernameCtr {
+  height: 10vw;
+  line-height: 10vw;
+  font-family: Dosis;
+  padding-left: 2vw;
+  font-size: 4vw;
+  display: inline-block;
+}
+
+.bottomPostCtr {
+  height: 10vw;
+  line-height: 10vw;
+  font-family: Dosis;
+  padding-left: 5vw;
+  font-size: 3vw;
+  display: inline-block;
+  width: 100%;
+}
+
+.bottomNewCtr {
+  height: 20vw;
+  line-height: 8vw;
+  font-family: Dosis;
+  padding-left: 5vw;
+  font-size: 3vw;
+  display: inline-block;
+  width: 100%;
+}
+
+#postUsername {
+  height: 10vw;
+  line-height: 10vw;
+  font-family: Dosis;
+  background-color: inherit;
+  border: 0;
+  color:#fdfdfa;
+  font-size: 3vw;
+  margin-left: 1vw;
+  display: inline-block;
+  width: 60vw
+}
+#postCaption {
+  height: 6vw;
+  line-height: 6vw;
+  font-family: Dosis;
+  background-color: inherit;
+  border: 0;
+  color:#fdfdfa;
+  font-size: 3vw;
+  margin-left: 1vw;
+  display: inline-block;
+  width:65vw
+}
+
+#postUsername:placeholder-shown, #postCaption:placeholder-shown {
+  font-style: italic;
+}
+
+.timestampHide {
+  display: none;
+}
+
+.timestamp {
+  float: right;
+  color: #767985;
+  font-size: 4vw;
+  margin-right: 8vw;
+}
+
+/*.deviceTypeCtr {
+  height: 10vw;
+  line-height: 10vw;
+  font-family: Dosis;
+  background-color: inherit;
+  border: 0;
+  color:#fdfdfa;
+  font-size: 5vw;
+  margin-left: 5vw;
+  display: inline-block;
+}
+
+#iosType, #androidType {
+  display: inline-block;
+  margin-left: 1vw;
+}
+
+#iosType:hover, #iosType:active {
+  color: #60CAFF;
+  cursor: pointer;
+}
+
+#androidType:hover, #androidType:active {
+  color: #a4c639;
+  cursor: pointer;
+}*/
+
+#postBtn {
+  display: inline-block;
+  height: 10vw;
+  width: 20vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 4vw;
+  color: #fdfdfa;
+  line-height: 10vw;
+  border-radius: 50px;
+  margin-left: 30vw;
+  background: linear-gradient(100deg, rgba(0,45,126,1) 0%, rgba(0,212,255,1) 71%, rgba(69,236,255,1) 100%);
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+  border: 0;
+}
+
+#pinbtn {
+  display: inline-block;
+  height: 8vw;
+  width: 16vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 3.5vw;
+  color: #fdfdfa;
+  line-height: 8vw;
+  border-radius: 50px;
+  background: linear-gradient(100deg, rgba(0,45,126,1) 0%, rgba(0,212,255,1) 71%, rgba(69,236,255,1) 100%);
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+  border: 0;
+}
+
+#postBtn:hover, #postBtn:active, #pinbtn:hover, #pinbtn:active {
+  cursor: pointer;
+  background: linear-gradient(100deg, rgba(0,45,146,1) 0%, rgba(0,222,255,1) 71%, rgba(69,255,255,1) 100%);
+}
+
+#haveSide, #wantSide {
+  border-top: 1px solid #30323b;
+  border-bottom: 1px solid #30323b;
+  width: 100%;
+  float: left;
+}
+
+.haswanttext {
+  margin: 2.5vw 0 1vw 3%;
+  font-family: Dosis;
+  font-size: 3.5vw;
+}
+
+.haswantblock {
+  height: 21vw;
+  width: 21vw;
+  float: left;
+  border-radius: 8px;
+  margin: 1vw 0 0 1vw;
+  background-color: #2b2e36;
+  box-shadow: 0 0 4px #45ecff65;
+  display: none;
+}
+
+#has1, #want1 {
+  display: inline-block;
+}
+
+.postplus {
+  width: 21vw;
+  height: 21vw;
+  line-height: 20vw;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22vw;
+  color: #26272e;
+}
+
+.haswantblock:hover, .haswantblock:active {
+  cursor: pointer;
+  box-shadow: 0 0 6px #45ecff99;
+}
+
+#offerType {
+  width: 90vw;
+  margin: 5vw 0 5vw 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 20vw;
+  background-color: #202127;
+  display: none;
+}
+
+.offerHeader {
+  width: 100%;
+  margin: 0;
+  height: 6vw;
+  line-height: 6vw;
+  padding: .5vw 0;
+  border-radius: 12px 12px 0 0;
+  font-family: Dosis;
+  font-size: 4vw;
+  text-align: center;
+  background-color: #1a1b20;
+}
+
+.offerCard, .offerCoins {
+  width: 50%;
+  float: left;
+  height: 13vw;
+  line-height: 13vw;
+  text-align: center;
+  font-size: 6vw;
+  font-family: Dosis;
+}
+
+.offerCard {
+  border-radius: 0 0 0 12px
+}
+
+.offerCoins {
+  border-radius: 0 0 12px 0;
+}
+
+.offerCard:hover, .offerCoins:hover, .offerCard:active, .offerCoins:active {
+  background-color: #2b2c35;
+  cursor: pointer;
+}
+
+#removeItem {
+  width: 80vw;
+  margin: 3vw 0 5vw 10vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 15vw;
+  background-color: #ac0f0f;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  font-size: 5vw;
+  text-align: center;
+  line-height: 15vw;
+  display: none;
+}
+
+#removeItem:hover, #removeItem:active {
+  background-color: #c71414;
+  cursor: pointer;
+}
+
+#coinsAmount {
+  width: 80vw;
+  margin: 5vw 0 5vw 15vw;
+  display: none;
+}
+
+#coinsNumberInput {
+  height: 10vw;
+  width: 44vw;
+  background-color: #2b2e36;
+  box-shadow: 0 0 4px #45ecff65;
+  border: 0;
+  border-radius: 8px;
+  padding-left: 1vw;
+  color: #fdfdfa;
+  font-family: Dosis;
+  font-size: 4vw;
+  float: left;
+}
+
+.coinBtn { 
+  width: 25vw;
+  margin-left: 2vw;
+  background: linear-gradient(100deg, rgba(139,0,146,1) 0%, rgba(214,0,255,1) 77%, rgba(137,69,255,1) 100%);
+  box-shadow: 0 0 8px #000;
+  height: 10vw;
+  line-height: 10vw;
+  float: left;
+  text-align: center;
+  font-family: Dosis;
+  border-radius: 24px;
+  border: 0;
+  color: #fdfdfa;
+  font-size: 3vw;
+}
+
+.coinBtn:hover, .coinBtn:active {
+  cursor: pointer;
+}
+
+.displayIB {
+  display: inline-block;
+}
+
+.displayB {
+  display: block;
+}
+
+.postBox {
+  width: 90vw;
+  margin: 5vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 41vw;
+  background-color: #202127;
+  position: relative;
+  z-index: 1;
+}
+
+.haveSide, .wantSide {
+  height: 16vw;
+  border-bottom: 1px solid #30323b;
+  width: 100%;
+  float: left;
+}
+
+.tradeUsername {
+  height: 8vw;
+  line-height: 8vw;
+  margin: .5vw 0 0 3%;
+  padding-top: 2vw;
+  font-family: Dosis;
+  font-size: 5vw;
+  color: #AFF7FF;
+}
+
+#filterBox {
+  width: 90vw;
+  margin: 5vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 90vw;
+  background-color: #202127;
+}
+
+.tradesSearchBar {
+  width: 75vw;
+  margin: 7vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 50px;
+  height: 10vw;
+  background-color: #24262d;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  padding-left: 5vw;
+  font-size: 4vw;
+}
+
+.tradesSearchTable {
+  width: 80vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  margin: 1vw 0 0 5vw;
+  padding: 0;
+  max-height: 48vw;
+  overflow-y: scroll;
+  display: none;
+  position: relative;
+  z-index: 20;
+
+  
+}
+
+.filterslots {
+  float: left;
+  width: 80vw;
+  height: 30vw;
+  margin: 1.5vw 0 0 13vw;
+}
+
+#resetMsg {
+  color: #51545f;
+  font-family: Dosis;
+  font-size: 5vw;
+  margin-top: 10vw;
+  display: inline-block;
+}
+
+.filtercard {
+	/*28:33 ratio*/
+	width: 20vw;
+  height: 23.56vw;
+  float: left;
+  background-repeat: no-repeat;
+	background-size: 100%;
+  font-family: 'DIN Pro Cond Medium';
+  margin: 2vw 2vw 0 0;
+}
+
+.filtername {
+	font-size: 1.8vw;
+	position: relative;
+	top: 16.96vw;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+  z-index: 5;
+  letter-spacing: 0px;
+}
+
+.filtercardbar {
+  margin: 3.3vw 0 0 2.6vw;
+  height: 11.07vw;
+  width: 4vw;
+}
+
+.filteroverall {
+	position: relative;
+	font-size: 2.9vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+  height: 2.35vw;
+  line-height: 2.35vw;
+  z-index: 5;
+}
+
+.filterposition {
+	position: relative;
+	font-size: 1.89vw;
+  width: 100%;
+  height: 2.12vw;
+  line-height: 2.12vw;
+	text-align: center;
+	padding: 0;
+  z-index: 5;
+}
+
+.filtercardflagctr {
+	position: relative;
+	height: 2.12vw;
+  line-height: 2.12vw;
+	width: 100%;
+  bottom: .4vw;
+	text-align: center;
+	padding: 0;
+	padding: 0;
+  z-index: 5;
+}
+
+.filtercardbadgectr {
+	position: relative;
+	height: 3.54vw;
+  line-height: 3.54vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin-top: .71vw;
+	z-index: 5;
+  bottom: .3vw;
+}
+
+.filtercardstd {
+	height: 50%;
+  float: left;
+  margin: -12.05vw 0 0 5.66vw;
+	z-index: 1;
+}
+
+.filtercarddyn {
+	width: 70%;
+	position: relative;
+	left: 17%;
+	bottom:12.3vw;
+	z-index: 1;
+}
+
+#filterBtn {
+  display: inline-block;
+  height: 8vw;
+  width: 20vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 3vw;
+  color: #fdfdfa;
+  line-height: 4vw;
+  border-radius: 50px;
+  margin: 2vw 0 0 35vw;
+  background: linear-gradient(100deg, rgba(0,45,126,1) 0%, rgba(0,212,255,1) 71%, rgba(69,236,255,1) 100%);
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+  border: 0;
+}
+
+#filterBtn:hover, #filterBtn:active {
+  cursor: pointer;
+  background: linear-gradient(100deg, rgba(0,45,146,1) 0%, rgba(0,222,255,1) 71%, rgba(69,255,255,1) 100%);
+}
+
+.filtertypectr {
+  height: 15vw;
+  width: 80vw;
+  margin: 5vw 0 0 5vw;
+  font-family: Dosis;
+}
+
+.filtertypecaption {
+  width: 80vw;
+  height: 5vw;
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 5vw;
+}
+
+.filtertype {
+  width: 38vw;
+  height: 13vw;
+  border: 1vw solid #fdfdfa;
+  text-align: center;
+  line-height: 13vw;
+  font-size: 4vw;
+  float: left;
+}
+
+.filtertypeselect {
+  width: 37vw;
+  height: 12vw;
+  border: 1.5vw solid #00c9f7;
+  color: #00c9f7;
+  text-align: center;
+  line-height: 12vw;
+  font-size: 4.5vw;
+  float: left;
+}
+
+#notradesmsg {
+  width: 90vw;
+  margin: 8vw 0 0 5vw;
+  text-align: center;
+  font-size: 5vw;
+  color: #51545F;
+  font-family: Dosis;
+  display: none;
+}
+
+#hastype {
+  border-radius: 0 12px 12px 0;
+}
+
+#wanttype {
+  border-radius: 12px 0 0 12px;
+}
+
+@keyframes dropdownAnim {
+  from {height: 15vw;}
+  to {height: 66vw;}
+}
+
+@keyframes dropupAnim {
+  from {height: 66vw;}
+  to {height: 15vw;}
+}
+
+.dropDown {
+  animation-name: dropdownAnim;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.dropUp {
+  animation-name: dropupAnim;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+#headerCtr {
+  width: 100%;
+  margin: 0;
+  height: 15vw;
+  background-color: #16171b;
+  color: #4EF7F2;
+  border-radius:  0 0 16px 16px;
+  box-shadow: 0 0 8px #000;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerlogo {
+  height: 15vw;
+  float: left;
+}
+
+.mobileburger {
+  float: right;
+  height: 15vw;
+  line-height: 15vw;
+  margin-right: 6vw;
+  font-size: 5vw;
+  width: 15vw;
+  text-align:right;
+}
+
+.linkBar {
+  margin-left: 10vw;
+}
+
+.linkBlock {
+  width: 100%;
+  line-height: 8vw;
+  font-family: Dosis;
+  text-decoration: none;
+  font-size: 2.8vw;
+  display: block;
+  margin-bottom: 2vw;
+}
+
+.headerlink {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.reportlead {
+  width: 100%;
+  text-align: center;
+  font-family: Dosis;
+  color: #fdfdfa;
+  font-size: 4vw;
+  margin-top: 5vw;
+}
+
+.reportcapt {font-size:2vw}
+
+#reportsubject {
+  background-color: #1e2025;
+  border: 0;
+  box-shadow: 0 0 8px #000;
+  width: 85vw;
+  margin-left: 5vw;
+  height: 8vw;
+  line-height: 8vw;
+  padding-left: 5vw;
+  font-family: Dosis;
+  color: #fdfdfa;
+  font-size: 3vw;
+  border-radius: 12px;
+  margin-top: 3vw;
+}
+
+#reportbody {
+  background-color: #1e2025;
+  border: 0;
+  box-shadow: 0 0 8px #000;
+  width: 80vw;
+  margin-left: 5vw;
+  height: 24vw;
+  padding: 2vw 5vw 0 5vw;
+  font-family: Dosis;
+  color: #fdfdfa;
+  font-size: 3vw;
+  border-radius: 12px;
+  margin-top: 3vw;
+  resize: vertical;
+}
+
+.reportbtn {
+  display: block;
+  height: 10vw;
+  width: 24vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 3vw;
+  color: #fdfdfa;
+  line-height: 10vw;
+  border-radius: 50px;
+  margin: 2vw 0 0 38vw;
+  background: linear-gradient(100deg, rgba(0,45,126,1) 0%, rgba(0,212,255,1) 71%, rgba(69,236,255,1) 100%);
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+  border: 0;
+}
+
+.reportbtn:hover, .reportbtn:active {
+  cursor: pointer;
+  background: linear-gradient(100deg, rgba(0,45,146,1) 0%, rgba(0,222,255,1) 71%, rgba(69,255,255,1) 100%);
+}
+
+#dbctr {
+  margin-left: 7vw;
+}
+
+#dbsearchbar {
+  width: 75vw;
+  margin: 5vw 0 2vw 10vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 50px;
+  height: 10vw;
+  background-color: #202127;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  padding-left: 5vw;
+  font-size: 4vw;
+}
+
+.dbcard {
+	/*28:33 ratio*/
+	width: 20vw;
+  height: 23.56vw;
+  float: left;
+  background-repeat: no-repeat;
+	background-size: 100%;
+  font-family: 'DIN Pro Cond Medium';
+  margin: 2vw 2vw 0 0;
+}
+
+.dbfullName {
+  display: none;
+}
+
+.dbname {
+	font-size: 1.8vw;
+	position: relative;
+	top: 16.96vw;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+  z-index: 5;
+  letter-spacing: 0px;
+}
+
+.dbcardbar {
+  margin: 3.3vw 0 0 2.6vw;
+  height: 11.07vw;
+  width: 4vw;
+}
+
+.dboverall {
+	position: relative;
+	font-size: 2.9vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+  height: 2.35vw;
+  line-height: 2.35vw;
+  z-index: 5;
+}
+
+.dbposition {
+	position: relative;
+	font-size: 1.89vw;
+  width: 100%;
+  height: 2.12vw;
+  line-height: 2.12vw;
+	text-align: center;
+	padding: 0;
+  z-index: 5;
+}
+
+.dbcardflagctr {
+	position: relative;
+	height: 2.12vw;
+  line-height: 2.12vw;
+	width: 100%;
+  bottom: .4vw;
+	text-align: center;
+	padding: 0;
+	padding: 0;
+  z-index: 5;
+}
+
+.dbcardbadgectr {
+	position: relative;
+	height: 3.54vw;
+  line-height: 3.54vw;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin-top: .71vw;
+	z-index: 5;
+  bottom: .3vw;
+}
+
+.dbcardstd {
+	height: 50%;
+  float: left;
+  margin: -12.05vw 0 0 5.66vw;
+	z-index: 1;
+}
+
+.dbcarddyn {
+	width: 70%;
+	position: relative;
+	left: 17%;
+	bottom:12.3vw;
+	z-index: 1;
+}
+
+.dbfilterctr {
+  width: 90vw;
+  margin: 5vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 12vw;
+  background-color: #202127;
+  position: relative;
+  z-index: 1; 
+}
+
+.greeting {
+  width: 90%;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 5vw;
+  margin-top: 5vw;
+  background-color: #f2505d;
+  line-height: 8vw;
+  padding: 0 5vw;
+}
+
+.greeting404 {
+  width: 90%;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 5vw;
+  margin: 5vw 0 0 5vw;
+  text-decoration: underline;
+}
+
+#tradecount {
+  width: 60vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 4vw;
+  margin: 8vw 0 0 20vw;
+  height: 12vw;
+  line-height: 12vw;
+  background: #16171b;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgb(88, 0, 77);
+}
+
+.updatesctr {
+  margin: 3vw 0 0 0;
+  width: 100vw;
+  color: #fdfdfa;
+  font-family: Dosis;
+  font-size: 3vw;
+}
+
+.updatesrow {
+  width: 100%;
+}
+
+.updatesdate {
+  width: 20vw;
+  display: inline-block;
+  text-align: center;
+}
+
+.updatescontent {
+  width: 74vw;
+  padding: 1.2vw 0 1.2vw 1vw;
+  display: inline-block;
+}
+
+.rowlight {
+  background-color: #24262d;
+}
+
+.rowdark {
+  background-color: #0b0c0f80;
+}
+
+.rowspecial {
+  background-color: #4EF7F2dd;
+  color: black;
+}
+
+.footerctr {
+  height: 12vw;
+  width: 95%;
+  background-color: #16171b;
+  margin: 20vw 0 0 0;
+  box-shadow: 0 0 12px #000;
+  color: #fdfdfa;
+  font-family: Lato;
+  line-height:3vw;
+  padding: 3vw 0 0 5vw;
+  font-size: 2vw;
+}
+
+.footerctr a {
+  text-decoration: underline;
+}
+
+.hiddenid {
+  display: none;
+}
+
+.descriptionctr {
+  width: 80vw;
+  margin: 8vw 0 0 5vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  background-color: #202127;
+  position: relative;
+  font-family: Dosis;
+  color: #fdfdfa;
+  z-index: 1;
+  padding: 0 5vw 3vw 5vw;
+}
+
+.descheader {
+  width: 100%;
+  text-align: center;
+  padding: 3vw 0;
+  font-size: 6vw;
+}
+
+.descshort {
+  font-size: 3.5vw;
+  width: 100%;
+  text-align: center;
+}
+
+.descbody {
+  margin-top: 5vw;
+  font-size: 3.5vw;
+  width: 100%;
+  color: #B2FAF7;
+}
+
+.descdesc {
+  width: 95%;
+  margin: 1vw 0 3vw 8%;
+  color: #fdfdfa;
+}
+
+#pinctr {
+  background-color: #000000d5;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.pinbox {
+  font-family: Dosis;
+  font-size: 2vw;
+  width: 60vw;
+  height: 40vw;
+  margin: 25vw 0 0 20vw;
+  box-shadow: 0 0 4px #4EF7F2;
+  border-radius: 12px;
+  background-color: #202127;
+  text-align: center;
+  color: #fdfdfa;
+}
+
+.pinheader {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  height: 6vw;
+  line-height: 6vw;
+}
+
+.pinsmall {
+  width: 90%;
+  text-align: center;
+  font-size: 2.5vw;
+  font-style: italic;
+  height: 4vw;
+  line-height: 4vw;
+  padding: 0 5%;
+}
+
+#postpin {
+  width: 40vw;
+  text-align: center;
+  height: 9.5vw;
+  padding-bottom: .5vw;
+  margin: 4vw 0;
+  border: 0;
+  background-color: inherit;
+  font-family: 'DIN Pro Cond Medium';
+  border-bottom: 3px solid #4ef7f18e;
+  color: #fdfdfa;
+  font-size: 10vw;
+  letter-spacing: 3vw;
+}
+
+.tradecan {
+  float: right;
+  margin-right: 5vw;
+  color: #fdfdfa;
+}
+
+.tradecan:hover, .tradecan:active {
+  cursor: pointer;
+  color: #AFF7FF;
+}
+
+#deletectr {
+  display: none;
+  width: 100vw;
+  height: 300vw;
+  background-color: #000000d5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.latestcards {
+  width: 66vw;
+  margin: 3vw 0 5vw 15vw;
+  padding: 2vw 2vw 0 3vw;
+  /*32,60,87,115,142,170,198,226,253,281,292,320,340,360,394*/
+  height: 292vw;
+  backdrop-filter: blur(6px);
+  background-color: #00000016;
+  border-radius: 12px;
+}
+
+.latesttitle {
+  text-align:center;
+  height: 8vw;
+  width: 100%;
+  text-decoration: underline;
+  font-size: 6vw;
+  font-family: Dosis;
+  color: #fdfdfa;
+}
+
+.dbcard {
+	/*28:33 ratio*/
+	width: 20vw;
+  height: 23.56vw;
+  float: left;
+  background-repeat: no-repeat;
+	background-size: 100%;
+  font-family: 'DIN Pro Cond Medium';
+  margin: 2vw 2vw 0 0;
+}

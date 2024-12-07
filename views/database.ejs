@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include ('public/partials/head.ejs') %>
+  <title>Cards Database</title>
+  <style>@media only screen and (min-width: 680px) {#databaseLink {box-shadow: 0 6px 3px -3px #4EF7F2;}}
+  </style>
+  <script src="./script.js" async="true"></script>
+  <script src="./public/sbc.js" async="true"></script>
+</head>
+<body>
+
+	<%- include ('public/partials/header.ejs') %>
+
+  <!--<form class="dbfilterctr" action="/database" method="POST">
+
+  </form>-->
+
+
+  <%- include ('public/partials/sbcfilters.ejs') %>
+        
+
+  <!--<div id="dbctr">
+	<% for (i=0;i<cardsOrder.length;i++) { %>
+    <div class="dbcard" title="<%=cardsOrder[i].ovr%> <%=cardsOrder[i].displayName%>" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>')">
+      <div class="dbname"><%=cardsOrder[i].cardName%></div>
+      <div class="dbfullName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
+      <div class="dbcardbar">
+        <div class="dboverall"><%=cardsOrder[i].ovr%></div>
+        <div class="dbposition"><%=cardsOrder[i].pos%></div>
+        <div class="dbcardflagctr">
+            <img class="cardflag" loading="lazy" src="<%=`/files/imgs/flags/${cardsOrder[i].nation}.png`%>"/>
+        </div>
+        <div class="dbcardbadgectr">
+            <img class="cardbadge" loading="lazy" src="<%=`/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png`%>"/>
+        </div>
+      </div>
+      <img class="<%=`dbcard${cardsOrder[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsOrder[i].id}.png`%>"/>
+    </div>
+  <% } %>
+  </div>-->
+
+</body>
+</html>

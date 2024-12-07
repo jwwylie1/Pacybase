@@ -1,0 +1,35 @@
+@media only screen and (min-width: 680px) and (max-width: 1399px) {
+    .rows1 {height:26vw}
+    .rows2 {height:36vw}
+    .rows3 {height:46vw}
+    .rows1hw {height:16vw}
+    .rows2hw {height:26vw}
+    .rows3hw {height:36vw}
+    .rows1new {height:26vw}
+    .rows2new {height:36vw}
+    .rows3new {height:46vw}
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .rows1 {height:20vw}
+    .rows2 {height:27vw}
+    .rows3 {height:34vw}
+    .rows1hw {height:13vw}
+    .rows2hw {height:20vw}
+    .rows3hw {height:27vw}
+    .rows1new {height:20vw}
+    .rows2new {height:27vw}
+    .rows3new {height:34vw}
+  }
+
+  @media only screen and (max-width: 679px) {
+    .rows1 {height:84vw}
+    .rows2 {height:128vw}
+    .rows3 {height:172vw}
+    .rows1hw {height:32vw}
+    .rows2hw {height:54vw}
+    .rows3hw {height:76vw}
+    .rows1new {height:94vw}
+    .rows2new {height:138vw}
+    .rows3new {height:182vw}
+  }

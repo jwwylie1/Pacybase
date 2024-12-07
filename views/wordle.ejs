@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scordle - Custom Competitve Wordle</title>
+    <meta name="description" content="Scordle is a Wordle clone that lets you play gain points by winning games with fully adjustable word length and difficulty!">
+    <link rel="stylesheet" href="/public/wordle/style.css">
+    <link rel="stylesheet" href="/public/wordle/style.css" media="only screen and (min-width: 680px)">
+    <link rel="stylesheet" href="/public/wordle/mobile.css" media="only screen and (max-width: 679px)">
+    <script src="./script.js" async="true"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6968042543897910"
+     crossorigin="anonymous"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V5RCZVMRZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V5RCZVMRZY');
+</script>
+</head>
+<body onkeydown="addLetter(event.key)">-->
+
+    <div id="signinctr">
+        <div class="signinhead">SIGN IN</div>
+        <div class="signincap">ENTER YOUR UNIQUE USERNAME TO CONTINUE YOUR SCORE PROGRESS</div>
+        <input type="text" id="signininput">
+        <div class="signinbtn" onclick="signIn()">SIGN IN</div>
+    </div>
+
+    <div class="titlebar"><div class="settingsicon" onclick="showStats()"><i class="fa-solid fa-chart-bar"></i></div>&emsp;<span style="color:#69a96a">SC</span>ORDLE<div class="settingsicon" onclick="showSettings()">&emsp;<i class="fa-solid fa-gear"></i></div></div>
+    <div id="settings">
+        <div class="letterchoice">
+            <div id="ltrbtn4" class="ltrbtn" onclick="setLetters(4)">4 Letters</div>
+            <div id="ltrbtn5" class="ltrbtn" onclick="setLetters(5)">5 Letters</div>
+            <div id="ltrbtn6" class="ltrbtn" onclick="setLetters(6)">6 Letters</div>
+            <div id="ltrbtn7" class="ltrbtn" onclick="setLetters(7)">7 Letters</div>
+            <div id="ltrbtn8" class="ltrbtn" onclick="setLetters(8)">8 Letters</div>
+            <div id="ltrbtn9" class="ltrbtn" onclick="setLetters(9)">9 Letters</div>
+        </div>
+        <input id="difficultyslider" type="range" oninput="getMult()" min="0" max="100" class="slider">
+        <div class="difficultytext">
+            <div id="difficultylevel">Difficulty: Normal</div>
+            <!--<div id="wordspossible">Possible Words: 1498</div>-->
+            <div id="difficultymult">Difficulty Multiplier: 1.00x</div>
+        </div>
+        <!--<div class="devsetting">Show Answer<div id="showans" class="switch" onclick="flickAns()"><div class="switchknob"></div></div></div>-->
+        <!--<div class="devsetting">Show Possible Solutions<div id="showsols" class="switch" onclick="flickSols()"><div class="switchknob"></div></div></div>-->
+        <div class="startbtn" onclick="startGame()">START GAME</div>
+        <div class="returnbtn" onclick="hideSettings('settings')"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;RETURN TO GAME</div>
+    </div>
+
+    <div id="endgamebox">
+        <div id="winlose">YOU WIN!</div>
+        <div class="endbtn" onclick="startGame()">PLAY AGAIN</div>
+        <div class="endbtn" onclick="showSettings()" id="changesettings">CHANGE SETTINGS</div>
+    </div>
+
+    <div id="answerctr">
+        <u>ANSWER</u><br/>
+        <div id="ansindex"></div>
+    </div>
+    <div id="solsctr">
+        <u>POSSIBLE WORDS</u><br/>
+        <div id="solsindex"></div>
+    </div>
+
+    <div class="smallmsgctr">
+        <div id="short">Not Enough Letters</div>
+        <div id="noword">Not in Dictionary</div>
+    </div>
+
+    <!--BOARD-->
+
+    <div id="boardctr4">
+        <div id="row14" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+        <div id="row24" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+        <div id="row34" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+        <div id="row44" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+        <div id="row54" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+        <div id="row64" class="boardrow">
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+            <div class="block4"></div>
+        </div>
+    </div>
+
+    <div id="boardctr5">
+        <div id="row15" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+        <div id="row25" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+        <div id="row35" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+        <div id="row45" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+        <div id="row55" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+        <div id="row65" class="boardrow">
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+            <div class="block5"></div>
+        </div>
+    </div>
+
+    <div id="boardctr6">
+        <div id="row16" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+        <div id="row26" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+        <div id="row36" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+        <div id="row46" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+        <div id="row56" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+        <div id="row66" class="boardrow">
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+            <div class="block6"></div>
+        </div>
+    </div>
+
+    <div id="boardctr7">
+        <div id="row17" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+        <div id="row27" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+        <div id="row37" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+        <div id="row47" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+        <div id="row57" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+        <div id="row67" class="boardrow">
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+            <div class="block7"></div>
+        </div>
+    </div>
+
+    <div id="boardctr8">
+        <div id="row18" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+        <div id="row28" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+        <div id="row38" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+        <div id="row48" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+        <div id="row58" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+        <div id="row68" class="boardrow">
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+            <div class="block8"></div>
+        </div>
+    </div>
+
+    <div id="boardctr9">
+        <div id="row19" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+        <div id="row29" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+        <div id="row39" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+        <div id="row49" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+        <div id="row59" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+        <div id="row69" class="boardrow">
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+            <div class="block9"></div>
+        </div>
+    </div>
+
+
+    <!--KEYBOARD-->
+    <div class="keyboardctr">
+        <div class="keyrow">
+            <div id="keyQ" class="key" onclick="addLetter('Q')">Q</div>
+            <div id="keyW" class="key" onclick="addLetter('W')">W</div>
+            <div id="keyE" class="key" onclick="addLetter('E')">E</div>
+            <div id="keyR" class="key" onclick="addLetter('R')">R</div>
+            <div id="keyT" class="key" onclick="addLetter('T')">T</div>
+            <div id="keyY" class="key" onclick="addLetter('Y')">Y</div>
+            <div id="keyU" class="key" onclick="addLetter('U')">U</div>
+            <div id="keyI" class="key" onclick="addLetter('I')">I</div>
+            <div id="keyO" class="key" onclick="addLetter('O')">O</div>
+            <div id="keyP" class="key" onclick="addLetter('P')">P</div>
+        </div>
+        <div class="keyrow" id="middlekeyrow">
+            <div id="keyA" class="key" onclick="addLetter('A')">A</div>
+            <div id="keyS" class="key" onclick="addLetter('S')">S</div>
+            <div id="keyD" class="key" onclick="addLetter('D')">D</div>
+            <div id="keyF" class="key" onclick="addLetter('F')">F</div>
+            <div id="keyG" class="key" onclick="addLetter('G')">G</div>
+            <div id="keyH" class="key" onclick="addLetter('H')">H</div>
+            <div id="keyJ" class="key" onclick="addLetter('J')">J</div>
+            <div id="keyK" class="key" onclick="addLetter('K')">K</div>
+            <div id="keyL" class="key" onclick="addLetter('L')">L</div>
+        </div>
+        <div class="keyrow">
+            <div id="keyENTER" class="key" onclick="addLetter('Enter')">ENTER</div>
+            <div id="keyZ" class="key" onclick="addLetter('Z')">Z</div>
+            <div id="keyX" class="key" onclick="addLetter('X')">X</div>
+            <div id="keyC" class="key" onclick="addLetter('C')">C</div>
+            <div id="keyV" class="key" onclick="addLetter('V')">V</div>
+            <div id="keyB" class="key" onclick="addLetter('B')">B</div>
+            <div id="keyN" class="key" onclick="addLetter('N')">N</div>
+            <div id="keyM" class="key" onclick="addLetter('M')">M</div>
+            <div id="keyBACK" class="key" onclick="addLetter('Backspace')"><i class="fa-solid fa-delete-left"></i></div>
+        </div>
+    </div>
+
+    <form id="scoreform" action="/wordle" method="POST">
+      <input name="player" id="playerform" value="<%=playerName%>" hidden>
+      <input name="guesses" id="guessesform" hidden>
+      <input name="letters" id="lettersform" hidden>
+      <input name="difficulty" id="difficultyform" hidden>
+      <input name="score" id="totscoreform" hidden>
+
+      <input name="nextword" id="nextwordform" hidden>
+      <input name="nextletters" id="nextlettersform" hidden>
+      <input name="nextdifficulty" id="nextdifficultyform" hidden>
+      <input name="nextdiffmult" id="nextdiffmultform" hidden>
+    </form>
+
+</body>
+</html>
+<script src="https://kit.fontawesome.com/493cf83dd1.js" crossorigin="anonymous"></script>

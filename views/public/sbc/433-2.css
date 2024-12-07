@@ -1,0 +1,286 @@
+#card1 { /*GK*/
+    top: 43vw;
+    left: 25.5vw;
+}
+
+#card2 {
+    top: 31vw;
+    left: 8.5vw;
+}
+
+#card3 {
+    top: 31vw;
+    left: 19.5vw;
+}
+
+#card4 {
+    top: 31vw;
+    left: 31.5vw;
+}
+
+#card5 {
+    top: 31vw;
+    left: 42.5vw;
+}
+
+#card6 {
+    top: 17vw;
+    left: 12.5vw;
+}
+
+#card7 {
+    top: 21vw;
+    left: 25.5vw;
+}
+
+#card8 {
+    top: 17vw;
+    left: 38.5vw;
+}
+
+#card9 {
+    top: 2vw;
+    left: 10.5vw;
+}
+
+#card10 {
+    top: 1vw;
+    left: 25.5vw;
+}
+
+#card11 {
+    top: 2vw;
+    left: 40.5vw;
+}
+
+.rmcard1 {
+    top: 43vw;
+    left: 25.5vw;
+}
+
+.rmcard2 {
+    top: 31vw;
+    left: 8.5vw;
+}
+
+.rmcard3 {
+    top: 31vw;
+    left: 19.5vw;
+}
+
+.rmcard4 {
+    top: 31vw;
+    left: 31.5vw;
+}
+
+.rmcard5 {
+    top: 31vw;
+    left: 42.5vw;
+}
+
+.rmcard6 {
+    top: 17vw;
+    left: 12.5vw;
+}
+
+.rmcard7 {
+    top: 21vw;
+    left: 25.5vw;
+}
+
+.rmcard8 {
+    top: 17vw;
+    left: 38.5vw;
+}
+
+.rmcard9 {
+    top: 2vw;
+    left: 10.5vw;
+}
+
+.rmcard10 {
+    top: 1vw;
+    left: 25.5vw;
+}
+
+.rmcard11 {
+    top: 2vw;
+    left: 40.5vw;
+}
+
+#pos1 {
+    top: 52vw;
+    left: 28vw;
+}
+
+#pos2 {
+    top: 40vw;
+    left: 11vw;
+}
+
+#pos3 {
+    top: 40vw;
+    left: 22vw;
+}
+
+#pos4 {
+    top: 40vw;
+    left: 34vw;
+}
+
+#pos5 {
+    top: 40vw;
+    left: 45vw;
+}
+
+#pos6 {
+    top: 26vw;
+    left: 15vw;
+}
+
+#pos7 {
+    top: 30vw;
+    left: 28vw;
+}
+
+#pos8 {
+    top: 26vw;
+    left: 41vw;
+}
+
+#pos9 {
+    top: 11vw;
+    left: 13vw;
+}
+
+#pos10 {
+    top: 10vw;
+    left: 28vw;
+}
+
+#pos11 {
+    top: 11vw;
+    left: 43vw;
+}
+
+#link1 { /*GK - LCB*/
+    width: 13.42vw;
+    transform: rotate(63.44deg);
+    top: 47vw;
+    left: 20.2vw;
+}
+
+#link2 { /*GK - RCB*/
+    width: 13.42vw;
+    transform: rotate(-63.44deg);
+    top: 47vw;
+    left: 26.5vw;
+}
+
+#link3 { /*LB - LCB*/
+    width: 11vw;
+    top: 41vw;
+    left: 13vw;
+}
+
+#link4 { /*LB - LCM*/
+    width: 14.56vw;
+    transform: rotate(-74.06deg);
+    top: 34vw;
+    left: 8vw;
+}
+
+#link5 { /*LCB - RCB*/
+    width: 11vw;
+    top: 41vw;
+    left: 24vw;
+}
+
+#link6 { /*LCB - CDM*/ 
+    width: 11.66vw;
+    transform: rotate(-59.04deg);
+    top: 36vw;
+    left: 21vw;
+}
+
+#link7 { /*RCB - RB*/
+    width: 11vw;
+    top: 41vw;
+    left: 35vw;
+}
+
+#link8 { /*RCB - CDM*/ 
+    width: 11.66vw;
+    transform: rotate(59.04deg);
+    top: 36vw;
+    left: 27.3vw;
+}
+
+#link9 { /*RB - RCM*/
+    width: 14.56vw;
+    transform: rotate(74.06deg);
+    top: 34vw;
+    left: 37.7vw;
+}
+
+#link10 { /*LCM - CDM*/ 
+   width: 13.6vw;
+   transform: rotate(17.103deg);
+   top: 29.5vw;
+   left: 17vw;
+}
+
+#link11 { /*LCM - RCM*/
+    width: 26vw;
+    top: 27vw;
+    left: 17vw;
+}
+
+#link12 { /*LCM - LW*/
+    width: 15.13vw;
+    transform: rotate(82.41deg);
+    top: 19vw;
+    left: 8.5vw;
+}
+
+#link13 { /*LCM - ST*/ 
+    width: 20.62vw;
+    transform: rotate(-50.91deg);
+    top: 19vw;
+    left: 13.5vw;
+}
+
+#link14 { /*CDM - RCM*/ 
+    width: 13.6vw;
+    transform: rotate(-17.103deg);
+    top: 29.5vw;
+    left: 29.5vw;
+}
+
+#link15 { /*RCM - ST*/
+    width: 20.62vw;
+    transform: rotate(50.91deg);
+    top: 19vw;
+    left: 26vw;
+}
+
+#link16 { /*RCM - RW*/ 
+    width: 15.13vw;
+    transform: rotate(-82.41deg);
+    top: 19vw;
+    left: 36.5vw;
+}
+
+#link17 { /*LW - ST*/
+    width: 15.03vw;
+    transform: rotate(-3.81deg);
+    top: 12vw;
+    left: 15vw;
+}
+
+#link18 { /*ST - RW*/
+    width: 15.03vw;
+    transform: rotate(3.81deg);
+    top: 12vw;
+    left: 30vw;
+}

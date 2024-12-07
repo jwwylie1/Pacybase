@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <%- include ('public/partials/head.ejs') %>
+     <style>@media only screen and (min-width: 680px) {#newLink {box-shadow: 0 6px 3px -3px #4EF7F2;}}</style>
+  <title>New Post</title>
+</head>
+<body>
+
+  <%- include ('public/partials/header.ejs') %>
+
+  <img src="files/imgs/blank.png" style="display:none">
+
+  <form action="/trades" method="POST">
+    <div id="newPostBox">
+      <div class="usernameCtr">Username:
+        <input id="postUsername" placeholder="Enter your Reddit username (don't include u/)" name="username" required></input>
+      </div>
+      <div id="haveSide">
+        <div class="haswanttext">I HAVE...</div>
+        <div id="has1" class="haswantblock hwbhover" onclick="showOfferType('has1')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has2" class="haswantblock hwbhover" onclick="showOfferType('has2')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has3" class="haswantblock hwbhover" onclick="showOfferType('has3')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has4" class="haswantblock hwbhover" onclick="showOfferType('has4')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has5" class="haswantblock hwbhover" onclick="showOfferType('has5')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has6" class="haswantblock hwbhover" onclick="showOfferType('has6')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has7" class="haswantblock hwbhover" onclick="showOfferType('has7')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has8" class="haswantblock hwbhover" onclick="showOfferType('has8')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has9" class="haswantblock hwbhover" onclick="showOfferType('has9')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has10" class="haswantblock hwbhover" onclick="showOfferType('has10')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has11" class="haswantblock hwbhover" onclick="showOfferType('has11')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>  
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="has12" class="haswantblock hwbhover" onclick="showOfferType('has12')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+      </div>
+      <div id="wantSide">
+        <div class="haswanttext">I WANT...</div>
+        <div id="want1" class="haswantblock hwbhover" onclick="showOfferType('want1')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want2" class="haswantblock hwbhover" onclick="showOfferType('want2')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want3" class="haswantblock hwbhover" onclick="showOfferType('want3')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want4" class="haswantblock hwbhover" onclick="showOfferType('want4')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want5" class="haswantblock hwbhover" onclick="showOfferType('want5')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want6" class="haswantblock hwbhover" onclick="showOfferType('want6')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want7" class="haswantblock hwbhover" onclick="showOfferType('want7')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want8" class="haswantblock hwbhover" onclick="showOfferType('want8')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want9" class="haswantblock hwbhover" onclick="showOfferType('want9')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want10" class="haswantblock hwbhover" onclick="showOfferType('want10')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want11" class="haswantblock hwbhover" onclick="showOfferType('want11')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+        <div id="want12" class="haswantblock hwbhover" onclick="showOfferType('want12')">
+          <div class="postplus">+</div>
+          <div class="cardctr">
+            <div class="name"></div>
+            <div class="cardbar">
+              <div class="overall"></div>
+              <div class="position"></div>
+              <div class="cardflagctr">
+                  <img class="cardflag" src=""/>
+              </div>
+              <div class="cardbadgectr">
+                  <img class="cardbadge" src=""/>
+              </div>
+            </div>
+            <img class="cardstd" src=""/>
+          </div>
+        </div>
+      </div>
+      <input id="has1form" hidden name="has1"  required>
+        <input id="has2form" hidden name="has2" >
+        <input id="has3form" hidden name="has3" >
+        <input id="has4form" hidden name="has4" >
+        <input id="has5form" hidden name="has5" >
+        <input id="has6form" hidden name="has6" >
+        <input id="has7form" hidden name="has7" >
+        <input id="has8form" hidden name="has8" >
+        <input id="has9form" hidden name="has9" >
+        <input id="has10form" hidden name="has10" >
+        <input id="has11form" hidden name="has11" >
+        <input id="has12form" hidden name="has12" >
+        <input id="want1form" hidden name="want1"  required>
+        <input id="want2form" hidden name="want2" >
+        <input id="want3form" hidden name="want3" >
+        <input id="want4form" hidden name="want4" >
+        <input id="want5form" hidden name="want5" >
+        <input id="want6form" hidden name="want6" >
+        <input id="want7form" hidden name="want7" >
+        <input id="want8form" hidden name="want8" >
+        <input id="want9form" hidden name="want9" >
+        <input id="want10form" hidden name="want10" >
+        <input id="want11form" hidden name="want11" >
+        <input id="want12form" hidden name="want12" >
+      <div class="bottomNewCtr">Message:
+        <input id="postCaption" placeholder="Add a message to your post" name="caption" maxlength="70"></input>
+        <div id="postBtn" onclick="checkFieldsNew()">POST</div>
+      </div>
+
+    </div>
+
+    <div id="pinctr">
+      <div class="pinbox">
+        <div class="pinheader">ENTER A 4-DIGIT PASSKEY</div>
+        <div class="pinsmall">THIS IS SO YOU CAN DELETE YOUR TRADE LATER</div>
+        <input id="postpin" type="number" placeholder="0000" name="pin" maxlength="4" minlength="4" max="9999" required><br/>
+        <button id="pinbtn" onclick="ridsubmit()">SUBMIT</button>
+      </div>
+    </div>
+
+  </form>
+
+    <div id="removeItem" onclick="removeItem()">Remove Item</div>
+
+    <div id="offerType">
+      <div class="offerHeader"><i>CHOOSE YOUR ITEM TYPE</i></div>
+      <div class="offerCard" onclick="chooseItem('card')">CARD</div>
+      <div class="offerCoins" onclick="chooseItem('coins')">COINS</div>
+    </div>
+
+      <input type="text" id="searchBar" class="newSearchBar" onkeyup="searchFilter()" placeholder="Search for names or 'offer'..." autocomplete="off">
+    
+      <div id="searchTable" class="newSearchTable">
+
+      <% for (i=cardsOrder.length-3; i<cardsOrder.length; i++) { %> <!--CARD COIN AND PACK OFFERS-->
+          <div class="searchRow" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
+              <div class="searchPlayerCtr" style="text-align: center">
+                  <img class="searchPlayer" src="<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>" />
+              </div>
+              <div class="searchTeams">
+                  <div class="searchNation"><img class="searchFlag" src="<%= `/files/imgs/flags/${cardsOrder[i].nation}.png` %>"/></div>
+                  <div class="searchClub"> <img class="searchBadge" src="<%= `/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png` %>"/></div>
+              </div>
+              <div class="displayName"><b><%=`${cardsOrder[i].displayName}`%></b></div>
+              <div class="searchName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
+              <div class="searchOvr" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>')"><%=cardsOrder[i].ovr%></div>
+          </div>
+      <% }; %>
+
+      <% for (i=0; i<cardsOrder.length-3; i++) { %>
+          <% if (cardsOrder[i].type != "ITB" && cardsOrder[i].type != "TOTY" && cardsOrder[i].type != "PSBC" && cardsOrder[i].type.slice(0,3) != "LTM" && cardsOrder[i].id!=1734 && cardsOrder[i].id!=1506 && cardsOrder[i].id!=1503 && cardsOrder[i].id!=1497 && cardsOrder[i].id!=1500 && cardsOrder[i].id!=1408 && cardsOrder[i].id!=1296 && cardsOrder[i].id!=1297) { %>
+            <div class="searchRow" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
+                <div class="searchPlayerCtr">
+                    <img class="searchPlayer" src="<%= `/files/imgs/faces/${cardsOrder[i].id}.png` %>" />
+                </div>
+                <div class="searchTeams">
+                    <div class="searchNation"><img class="searchFlag" src="<%= `/files/imgs/flags/${cardsOrder[i].nation}.png` %>"/></div>
+                    <div class="searchClub"> <img class="searchBadge" src="<%= `/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png` %>"/></div>
+                </div>
+                <div class="displayName"><%=`${cardsOrder[i].displayName}`%></div>
+                <div class="searchName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
+                <div class="searchOvr" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>')"><%=cardsOrder[i].ovr%></div>
+            </div>
+          <% } %>
+      <% }; %>
+
+      </div>
+
+      <form id="coinsAmount">
+        <input type="number" id="coinsNumberInput" min=10000 max=999999999 placeholder="Enter Coin Amount" autocomplete="off">
+        <div class="coinBtn" onclick="fillPostBox('COINS')">SUBMIT</div>
+      </form>
+
+     
+
+</body>
+</html>

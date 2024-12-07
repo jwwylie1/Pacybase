@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include ('public/partials/head.ejs') %>
+     <style>@media only screen and (min-width: 680px) {#reportLink {box-shadow: 0 6px 3px -3px #4EF7F2;}}</style>
+  <title>Report Problem</title>
+
+</head>
+<body>
+
+	<%- include ('public/partials/header.ejs') %>
+
+  <div class="reportlead">PLEASE FILL OUT THE REPORT FORM
+    <br/><i class="reportcapt">REPORTING ANYTHING FROM A TYPO TO A BIG ISSUE HELPS MAKE PACYBASE THE BEST IT CAN BE<br/>
+    SUGGESTIONS AND IDEAS ARE ALSO WELCOME!
+    </i>
+  </div>
+	<form action="/report" method="POST">
+    <input required id="reportsubject" name="subject" type="text" placeholder="Briefly describe the issue/suggestion" autocomplete="off">
+    <textarea required id="reportbody" name="body" type="text" placeholder="Describe the issue/suggestion in detail"></textarea>
+    <button class="reportbtn">SUBMIT</button>
+  </form>
+	
+  <%- include ('public/partials/footer.ejs') %>
+
+</body>
+</html>

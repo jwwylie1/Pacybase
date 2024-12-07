@@ -1,0 +1,1167 @@
+<div id="sbccards">
+    <input type="text" id="sbcsearchbar" onkeyup="sbcSearchFilter()" placeholder="Search for names.." autocomplete="off">
+
+    <div class="filterbar">
+        <div class="filterelement" id="posfilterctr">
+            <div class="filtercircle" id="poscircle" onclick="showPosFilter()"></div>
+            <!--<div class="poslabel" onclick="showPosFilter()"><i>POSITIONS<br/>SELECTED</i></div>-->
+            <div class="filterlabel">POSITION</div>
+        </div>
+        <div class="filterelement" id="nationfilterctr" onclick="showNationFilter()">
+            <div class="filtercircle" id="nationcircle"><img id="circleflag" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">NATION</div>
+        </div>
+        <div class="filterelement" id="lgfilterctr" onclick="showLeagueFilter()">
+            <div class="filtercircle" id="lgcircle"><img id="circlelg" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">LEAGUE</div>
+        </div>
+        <div class="filterelement" id="clubfilterctr" onclick="showClubFilter()">
+            <div class="filtercircle nohover" id="clubcircle"><img id="circleclub" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">CLUB</div>
+        </div>
+        <div class="filterelement" id="typefilterctr" onclick="showTypeFilter()">
+            <div class="filtercircle" id="typecircle"><img id="circletype" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">CARD TYPE</div>
+        </div>
+        <div class="filterelement" id="ovrfilterctr" onclick="showOvrFilter()">
+            <div class="filtercircle" id="ovrcircle"></div>
+            <div class="filterlabel">RATING</div>
+        </div>
+    </div>
+
+    <div id="posselectctr">
+        <div id="GKoption" class="posfilteroption" onclick="addPos('GK')">GK</div>
+        <div id="CBoption" class="posfilteroption" onclick="addPos('CB')">CB</div>
+        <div id="LBoption" class="posfilteroption" onclick="addPos('LB')">LB</div>
+        <div id="LWBoption" class="posfilteroption" onclick="addPos('LWB')">LWB</div>
+        <div id="RBoption" class="posfilteroption" onclick="addPos('RB')">RB</div>
+        <div id="RWBoption" class="posfilteroption" onclick="addPos('RWB')">RWB</div>
+        <div id="CDMoption" class="posfilteroption" onclick="addPos('CDM')">CDM</div>
+        <div id="CMoption" class="posfilteroption" onclick="addPos('CM')">CM</div>
+        <div id="CAMoption" class="posfilteroption" onclick="addPos('CAM')">CAM</div>
+        <div id="CFoption" class="posfilteroption" onclick="addPos('CF')">CF</div>
+        <div id="SToption" class="posfilteroption" onclick="addPos('ST')">ST</div>
+        <div id="LMoption" class="posfilteroption" onclick="addPos('LM')">LM</div>
+        <div id="LWoption" class="posfilteroption" onclick="addPos('LW')">LW</div>
+        <div id="LFoption" class="posfilteroption" onclick="addPos('LF')">LF</div>
+        <div id="RMoption" class="posfilteroption" onclick="addPos('RM')">RM</div>
+        <div id="RWoption" class="posfilteroption" onclick="addPos('RW')">RW</div>
+        <div id="RFoption" class="posfilteroption" onclick="addPos('RF')">RF</div>
+        <div class="posfilterconfirm easybg" onclick="sbcfilterpos()">CONFIRM</div>
+    </div>
+
+<!--NATIONS-->
+
+    <div id="nationselectctr" style="padding-left:3vw">
+
+        <input type="text" id="nationsbcsearchbar" style="margin-left:27vw" class="sbcsearchbar" onkeyup="nationSearchFilter()" placeholder="Search for a nation.." autocomplete="off">
+
+        <div class="nationfilteroption" onclick="filterNation('ar')"><img class="sbcflag" src="/files/imgs/flags/ar.png"><br/>Argentina</div>
+        <div class="nationfilteroption" onclick="filterNation('br')"><img class="sbcflag" src="/files/imgs/flags/br.png"><br/>Brazil</div>
+        <div class="nationfilteroption" onclick="filterNation('gb-eng')"><img class="sbcflag" src="/files/imgs/flags/gb-eng.png"><br/>England</div>
+        <div class="nationfilteroption" onclick="filterNation('fr')"><img class="sbcflag" src="/files/imgs/flags/fr.png"><br/>France</div>
+        <div class="nationfilteroption" onclick="filterNation('de')"><img class="sbcflag" src="/files/imgs/flags/de.png"><br/>Germany</div>
+        <div class="nationfilteroption" onclick="filterNation('it')"><img class="sbcflag" src="/files/imgs/flags/it.png"><br/>Italy</div>
+        <div class="nationfilteroption" onclick="filterNation('nl')"><img class="sbcflag" src="/files/imgs/flags/nl.png"><br/>Netherlands</div>
+        <div class="nationfilteroption" onclick="filterNation('pt')"><img class="sbcflag" src="/files/imgs/flags/pt.png"><br/>Portugal</div>
+        <div class="nationfilteroption" onclick="filterNation('es')"><img class="sbcflag" src="/files/imgs/flags/es.png"><br/>Spain</div>
+        <div class="nationfilteroption" onclick="filterNation('be')"><img class="sbcflag" src="/files/imgs/flags/be.png"><br/>Belgium</div>
+        <div class="nationfilteroption" onclick="filterNation('af')"><img class="sbcflag" src="/files/imgs/flags/af.png"><br/>Afghanistan</div>
+        <div class="nationfilteroption " onclick="filterNation('al')"><img class="sbcflag" src="/files/imgs/flags/al.png"><br/>Albania</div>
+        <div class="nationfilteroption " onclick="filterNation('dz')"><img class="sbcflag" src="/files/imgs/flags/dz.png"><br/>Algeria</div>
+        <div class="nationfilteroption " onclick="filterNation('ad')"><img class="sbcflag" src="/files/imgs/flags/ad.png"><br/>Andorra</div>
+        <div class="nationfilteroption " onclick="filterNation('ao')"><img class="sbcflag" src="/files/imgs/flags/ao.png"><br/>Angola</div>
+        <div class="nationfilteroption " onclick="filterNation('ag')"><img class="sbcflag" src="/files/imgs/flags/ag.png"><br/>Antigua & Barbuda</div>
+        <div class="nationfilteroption " onclick="filterNation('am')"><img class="sbcflag" src="/files/imgs/flags/am.png"><br/>Armenia</div>
+        <div class="nationfilteroption " onclick="filterNation('au')"><img class="sbcflag" src="/files/imgs/flags/au.png"><br/>Australia</div>
+        <div class="nationfilteroption " onclick="filterNation('at')"><img class="sbcflag" src="/files/imgs/flags/at.png"><br/>Austria</div>
+        <div class="nationfilteroption " onclick="filterNation('az')"><img class="sbcflag" src="/files/imgs/flags/az.png"><br/>Azerbaijan</div>
+        <div class="nationfilteroption " onclick="filterNation('bb')"><img class="sbcflag" src="/files/imgs/flags/bb.png"><br/>Barbados</div>
+        <div class="nationfilteroption " onclick="filterNation('by')"><img class="sbcflag" src="/files/imgs/flags/by.png"><br/>Belarus</div>
+        <div class="nationfilteroption " onclick="filterNation('bz')"><img class="sbcflag" src="/files/imgs/flags/bz.png"><br/>Belize</div>
+        <div class="nationfilteroption " onclick="filterNation('bj')"><img class="sbcflag" src="/files/imgs/flags/bj.png"><br/>Benin</div>
+        <div class="nationfilteroption " onclick="filterNation('bm')"><img class="sbcflag" src="/files/imgs/flags/bm.png"><br/>Bermuda</div>
+        <div class="nationfilteroption " onclick="filterNation('bo')"><img class="sbcflag" src="/files/imgs/flags/bo.png"><br/>Bolivia</div>
+        <div class="nationfilteroption " onclick="filterNation('ba')"><img class="sbcflag" src="/files/imgs/flags/ba.png"><br/>Bosnia & Herzegovina</div>
+        <div class="nationfilteroption " onclick="filterNation('bg')"><img class="sbcflag" src="/files/imgs/flags/bg.png"><br/>Bulgaria</div>
+        <div class="nationfilteroption " onclick="filterNation('bf')"><img class="sbcflag" src="/files/imgs/flags/bf.png"><br/>Burkina Faso</div>
+        <div class="nationfilteroption " onclick="filterNation('bi')"><img class="sbcflag" src="/files/imgs/flags/bi.png"><br/>Burundi</div>
+        <div class="nationfilteroption " onclick="filterNation('cf')"><img class="sbcflag" src="/files/imgs/flags/cf.png"><br/>CAR</div>
+        <div class="nationfilteroption " onclick="filterNation('cm')"><img class="sbcflag" src="/files/imgs/flags/cm.png"><br/>Cameroon</div>
+        <div class="nationfilteroption " onclick="filterNation('ca')"><img class="sbcflag" src="/files/imgs/flags/ca.png"><br/>Canada</div>
+        <div class="nationfilteroption " onclick="filterNation('cv')"><img class="sbcflag" src="/files/imgs/flags/cv.png"><br/>Cape Verde</div>
+        <div class="nationfilteroption " onclick="filterNation('td')"><img class="sbcflag" src="/files/imgs/flags/td.png"><br/>Chad</div>
+        <div class="nationfilteroption " onclick="filterNation('cl')"><img class="sbcflag" src="/files/imgs/flags/cl.png"><br/>Chile</div>
+        <div class="nationfilteroption " onclick="filterNation('cn')"><img class="sbcflag" src="/files/imgs/flags/cn.png"><br/>China PR</div>
+        <div class="nationfilteroption " onclick="filterNation('tw')"><img class="sbcflag" src="/files/imgs/flags/tw.png"><br/>Chinese Taipei</div>
+        <div class="nationfilteroption " onclick="filterNation('co')"><img class="sbcflag" src="/files/imgs/flags/co.png"><br/>Colombia</div>
+        <div class="nationfilteroption " onclick="filterNation('km')"><img class="sbcflag" src="/files/imgs/flags/km.png"><br/>Comoros</div>
+        <div class="nationfilteroption " onclick="filterNation('cg')"><img class="sbcflag" src="/files/imgs/flags/cg.png"><br/>Congo</div>
+        <div class="nationfilteroption " onclick="filterNation('cr')"><img class="sbcflag" src="/files/imgs/flags/cr.png"><br/>Costa Rica</div>
+        <div class="nationfilteroption " onclick="filterNation('hr')"><img class="sbcflag" src="/files/imgs/flags/hr.png"><br/>Croatia</div>
+        <div class="nationfilteroption " onclick="filterNation('cu')"><img class="sbcflag" src="/files/imgs/flags/cu.png"><br/>Cuba</div>
+        <div class="nationfilteroption " onclick="filterNation('cy')"><img class="sbcflag" src="/files/imgs/flags/cy.png"><br/>Cyprus</div>
+        <div class="nationfilteroption " onclick="filterNation('cz')"><img class="sbcflag" src="/files/imgs/flags/cz.png"><br/>Czech Republic</div>
+        <div class="nationfilteroption " onclick="filterNation('cd')"><img class="sbcflag" src="/files/imgs/flags/cd.png"><br/>DR Congo</div>
+        <div class="nationfilteroption " onclick="filterNation('dk')"><img class="sbcflag" src="/files/imgs/flags/dk.png"><br/>Denmark</div>
+        <div class="nationfilteroption " onclick="filterNation('do')"><img class="sbcflag" src="/files/imgs/flags/do.png"><br/>Dominican Republic</div>
+        <div class="nationfilteroption " onclick="filterNation('ec')"><img class="sbcflag" src="/files/imgs/flags/ec.png"><br/>Ecuador</div>
+        <div class="nationfilteroption " onclick="filterNation('eg')"><img class="sbcflag" src="/files/imgs/flags/eg.png"><br/>Egypt</div>
+        <div class="nationfilteroption " onclick="filterNation('sv')"><img class="sbcflag" src="/files/imgs/flags/sv.png"><br/>El Salvador</div>
+        <div class="nationfilteroption " onclick="filterNation('gq')"><img class="sbcflag" src="/files/imgs/flags/gq.png"><br/>Equatorial Guinea</div>
+        <div class="nationfilteroption " onclick="filterNation('er')"><img class="sbcflag" src="/files/imgs/flags/er.png"><br/>Eritrea</div>
+        <div class="nationfilteroption " onclick="filterNation('ee')"><img class="sbcflag" src="/files/imgs/flags/ee.png"><br/>Estonia</div>
+        <div class="nationfilteroption " onclick="filterNation('et')"><img class="sbcflag" src="/files/imgs/flags/et.png"><br/>Ethiopia</div>
+        <div class="nationfilteroption " onclick="filterNation('mk')"><img class="sbcflag" src="/files/imgs/flags/mk.png"><br/>North Macedonia</div>
+        <div class="nationfilteroption " onclick="filterNation('fo')"><img class="sbcflag" src="/files/imgs/flags/fo.png"><br/>Faroe Islands</div>
+        <div class="nationfilteroption " onclick="filterNation('fj')"><img class="sbcflag" src="/files/imgs/flags/fj.png"><br/>Fiji</div>
+        <div class="nationfilteroption " onclick="filterNation('fi')"><img class="sbcflag" src="/files/imgs/flags/fi.png"><br/>Finland</div>
+        <div class="nationfilteroption " onclick="filterNation('ga')"><img class="sbcflag" src="/files/imgs/flags/ga.png"><br/>Gabon</div>
+        <div class="nationfilteroption " onclick="filterNation('gm')"><img class="sbcflag" src="/files/imgs/flags/gm.png"><br/>Gambia</div>
+        <div class="nationfilteroption " onclick="filterNation('ge')"><img class="sbcflag" src="/files/imgs/flags/ge.png"><br/>Georgia</div>
+        <div class="nationfilteroption " onclick="filterNation('gh')"><img class="sbcflag" src="/files/imgs/flags/gh.png"><br/>Ghana</div>
+        <div class="nationfilteroption " onclick="filterNation('gi')"><img class="sbcflag" src="/files/imgs/flags/gi.png"><br/>Gibraltar</div>
+        <div class="nationfilteroption " onclick="filterNation('gr')"><img class="sbcflag" src="/files/imgs/flags/gr.png"><br/>Greece</div>
+        <div class="nationfilteroption " onclick="filterNation('gd')"><img class="sbcflag" src="/files/imgs/flags/gd.png"><br/>Grenada</div>
+        <div class="nationfilteroption " onclick="filterNation('gu')"><img class="sbcflag" src="/files/imgs/flags/gu.png"><br/>Guam</div>
+        <div class="nationfilteroption " onclick="filterNation('gt')"><img class="sbcflag" src="/files/imgs/flags/gt.png"><br/>Guatemala</div>
+        <div class="nationfilteroption " onclick="filterNation('gn')"><img class="sbcflag" src="/files/imgs/flags/gn.png"><br/>Guinea</div>
+        <div class="nationfilteroption " onclick="filterNation('gw')"><img class="sbcflag" src="/files/imgs/flags/gw.png"><br/>Guinea Bissau</div>
+        <div class="nationfilteroption " onclick="filterNation('gy')"><img class="sbcflag" src="/files/imgs/flags/gy.png"><br/>Guyana</div>
+        <div class="nationfilteroption " onclick="filterNation('ht')"><img class="sbcflag" src="/files/imgs/flags/ht.png"><br/>Haiti</div>
+        <div class="nationfilteroption " onclick="filterNation('hn')"><img class="sbcflag" src="/files/imgs/flags/hn.png"><br/>Honduras</div>
+        <div class="nationfilteroption " onclick="filterNation('hk')"><img class="sbcflag" src="/files/imgs/flags/hk.png"><br/>Hong Kong</div>
+        <div class="nationfilteroption " onclick="filterNation('hu')"><img class="sbcflag" src="/files/imgs/flags/hu.png"><br/>Hungary</div>
+        <div class="nationfilteroption " onclick="filterNation('is')"><img class="sbcflag" src="/files/imgs/flags/is.png"><br/>Iceland</div>
+        <div class="nationfilteroption " onclick="filterNation('in')"><img class="sbcflag" src="/files/imgs/flags/in.png"><br/>India</div>
+        <div class="nationfilteroption " onclick="filterNation('ir')"><img class="sbcflag" src="/files/imgs/flags/ir.png"><br/>Iran</div>
+        <div class="nationfilteroption " onclick="filterNation('iq')"><img class="sbcflag" src="/files/imgs/flags/iq.png"><br/>Iraq</div>
+        <div class="nationfilteroption " onclick="filterNation('il')"><img class="sbcflag" src="/files/imgs/flags/il.png"><br/>Israel</div>
+        <div class="nationfilteroption " onclick="filterNation('ci')"><img class="sbcflag" src="/files/imgs/flags/ci.png"><br/>Ivory Coast</div>
+        <div class="nationfilteroption " onclick="filterNation('jm')"><img class="sbcflag" src="/files/imgs/flags/jm.png"><br/>Jamaica</div>
+        <div class="nationfilteroption " onclick="filterNation('jp')"><img class="sbcflag" src="/files/imgs/flags/jp.png"><br/>Japan</div>
+        <div class="nationfilteroption " onclick="filterNation('jo')"><img class="sbcflag" src="/files/imgs/flags/jo.png"><br/>Jordan</div>
+        <div class="nationfilteroption " onclick="filterNation('kz')"><img class="sbcflag" src="/files/imgs/flags/kz.png"><br/>Kazakhstan</div>
+        <div class="nationfilteroption " onclick="filterNation('ke')"><img class="sbcflag" src="/files/imgs/flags/ke.png"><br/>Kenya</div>
+        <div class="nationfilteroption " onclick="filterNation('kp')"><img class="sbcflag" src="/files/imgs/flags/kp.png"><br/>Korea DPR</div>
+        <div class="nationfilteroption " onclick="filterNation('kr')"><img class="sbcflag" src="/files/imgs/flags/kr.png"><br/>Korea Republic</div>
+        <div class="nationfilteroption " onclick="filterNation('xk')"><img class="sbcflag" src="/files/imgs/flags/xk.png"><br/>Kosovo</div>
+        <div class="nationfilteroption " onclick="filterNation('lv')"><img class="sbcflag" src="/files/imgs/flags/lv.png"><br/>Latvia</div>
+        <div class="nationfilteroption " onclick="filterNation('lb')"><img class="sbcflag" src="/files/imgs/flags/lb.png"><br/>Lebanon</div>
+        <div class="nationfilteroption " onclick="filterNation('lr')"><img class="sbcflag" src="/files/imgs/flags/lr.png"><br/>Liberia</div>
+        <div class="nationfilteroption " onclick="filterNation('ly')"><img class="sbcflag" src="/files/imgs/flags/ly.png"><br/>Libya</div>
+        <div class="nationfilteroption " onclick="filterNation('lt')"><img class="sbcflag" src="/files/imgs/flags/lt.png"><br/>Lithuania</div>
+        <div class="nationfilteroption " onclick="filterNation('lu')"><img class="sbcflag" src="/files/imgs/flags/lu.png"><br/>Luxembourg</div>
+        <div class="nationfilteroption " onclick="filterNation('mg')"><img class="sbcflag" src="/files/imgs/flags/mg.png"><br/>Madagascar</div>
+        <div class="nationfilteroption " onclick="filterNation('mw')"><img class="sbcflag" src="/files/imgs/flags/mw.png"><br/>Malawi</div>
+        <div class="nationfilteroption " onclick="filterNation('my')"><img class="sbcflag" src="/files/imgs/flags/my.png"><br/>Malaysia</div>
+        <div class="nationfilteroption " onclick="filterNation('ml')"><img class="sbcflag" src="/files/imgs/flags/ml.png"><br/>Mali</div>
+        <div class="nationfilteroption " onclick="filterNation('mt')"><img class="sbcflag" src="/files/imgs/flags/mt.png"><br/>Malta</div>
+        <div class="nationfilteroption " onclick="filterNation('mr')"><img class="sbcflag" src="/files/imgs/flags/mr.png"><br/>Mauritania</div>
+        <div class="nationfilteroption " onclick="filterNation('mu')"><img class="sbcflag" src="/files/imgs/flags/mu.png"><br/>Mauritius</div>
+        <div class="nationfilteroption " onclick="filterNation('mx')"><img class="sbcflag" src="/files/imgs/flags/mx.png"><br/>Mexico</div>
+        <div class="nationfilteroption " onclick="filterNation('md')"><img class="sbcflag" src="/files/imgs/flags/md.png"><br/>Moldova</div>
+        <div class="nationfilteroption " onclick="filterNation('me')"><img class="sbcflag" src="/files/imgs/flags/me.png"><br/>Montenegro</div>
+        <div class="nationfilteroption " onclick="filterNation('ms')"><img class="sbcflag" src="/files/imgs/flags/ms.png"><br/>Montserrat</div>
+        <div class="nationfilteroption " onclick="filterNation('ma')"><img class="sbcflag" src="/files/imgs/flags/ma.png"><br/>Morocco</div>
+        <div class="nationfilteroption " onclick="filterNation('mz')"><img class="sbcflag" src="/files/imgs/flags/mz.png"><br/>Mozambique</div>
+        <div class="nationfilteroption " onclick="filterNation('na')"><img class="sbcflag" src="/files/imgs/flags/na.png"><br/>Namibia</div>
+        <div class="nationfilteroption " onclick="filterNation('cw')"><img class="sbcflag" src="/files/imgs/flags/cw.png"><br/>Netherlands Antilles</div>
+        <div class="nationfilteroption " onclick="filterNation('nz')"><img class="sbcflag" src="/files/imgs/flags/nz.png"><br/>New Zealand</div>
+        <div class="nationfilteroption " onclick="filterNation('ne')"><img class="sbcflag" src="/files/imgs/flags/ne.png"><br/>Niger</div>
+        <div class="nationfilteroption " onclick="filterNation('ng')"><img class="sbcflag" src="/files/imgs/flags/ng.png"><br/>Nigeria</div>
+        <div class="nationfilteroption " onclick="filterNation('gb-nir')"><img class="sbcflag" src="/files/imgs/flags/gb-nir.png"><br/>Northern Ireland</div>
+        <div class="nationfilteroption " onclick="filterNation('no')"><img class="sbcflag" src="/files/imgs/flags/no.png"><br/>Norway</div>
+        <div class="nationfilteroption " onclick="filterNation('ps')"><img class="sbcflag" src="/files/imgs/flags/ps.png"><br/>Palestine</div>
+        <div class="nationfilteroption " onclick="filterNation('pa')"><img class="sbcflag" src="/files/imgs/flags/pa.png"><br/>Panama</div>
+        <div class="nationfilteroption " onclick="filterNation('py')"><img class="sbcflag" src="/files/imgs/flags/py.png"><br/>Paraguay</div>
+        <div class="nationfilteroption " onclick="filterNation('pe')"><img class="sbcflag" src="/files/imgs/flags/pe.png"><br/>Peru</div>
+        <div class="nationfilteroption " onclick="filterNation('ph')"><img class="sbcflag" src="/files/imgs/flags/ph.png"><br/>Philippines</div>
+        <div class="nationfilteroption " onclick="filterNation('pl')"><img class="sbcflag" src="/files/imgs/flags/pl.png"><br/>Poland</div>
+        <div class="nationfilteroption " onclick="filterNation('pr')"><img class="sbcflag" src="/files/imgs/flags/pr.png"><br/>Puerto Rico</div>
+        <div class="nationfilteroption " onclick="filterNation('ie')"><img class="sbcflag" src="/files/imgs/flags/ie.png"><br/>Republic of Ireland</div>
+        <div class="nationfilteroption " onclick="filterNation('ro')"><img class="sbcflag" src="/files/imgs/flags/ro.png"><br/>Romania</div>
+        <div class="nationfilteroption " onclick="filterNation('ru')"><img class="sbcflag" src="/files/imgs/flags/ru.png"><br/>Russia</div>
+        <div class="nationfilteroption " onclick="filterNation('sa')"><img class="sbcflag" src="/files/imgs/flags/sa.png"><br/>Saudi Arabia</div>
+        <div class="nationfilteroption " onclick="filterNation('gb-sct')"><img class="sbcflag" src="/files/imgs/flags/gb-sct.png"><br/>Scotland</div>
+        <div class="nationfilteroption " onclick="filterNation('sn')"><img class="sbcflag" src="/files/imgs/flags/sn.png"><br/>Senegal</div>
+        <div class="nationfilteroption " onclick="filterNation('rs')"><img class="sbcflag" src="/files/imgs/flags/rs.png"><br/>Serbia</div>
+        <div class="nationfilteroption " onclick="filterNation('sl')"><img class="sbcflag" src="/files/imgs/flags/sl.png"><br/>Sierra Leone</div>
+        <div class="nationfilteroption " onclick="filterNation('sk')"><img class="sbcflag" src="/files/imgs/flags/sk.png"><br/>Slovakia</div>
+        <div class="nationfilteroption " onclick="filterNation('si')"><img class="sbcflag" src="/files/imgs/flags/si.png"><br/>Slovenia</div>
+        <div class="nationfilteroption " onclick="filterNation('za')"><img class="sbcflag" src="/files/imgs/flags/za.png"><br/>South Africa</div>
+        <div class="nationfilteroption " onclick="filterNation('ss')"><img class="sbcflag" src="/files/imgs/flags/ss.png"><br/>South Sudan</div>
+        <div class="nationfilteroption " onclick="filterNation('kn')"><img class="sbcflag" src="/files/imgs/flags/kn.png"><br/>St Kitts Nevis</div>
+        <div class="nationfilteroption " onclick="filterNation('lc')"><img class="sbcflag" src="/files/imgs/flags/lc.png"><br/>St Lucia</div>
+        <div class="nationfilteroption " onclick="filterNation('sd')"><img class="sbcflag" src="/files/imgs/flags/sd.png"><br/>Sudan</div>
+        <div class="nationfilteroption " onclick="filterNation('sr')"><img class="sbcflag" src="/files/imgs/flags/sr.png"><br/>Suriname</div>
+        <div class="nationfilteroption " onclick="filterNation('se')"><img class="sbcflag" src="/files/imgs/flags/se.png"><br/>Sweden</div>
+        <div class="nationfilteroption " onclick="filterNation('ch')"><img class="sbcflag" src="/files/imgs/flags/ch.png"><br/>Switzerland</div>
+        <div class="nationfilteroption " onclick="filterNation('sy')"><img class="sbcflag" src="/files/imgs/flags/sy.png"><br/>Syria</div>
+        <div class="nationfilteroption " onclick="filterNation('tz')"><img class="sbcflag" src="/files/imgs/flags/tz.png"><br/>Tanzania</div>
+        <div class="nationfilteroption " onclick="filterNation('th')"><img class="sbcflag" src="/files/imgs/flags/th.png"><br/>Thailand</div>
+        <div class="nationfilteroption " onclick="filterNation('tg')"><img class="sbcflag" src="/files/imgs/flags/tg.png"><br/>Togo</div>
+        <div class="nationfilteroption " onclick="filterNation('tt')"><img class="sbcflag" src="/files/imgs/flags/tt.png"><br/>Trinidad & Tobago</div>
+        <div class="nationfilteroption " onclick="filterNation('tn')"><img class="sbcflag" src="/files/imgs/flags/tn.png"><br/>Tunisia</div>
+        <div class="nationfilteroption " onclick="filterNation('tr')"><img class="sbcflag" src="/files/imgs/flags/tr.png"><br/>Turkey</div>
+        <div class="nationfilteroption " onclick="filterNation('ae')"><img class="sbcflag" src="/files/imgs/flags/ae.png"><br/>UAE</div>
+        <div class="nationfilteroption " onclick="filterNation('ug')"><img class="sbcflag" src="/files/imgs/flags/ug.png"><br/>Uganda</div>
+        <div class="nationfilteroption " onclick="filterNation('ua')"><img class="sbcflag" src="/files/imgs/flags/ua.png"><br/>Ukraine</div>
+        <div class="nationfilteroption " onclick="filterNation('us')"><img class="sbcflag" src="/files/imgs/flags/us.png"><br/>United States</div>
+        <div class="nationfilteroption " onclick="filterNation('uy')"><img class="sbcflag" src="/files/imgs/flags/uy.png"><br/>Uruguay</div>
+        <div class="nationfilteroption " onclick="filterNation('uz')"><img class="sbcflag" src="/files/imgs/flags/uz.png"><br/>Uzbekistan</div>
+        <div class="nationfilteroption " onclick="filterNation('ve')"><img class="sbcflag" src="/files/imgs/flags/ve.png"><br/>Venezuela</div>
+        <div class="nationfilteroption " onclick="filterNation('vn')"><img class="sbcflag" src="/files/imgs/flags/vn.png"><br/>Vietnam</div>
+        <div class="nationfilteroption " onclick="filterNation('gb-wls')"><img class="sbcflag" src="/files/imgs/flags/gb-wls.png"><br/>Wales</div>
+        <div class="nationfilteroption " onclick="filterNation('zm')"><img class="sbcflag" src="/files/imgs/flags/zm.png"><br/>Zambia</div>
+        <div class="nationfilteroption " onclick="filterNation('zw')"><img class="sbcflag" src="/files/imgs/flags/zw.png"><br/>Zimbabwe</div>
+
+    </div>
+
+    <!--LEAGUE OPTIONS-->
+
+    <div id="lgselectctr" style="padding-left: 5vw">
+
+        <input type="text" id="lgsbcsearchbar" class="sbcsearchbar" style="margin-left:25vw" onkeyup="lgSearchFilter()" placeholder="Search for a league.." autocomplete="off">
+
+        <div class="lgfilteroption" onclick="filterLeague(1)"><img class="sbclg" src="/files/imgs/clubs/1/0.png"><br/>Premier League<div class="lgsml">ENG 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(2)"><img class="sbclg" src="/files/imgs/clubs/2/0.png"><br/>LaLiga<div class="lgsml">ESP 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(3)"><img class="sbclg" src="/files/imgs/clubs/3/0.png"><br/>Serie A<div class="lgsml">ITA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(4)"><img class="sbclg" src="/files/imgs/clubs/4/0.png"><br/>Bundesliga<div class="lgsml">GER 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(5)"><img class="sbclg" src="/files/imgs/clubs/5/0.png"><br/>Ligue 1<div class="lgsml">FRA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(6)"><img class="sbclg" src="/files/imgs/clubs/6/0.png"><br/>Icons<div class="lgsml">ICONS</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(7)"><img class="sbclg" src="/files/imgs/clubs/7/0.png"><br/>3. Liga<div class="lgsml">GER 3</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(8)"><img class="sbclg" src="/files/imgs/clubs/8/0.png"><br/>A-League<div class="lgsml">AUS 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(9)"><img class="sbclg" src="/files/imgs/clubs/9/0.png"><br/>Allsvenskan<div class="lgsml">SWE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(10)"><img class="sbclg" src="/files/imgs/clubs/10/0.png"><br/>Belgian Pro League<div class="lgsml">BEL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(11)"><img class="sbclg" src="/files/imgs/clubs/11/0.png"><br/>Bundesliga 2<div class="lgsml">GER 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(12)"><img class="sbclg" src="/files/imgs/clubs/12/0.png"><br/>CSL<div class="lgsml">CHN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(13)"><img class="sbclg" src="/files/imgs/clubs/13/0.png"><br/>CSSL<div class="lgsml">SUI 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(14)"><img class="sbclg" src="/files/imgs/clubs/14/0.png"><br/>Calcio B<div class="lgsml">ITA 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(15)"><img class="sbclg" src="/files/imgs/clubs/15/0.png"><br/>Danish Superliga<div class="lgsml">DEN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(16)"><img class="sbclg" src="/files/imgs/clubs/16/0.png"><br/>EFL Championship<div class="lgsml">ENG 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(17)"><img class="sbclg" src="/files/imgs/clubs/17/0.png"><br/>EFL League One<div class="lgsml">ENG 3</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(18)"><img class="sbclg" src="/files/imgs/clubs/18/0.png"><br/>EFL League Two<div class="lgsml">ENG 4</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(19)"><img class="sbclg" src="/files/imgs/clubs/19/0.png"><br/>Ekstraklasa<div class="lgsml">POL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(20)"><img class="sbclg" src="/files/imgs/clubs/20/0.png"><br/>Eliteserien<div class="lgsml">NOR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(21)"><img class="sbclg" src="/files/imgs/clubs/21/0.png"><br/>England Div. 5<div class="lgsml">ENG 5</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(22)"><img class="sbclg" src="/files/imgs/clubs/22/0.png"><br/>Eredivisie<div class="lgsml">NED 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(23)"><img class="sbclg" src="/files/imgs/clubs/23/0.png"><br/>Finnliiga<div class="lgsml">FIN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(24)"><img class="sbclg" src="/files/imgs/clubs/24/0.png"><br/>Hellas Liga<div class="lgsml">GRE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(25)"><img class="sbclg" src="/files/imgs/clubs/25/0.png"><br/>Hero ISL<div class="lgsml">IND 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(26)"><img class="sbclg" src="/files/imgs/clubs/26/0.png"><br/>K League 1<div class="lgsml">KOR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(27)"><img class="sbclg" src="/files/imgs/clubs/27/0.png"><br/>LIGA BBVA MX<div class="lgsml">MEX 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(28)"><img class="sbclg" src="/files/imgs/clubs/28/0.png"><br/>LPF<div class="lgsml">ARG 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(29)"><img class="sbclg" src="/files/imgs/clubs/29/0.png"><br/>LaLiga SmartBank<div class="lgsml">ESP 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(30)"><img class="sbclg" src="/files/imgs/clubs/30/0.png"><br/>League of Russia<div class="lgsml">RUS 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(31)"><img class="sbclg" src="/files/imgs/clubs/31/0.png"><br/>Libertadores<div class="lgsml">LIB</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(32)"><img class="sbclg" src="/files/imgs/clubs/32/0.png"><br/>Liga Cyprus<div class="lgsml">CYP 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(33)"><img class="sbclg" src="/files/imgs/clubs/33/0.png"><br/>Liga Hrvatska<div class="lgsml">CRO 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(34)"><img class="sbclg" src="/files/imgs/clubs/34/0.png"><br/>Liga I<div class="lgsml">ROM 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(35)"><img class="sbclg" src="/files/imgs/clubs/35/0.png"><br/>Liga Portugal<div class="lgsml">POR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(36)"><img class="sbclg" src="/files/imgs/clubs/36/0.png"><br/>Liga do Brasil<div class="lgsml">BRA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(37)"><img class="sbclg" src="/files/imgs/clubs/37/0.png"><br/>Ligue 2<div class="lgsml">FRA 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(38)"><img class="sbclg" src="/files/imgs/clubs/38/0.png"><br/>MBS Pro League<div class="lgsml">SAU 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(39)"><img class="sbclg" src="/files/imgs/clubs/39/0.png"><br/>Major League Soccer<div class="lgsml">MLS</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(40)"><img class="sbclg" src="/files/imgs/clubs/40/0.png"><br/>Magyar Liga<div class="lgsml">HUN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(41)"><img class="sbclg" src="/files/imgs/clubs/41/0.png"><br/>Meiji Yasuda J1<div class="lgsml">JPN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(42)"><img class="sbclg" src="/files/imgs/clubs/42/0.png"><br/>SSE Airtricity PD<div class="lgsml">IRL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(43)"><img class="sbclg" src="/files/imgs/clubs/43/0.png"><br/>Scottish Premiership<div class="lgsml">SPFL</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(44)"><img class="sbclg" src="/files/imgs/clubs/44/0.png"><br/>South African FL<div class="lgsml">RSA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(45)"><img class="sbclg" src="/files/imgs/clubs/45/0.png"><br/>Sudamericana<div class="lgsml">SUD</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(46)"><img class="sbclg" src="/files/imgs/clubs/46/0.png"><br/>Super Lig<div class="lgsml">TUR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(47)"><img class="sbclg" src="/files/imgs/clubs/47/0.png"><br/>United Emirates League<div class="lgsml">UAE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(48)"><img class="sbclg" src="/files/imgs/clubs/48/0.png"><br/>Ukrayina Liha<div class="lgsml">UKR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(49)"><img class="sbclg" src="/files/imgs/clubs/49/0.png"><br/>O. Bundesliga<div class="lgsml">AUT 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(50)"><img class="sbclg" src="/files/imgs/clubs/50/0.png"><br/>Ceska Liga<div class="lgsml">CZE 1</div></div>
+    </div>
+
+    <!--CLUB FILTERS-->
+
+    <div id="clubselectctr" class="clubselectctr">
+        <input type="text" id="clubsbcsearchbar" onkeyup="clubSearchFilter()" placeholder="Search for club.." autocomplete="off">
+        <div id="clubselect1" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/1/1.png">Arsenal</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/1/2.png">Aston Villa</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/1/3.png">Brentford</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/1/4.png">Brighton</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/1/5.png">Burnley</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/1/6.png">Chelsea</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/1/7.png">Crystal Palace</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/1/8.png">Everton</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/1/9.png">Leeds United</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/1/10.png">Leicester</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/1/11.png">Liverpool</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/1/12.png">Manchester City</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/1/13.png">Manchester United</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/1/14.png">Newcastle United</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/1/15.png">Norwich</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/1/16.png">Southampton</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/1/17.png">Spurs</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/1/18.png">Watford</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/1/19.png">West Ham</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/1/20.png">Wolves</div>
+        </div>
+        <div id="clubselect2" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/2/1.png">Alavés</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/2/2.png">Athletic Club</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/2/3.png">Atlético Madrid</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/2/4.png">Barcelona</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/2/5.png">Celta Vigo</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/2/6.png">Cádiz</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/2/7.png">Elche</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/2/8.png">Espanyol</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/2/9.png">Getafe</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/2/10.png">Granada</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/2/11.png">Levante</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/2/12.png">Mallorca</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/2/13.png">Osasuna</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/2/14.png">Rayo Vallecano</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/2/15.png">Real Betis</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/2/16.png">Real Madrid</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/2/17.png">Real Sociedad</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/2/18.png">Sevilla</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/2/19.png">Valencia</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/2/20.png">Villareal</div>
+        </div>
+        <div id="clubselect3" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/3/1.png">Bergamo Calcio</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/3/2.png">Bologna</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/3/3.png">Cagliari</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/3/4.png">Empoli</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/3/5.png">Fiorentina</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/3/6.png">Genoa</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/3/7.png">Hellas Verona</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/3/8.png">Inter</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/3/9.png">Latium</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/3/10.png">Milan</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/3/11.png">Napoli</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/3/12.png">Piemonte Calcio</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/3/13.png">Roma</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/3/14.png">Salernitana</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/3/15.png">Sampdoria</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/3/16.png">Sassuolo</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/3/17.png">Spezia</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/3/18.png">Torino</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/3/19.png">Udinese</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/3/20.png">Venezia</div>
+        </div>
+        <div id="clubselect4" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/4/1.png">Arminia Bielefeld</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/4/2.png">Augsburg</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/4/3.png">Bayern München</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/4/4.png">Borussia Dortmund</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/4/5.png">Frankfurt</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/4/6.png">Freiburg</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/4/7.png">Fürth</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/4/8.png">Hertha Berlin</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/4/9.png">Hoffenheim</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/4/10.png">Köln</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/4/11.png">Leverkusen</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/4/12.png">M'gladbach</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/4/13.png">Mainz 05</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/4/14.png">RB Leipzig</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/4/15.png">Union Berlin</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/4/16.png">VfB Stuttgart</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/4/17.png">VfL Bochum</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/4/18.png">Wolfsburg</div>
+        </div>
+        <div id="clubselect5" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/5/1.png">Angers</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/5/2.png">Bordeaux</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/5/3.png">Clermont Foot</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/5/4.png">Lens</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/5/5.png">Lille</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/5/6.png">Lorient</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/5/7.png">Lyon</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/5/8.png">Marseille</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/5/9.png">Metz</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/5/10.png">Monaco</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/5/11.png">Montpellier</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/5/12.png">Nantes</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/5/13.png">Nice</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/5/14.png">PSG</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/5/15.png">Reims</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/5/16.png">Rennais</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/5/17.png">Saint-Étienne</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/5/18.png">Stade Brestois</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/5/19.png">Strasbourg</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/5/20.png">Troyes</div>
+        </div>
+        <div id="clubselect6" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/6/99.png">Icons</div>
+        </div>
+        <div id="clubselect7" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/7/1.png">1. FC Magdeburg</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/7/2.png">1860 München</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/7/3.png">B. Dortmund II</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/7/4.png">Braunschweig</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/7/5.png">Freiburg II</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/7/6.png">Hallescher</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/7/7.png">Havelse</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/7/8.png">Kaiserslautern</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/7/9.png">MSV Duisburg</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/7/10.png">Meppen</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/7/11.png">SVWW</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/7/12.png">Saarbrücken</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/7/13.png">Türkgücü</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/7/14.png">Verl</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/7/15.png">VfL Osnabrück</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/7/16.png">Viktoria Berlin</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/7/17.png">Viktoria Köln</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/7/18.png">Waldhof</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/7/19.png">Würzburg</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/7/20.png">Zwickau</div>
+        </div>
+        <div id="clubselect8" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/8/1.png">Adelaide United</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/8/2.png">Brisbane Roar</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/8/3.png">Central Coast</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/8/4.png">Macarthur</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/8/5.png">Melb. Victory</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/8/6.png">Melbourne City</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/8/7.png">Newcastle Jets</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/8/8.png">Perth Glory</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/8/9.png">Sydney</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/8/10.png">WS Wanderers</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/8/11.png">Well. Phoenix</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/8/12.png">Western United</div>
+        </div>
+        <div id="clubselect9" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/9/1.png">AIK</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/9/2.png">Degerfors IF</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/9/3.png">Djurgårdens</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/9/4.png">Halmstads</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/9/5.png">Hammarby</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/9/6.png">Häcken</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/9/7.png">IF Elfsborg</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/9/8.png">IFK Göteborg</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/9/9.png">IFK Norrköping</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/9/10.png">IK Sirius</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/9/11.png">Kalmar</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/9/12.png">Malmö</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/9/13.png">Mjällby AIF</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/9/14.png">Varbergs BoIS</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/9/15.png">Örebro</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/9/16.png">Östersunds FK</div>
+        </div>
+        <div id="clubselect10" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/10/1.png">Anderlecht</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/10/2.png">Cercle Brugge</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/10/3.png">Club Brugge</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/10/4.png">Genk</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/10/5.png">Gent</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/10/6.png">K Beerschot</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/10/7.png">KAS Eupen</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/10/8.png">KV Kortrijk</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/10/9.png">KV Mechelen</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/10/10.png">OH Leuven</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/10/11.png">Oostende</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/10/12.png">RFC Seraing</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/10/13.png">Royal Antwerp</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/10/14.png">Sint-Truiden</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/10/15.png">Sp. Charleroi</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/10/16.png">Standard Liège</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/10/17.png">Union SG</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/10/18.png">Zulte Waregem</div>
+        </div>
+        <div id="clubselect11" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/11/1.png">Darmstadt 98</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/11/2.png">Dynamo Dresden</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/11/3.png">Düsseldorf</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/11/4.png">Erzgebirge Aue</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/11/5.png">Hamburger SV</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/11/6.png">Hannover 96</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/11/7.png">Heidenheim</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/11/8.png">Holstein Kiel</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/11/9.png">Ingolstadt 04</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/11/10.png">Karlsruher</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/11/11.png">Nürnberg</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/11/12.png">Paderborn</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/11/13.png">Regensburg</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/11/14.png">Rostock</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/11/15.png">Sandhausen</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/11/16.png">Schalke 04</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/11/17.png">St. Pauli</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/11/18.png">Werder Bremen</div>
+        </div>
+        <div id="clubselect12" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/12/1.png">Beijing Guoan</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/12/2.png">Cangzhou Lions</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/12/3.png">Changchun Yatai</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/12/4.png">Chongqing LJ Ath</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/12/5.png">Dalian Pro</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/12/6.png">Guangzhou</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/12/7.png">Guangzhou City</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/12/8.png">Hebei</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/12/9.png">Henan Songshan</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/12/10.png">Qingdao</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/12/11.png">Shandong Taishan</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/12/12.png">Shanghai Port</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/12/13.png">Shanghai Shenhua</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/12/14.png">Shenzhen</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/12/15.png">Tianjin JMT</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/12/16.png">Wuhan</div>
+        </div>
+        <div id="clubselect13" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/13/1.png">Basel 1893</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/13/2.png">Grasshopper</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/13/3.png">Lausanne-Sport</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/13/4.png">Lugano</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/13/5.png">Luzern</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/13/6.png">Servette</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/13/7.png">Sion</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/13/8.png">St. Gallen</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/13/9.png">Young Boys</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/13/10.png">Zürich</div>
+        </div>
+        <div id="clubselect14" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/14/1.png">AC Monza</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/14/2.png">Benevento</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/14/3.png">Crotone</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/14/4.png">Lecce</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/14/5.png">Parma</div>
+        </div>
+        <div id="clubselect15" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/15/1.png">Aalborg</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/15/2.png">Aarhus</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/15/3.png">Brondby</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/15/4.png">Kobenhavn</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/15/5.png">Midtjylland</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/15/6.png">Nordsjaelland</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/15/7.png">Odense</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/15/8.png">Randers</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/15/9.png">Silkeborg</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/15/10.png">SonderjyskE</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/15/11.png">Vejle Boldklub</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/15/12.png">Viborg</div>
+        </div>
+        <div id="clubselect16" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/16/1.png">Barnsley</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/16/2.png">Brimingham</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/16/3.png">Blackburn Rovers</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/16/4.png">Blackpool</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/16/5.png">Bournemouth</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/16/6.png">Bristol City</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/16/7.png">Cardiff City</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/16/8.png">Coventry City</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/16/9.png">Derby County</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/16/10.png">Fulham</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/16/11.png">Huddersfield</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/16/12.png">Hull City</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/16/13.png">Luton Town</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/16/14.png">Middlesbrough</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/16/15.png">Millwall</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/16/16.png">Nott'm Forest</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/16/17.png">Peterborough</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/16/18.png">Preston</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/16/19.png">QPR</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/16/20.png">Reading</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/16/21.png">Sheffield Utd</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/16/22.png">Stoke City</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs/16/23.png">Swansea City</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs/16/24.png">West Brom</div>
+        </div>
+        <div id="clubselect17" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/17/1.png">AFC Wimbledon</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/17/2.png">Accrington</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/17/3.png">Bolton</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/17/4.png">Burton Albion</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/17/5.png">Cambridge Utd</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/17/6.png">Charlton Ath</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/17/7.png">Cheltenham Town</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/17/8.png">Crewe Alexandra</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/17/9.png">Doncaster</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/17/10.png">Fleetwood Town</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/17/11.png">Gillingham</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/17/12.png">Ipswich</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/17/13.png">Lincoln City</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/17/14.png">MK Dons</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/17/15.png">Morecambe</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/17/16.png">Oxford United</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/17/17.png">Plymouth Argyle</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/17/18.png">Portsmouth</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/17/19.png">Rotherham Utd</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/17/20.png">Sheffield Wed</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/17/21.png">Shrewsbury</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/17/22.png">Sunderland</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs/17/23.png">Wigan Athletic</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs/17/24.png">Wycombe</div>
+        </div>
+        <div id="clubselect18" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/18/1.png">Barrow</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/18/2.png">Bradford City</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/18/3.png">Bristol Rovers</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/18/4.png">Carlisle United</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/18/5.png">Colchester</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/18/6.png">Crawley Town</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/18/7.png">Exeter City</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/18/8.png">Forest Green</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/18/9.png">Harrogate Town</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/18/10.png">Hartlepool</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/18/11.png">Leyton Orient</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/18/12.png">Mansfield Town</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/18/13.png">Newport County</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/18/14.png">Northampton</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/18/15.png">Oldham Athletic</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/18/16.png">Port Vale</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/18/17.png">Rochdale</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/18/18.png">Salford City</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/18/19.png">Scunthorpe Utd</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/18/20.png">Stevenage</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/18/21.png">Sutton United</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/18/22.png">Swindon Town</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs/18/23.png">Tranmere Rovers</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs/18/24.png">Walsall</div>
+        </div>
+        <div id="clubselect19" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/19/1.png">Cracovia</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/19/2.png">Górnik Zabrze</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/19/3.png">Górnik Lęczna</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/19/4.png">Jagiellonia</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/19/5.png">Lech Poznań</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/19/6.png">Lechia Gdańsk</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/19/7.png">Legia Warszawa</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/19/8.png">PGE Stal Mielec</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/19/9.png">Piast Gliwice</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/19/10.png">Pogoń Szczecin</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/19/11.png">Radomiak Radom</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/19/12.png">Raków</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/19/13.png">Termalica</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/19/14.png">Warta Poznań</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/19/15.png">Wisla Kraków</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/19/16.png">Wisla Plock</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/19/17.png">Zaglębie Lubin</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/19/18.png">Śląsk Wroclaw</div>
+        </div>
+        <div id="clubselect20" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/20/1.png">Bodo/Glimt</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/20/2.png">Brann</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/20/3.png">FK Haugesund</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/20/4.png">Kristiansund</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/20/5.png">Lillestrom</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/20/6.png">Mjondalef IF</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/20/7.png">Molde</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/20/8.png">Odds</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/20/9.png">Rosenborg</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/20/10.png">Sandefjord</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/20/11.png">Sarpsborg 08</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/20/12.png">Stabaek Fotball</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/20/13.png">Stromgodset IF</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/20/14.png">Tromso</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/20/15.png">Viking</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/20/16.png">Vålerenga Fotball</div>
+        </div>
+        <div id="clubselect21" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/21/1.png">Wrexham</div>
+        </div>
+        <div id="clubselect22" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/22/1.png">AZ</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/22/2.png">Ajax</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/22/3.png">Cambuur</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/22/4.png">Feyenoord</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/22/5.png">Fortuna Sittard</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/22/6.png">Go Ahead Eagles</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/22/7.png">Groningen</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/22/8.png">Heerenveen</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/22/9.png">Heracles Almelo</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/22/10.png">N.E.C. Nijmegen</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/22/11.png">PEC Zwolle</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/22/12.png">PSV</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/22/13.png">RKC Waalwijk</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/22/14.png">Sparta Rotterdam</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/22/15.png">Twente</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/22/16.png">Utrecht</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/22/17.png">Vitesse</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/22/18.png">Willem II</div>
+        </div>
+        <div id="clubselect23" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/23/1.png">HJK Helsinki</div>
+        </div>
+        <div id="clubselect24" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/24/1.png">Athens</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/24/2.png">Olympiacos</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/24/3.png">PAOK</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/24/4.png">Panathinaikos</div>
+        </div>
+        <div id="clubselect25" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/25/1.png">ATK Mohun Bagan</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/25/2.png">Bengaluru</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/25/3.png">Chennaiyin</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/25/4.png">East Bengal</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/25/5.png">Goa</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/25/6.png">Hyderabad</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/25/7.png">Jamshedpur</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/25/8.png">Kerala Blasters</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/25/9.png">Mumbai City</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/25/10.png">NorthEast United</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/25/11.png">Odisha</div>
+        </div>
+        <div id="clubselect26" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/26/1.png">Daegu</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/26/2.png">Gangwon</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/26/3.png">GwangJu</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/26/4.png">Incheon United</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/26/5.png">Jeju United</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/26/6.png">Jeonbuk Hyundai</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/26/7.png">Pohang Steelers</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/26/8.png">Seongnam</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/26/9.png">Seoul</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/26/10.png">Suwon</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/26/11.png">Suwon Samsung</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/26/12.png">Ulsan Hyundai</div>
+        </div>
+        <div id="clubselect27" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/27/1.png">América</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/27/2.png">Atlas</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/27/3.png">Atlético de San Luis</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/27/4.png">CF Monterrey</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/27/5.png">Cruz Azul</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/27/6.png">Guadalajara</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/27/7.png">Juárez</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/27/8.png">León</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/27/9.png">Mazatlán</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/27/10.png">Necaxa</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/27/11.png">Pachuca</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/27/12.png">Puebla</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/27/13.png">Pumas</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/27/14.png">Querétaro</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/27/15.png">Santos Laguna</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/27/16.png">Tigres</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/27/17.png">Tijuana</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/27/18.png">Toluca</div>
+        </div>
+        <div id="clubselect28" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/28/1.png">Aldosivi</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/28/2.png">Atlético Tucumán</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/28/3.png">Banfield</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/28/4.png">Central Córdoba</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/28/5.png">Colón</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/28/6.png">Estudiantes</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/28/7.png">Gimnasia</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/28/8.png">Godoy Cruz</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/28/9.png">Patronato</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/28/10.png">Platense</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/28/11.png">Sarmiento</div>
+        </div>
+        <div id="clubselect29" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/29/1.png">AD Alcorcón</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/29/2.png">Almería</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/29/3.png">Burgos</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/29/4.png">CD Leganés</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/29/5.png">CD Lugo</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/29/6.png">CD Mirandés</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/29/7.png">CF Fuenlabrada</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/29/8.png">Cartagena</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/29/9.png">Eibar</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/29/10.png">Girona</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/29/11.png">Huesca</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/29/12.png">Las Palmas</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/29/13.png">Málaga</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/29/14.png">Ponferradina</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/29/15.png">R. Oviedo</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/29/16.png">R. Zaragoza</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/29/17.png">Real Sociedad B</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/29/18.png">Real Sporting</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/29/19.png">Real Valladoid</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/29/20.png">SD Amorebieta</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/29/21.png">Tenerife</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/29/22.png">UD Ibiza</div>
+        </div>
+        <div id="clubselect30" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/30/1.png">CSKA Moscow</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/30/2.png">Lokomotiv Moscow</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/30/3.png">Spartak Moscow</div>
+        </div>
+        <div id="clubselect31" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/31/1.png">Always Ready</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/31/2.png">América de Cali</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/31/3.png">Argentinos Jrs.</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/31/4.png">Atl. Nacional</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/31/5.png">Barcelona SC</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/31/6.png">Boca Juniors</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/31/7.png">Cerro Porteño</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/31/8.png">Defensa</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/31/9.png">Dep. La Guaira</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/31/10.png">Dep. Táchira</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/31/11.png">Flamengo</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/31/12.png">Independiente DV</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/31/13.png">Junior</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/31/14.png">LDU Quito</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/31/15.png">Nacional</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/31/16.png">Olimpia</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/31/17.png">Palmeiras</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/31/18.png">Racing Club</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/31/19.png">Rentistas</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/31/20.png">River Plate</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/31/21.png">Santa Fe</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/31/22.png">Sporting Cristal</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs/31/23.png">São Paulo</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs/31/24.png">The Strongest</div>
+            <div class="clubfilteroption" onclick="filterClub(25)"><img class="sbcclubopt" src="/files/imgs/clubs/31/25.png">Uni. Católica</div>
+            <div class="clubfilteroption" onclick="filterClub(26)"><img class="sbcclubopt" src="/files/imgs/clubs/31/26.png">Universitario</div>
+            <div class="clubfilteroption" onclick="filterClub(27)"><img class="sbcclubopt" src="/files/imgs/clubs/31/27.png">Unión La Calera</div>
+            <div class="clubfilteroption" onclick="filterClub(28)"><img class="sbcclubopt" src="/files/imgs/clubs/31/28.png">Vélez Sarsfield</div>
+        </div>
+        <div id="clubselect32" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/32/1.png">Apoel</div>
+        </div>
+        <div id="clubselect33" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/33/1.png">Dinamo Zagreb</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/33/2.png">Hajduk Split</div>
+        </div>
+        <div id="clubselect34" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/34/1.png">AFC Chindia</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/34/2.png">Academica</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/34/3.png">Agreș</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/34/4.png">Botoșani</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/34/5.png">CFR Cluj</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/34/6.png">CS Mioveni</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/34/7.png">Dinamo 1948</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/34/8.png">FCSB</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/34/9.png">Farul Constanța</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/34/10.png">Gaz Metan</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/34/11.png">Rapid</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/34/12.png">Sepsi OSK</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/34/13.png">U Craiova</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/34/14.png">UTA Arad</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/34/15.png">Univ. Craiova</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/34/16.png">Voluntari</div>
+        </div>
+        <div id="clubselect35" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/35/1.png">Arouca</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/35/2.png">Belenenses SAD</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/35/3.png">Benfica</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/35/4.png">Boavista</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/35/5.png">Braga</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/35/6.png">CD Tondela</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/35/7.png">Estoril Praia</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/35/8.png">Famalicão</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/35/9.png">Gil Vincente</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/35/10.png">Marítimo</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/35/11.png">Moreirense</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/35/12.png">Paços Ferreira</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/35/13.png">Portimonense</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/35/14.png">Porto</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/35/15.png">Santa Clara</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/35/16.png">Sporting</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/35/17.png">Vitória SC</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/35/18.png">Vizela</div>
+        </div>
+        <div id="clubselect37" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/37/1.png">AC Ajaccio</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/37/2.png">Amiens</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/37/3.png">Auxerre</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/37/4.png">Bastia</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/37/5.png">Caen</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/37/6.png">Dijon FCO</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/37/7.png">FCSM</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/37/8.png">Grenoble Foot</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/37/9.png">Guingamp</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/37/10.png">Havre AC</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/37/11.png">Nancy Lorraine</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/37/12.png">Niort</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/37/13.png">Nîmes</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/37/14.png">Paris</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/37/15.png">Pau</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/37/16.png">Quevilly Rouen</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/37/17.png">Rodez AF</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/37/18.png">Toulouse</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/37/19.png">USL Dunkerque</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/37/20.png">Valenciennes</div>
+        </div>
+        <div id="clubselect38" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/38/1.png">Abha Club</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/38/2.png">Al Ahli</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/38/3.png">Al Batin</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/38/4.png">Al Faisaly</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/38/5.png">Al Fateh</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/38/6.png">Al Fayha</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/38/7.png">Al Hazem</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/38/8.png">Al Hilal</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/38/9.png">Al Ittihad</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/38/10.png">Al Nassr</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/38/11.png">Al Raed</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/38/12.png">Al Shabab</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/38/13.png">Al Taawoun</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/38/14.png">Al Tai</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/38/15.png">Damac</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/38/16.png">Ettifaq</div>
+        </div>
+        <div id="clubselect39" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/39/1.png">Atlanta United</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/39/2.png">Austin</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/39/3.png">CF Montréal</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/39/4.png">Charlotte</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/39/5.png">Chicago Fire</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/39/6.png">Cincinnati</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/39/7.png">Colorado Rapids</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/39/8.png">Colombus Crew</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/39/9.png">D.C. United</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/39/10.png">Dallas</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/39/11.png">Houston Dynamo</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/39/12.png">Inter Miami</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/39/13.png">LA Galaxy</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/39/14.png">LAFC</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/39/15.png">Minnesota United</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/39/16.png">Nashville SC</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/39/17.png">New England</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/39/18.png">New York City</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/39/19.png">Orlando City</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/39/20.png">Philadelphia</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs/39/21.png">Portland Timbers</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs/39/22.png">Real Salt Lake</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs/39/23.png">Red Bulls</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs/39/24.png">SJ Earthquakes</div>
+            <div class="clubfilteroption" onclick="filterClub(25)"><img class="sbcclubopt" src="/files/imgs/clubs/39/25.png">Sounders</div>
+            <div class="clubfilteroption" onclick="filterClub(26)"><img class="sbcclubopt" src="/files/imgs/clubs/39/26.png">Sporting KC</div>
+            <div class="clubfilteroption" onclick="filterClub(27)"><img class="sbcclubopt" src="/files/imgs/clubs/39/27.png">Toronto</div>
+            <div class="clubfilteroption" onclick="filterClub(28)"><img class="sbcclubopt" src="/files/imgs/clubs/39/28.png">Whitecaps</div>
+        </div>
+        <div id="clubselect40" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/40/1.png">Ferencvárosi</div>
+        </div>
+        <div id="clubselect41" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/41/1.png">Avispa Fukuoka</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/41/2.png">Cerezo Osaka</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/41/3.png">F.C. Tokyo</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/41/4.png">Gamba Osaka</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/41/5.png">H.Consa.Sapporo</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/41/6.png">Kashima Antlers</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/41/7.png">Kashiwa Reysol</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/41/8.png">Kawasaki Frontale</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/41/9.png">Nagoya Grampus</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/41/10.png">Oita Trinita</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/41/11.png">S-Hiroshima</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/41/12.png">Sagan Tosu</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/41/13.png">Shimizu S-Pulse</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/41/14.png">Shonan Bellmare</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/41/15.png">Tokushima Vortis</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/41/16.png">Urawa Reds</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/41/17.png">Vegalta Sendai</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/41/18.png">Vissel Kobe</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/41/19.png">Yokohama</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/41/20.png">Yokohama FM</div>
+        </div>
+        <div id="clubselect42" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/42/1.png">Bohemian</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/42/2.png">Derry City</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/42/3.png">Drogheda United</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/42/4.png">Dundalk</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/42/5.png">Finn Harps</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/42/6.png">Longford Town</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/42/7.png">Shamrock Rovers</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/42/8.png">Sligo Rovers</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/42/9.png">St. Pats</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/42/10.png">Waterford</div>
+        </div>
+        <div id="clubselect43" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/43/1.png">Aberdeen</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/43/2.png">Celtic</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/43/3.png">Dundee</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/43/4.png">Dundee United</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/43/5.png">Hearts</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/43/6.png">Hibernian</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/43/7.png">Livingston</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/43/8.png">Motherwell</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/43/9.png">Rangers</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/43/10.png">Ross County</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/43/11.png">St. Johnstone</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/43/12.png">St. Mirren</div>
+        </div>
+        <div id="clubselect44" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/44/1.png">Kaizer Chiefs</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/44/2.png">Orlando Pirates</div>
+        </div>
+        <div id="clubselect45" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs//1.png">12 de Octubre</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs//2.png">Antofagasta</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs//3.png">Aragua</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs//4.png">Arsenal</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs//5.png">Atl. Palmaflor</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs//6.png">Aucas</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs//7.png">Bolívar</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs//8.png">C.A. Mannucci</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs//9.png">CS Emelec</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs//10.png">Cerro Largo</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs//11.png">Club Nacional</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs//12.png">Cobresal</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs//13.png">Corinthians</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs//14.png">Deportes Tolima</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs//15.png">Deportivo Cali</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs//16.png">Deportivo Pasto</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs//17.png">FBC Melgar</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs//18.png">Fénix</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs//19.png">Guabirá</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs//20.png">Guaireña</div>
+            <div class="clubfilteroption" onclick="filterClub(21)"><img class="sbcclubopt" src="/files/imgs/clubs//21.png">Guayaquil City</div>
+            <div class="clubfilteroption" onclick="filterClub(22)"><img class="sbcclubopt" src="/files/imgs/clubs//22.png">Huachipato</div>
+            <div class="clubfilteroption" onclick="filterClub(23)"><img class="sbcclubopt" src="/files/imgs/clubs//23.png">Huracán</div>
+            <div class="clubfilteroption" onclick="filterClub(24)"><img class="sbcclubopt" src="/files/imgs/clubs//24.png">Independiente</div>
+            <div class="clubfilteroption" onclick="filterClub(25)"><img class="sbcclubopt" src="/files/imgs/clubs//25.png">La Equidad</div>
+            <div class="clubfilteroption" onclick="filterClub(26)"><img class="sbcclubopt" src="/files/imgs/clubs//26.png">Lanús</div>
+            <div class="clubfilteroption" onclick="filterClub(27)"><img class="sbcclubopt" src="/files/imgs/clubs//27.png">Libertad</div>
+            <div class="clubfilteroption" onclick="filterClub(28)"><img class="sbcclubopt" src="/files/imgs/clubs//28.png">Macará</div>
+            <div class="clubfilteroption" onclick="filterClub(29)"><img class="sbcclubopt" src="/files/imgs/clubs//29.png">Mdeo City Torque</div>
+            <div class="clubfilteroption" onclick="filterClub(30)"><img class="sbcclubopt" src="/files/imgs/clubs//30.png">Metropolitanos</div>
+            <div class="clubfilteroption" onclick="filterClub(31)"><img class="sbcclubopt" src="/files/imgs/clubs//31.png">Mineros</div>
+            <div class="clubfilteroption" onclick="filterClub(32)"><img class="sbcclubopt" src="/files/imgs/clubs//32.png">Macional Potosí</div>
+            <div class="clubfilteroption" onclick="filterClub(33)"><img class="sbcclubopt" src="/files/imgs/clubs//33.png">Newells</div>
+            <div class="clubfilteroption" onclick="filterClub(34)"><img class="sbcclubopt" src="/files/imgs/clubs//34.png">Palestino</div>
+            <div class="clubfilteroption" onclick="filterClub(35)"><img class="sbcclubopt" src="/files/imgs/clubs//35.png">Peñarol</div>
+            <div class="clubfilteroption" onclick="filterClub(36)"><img class="sbcclubopt" src="/files/imgs/clubs//36.png">Puerto Cabello</div>
+            <div class="clubfilteroption" onclick="filterClub(37)"><img class="sbcclubopt" src="/files/imgs/clubs//37.png">RB Bragantino</div>
+            <div class="clubfilteroption" onclick="filterClub(38)"><img class="sbcclubopt" src="/files/imgs/clubs//38.png">River Plate</div>
+            <div class="clubfilteroption" onclick="filterClub(39)"><img class="sbcclubopt" src="/files/imgs/clubs//39.png">Rosario Central</div>
+            <div class="clubfilteroption" onclick="filterClub(40)"><img class="sbcclubopt" src="/files/imgs/clubs//40.png">San Lorenzo</div>
+            <div class="clubfilteroption" onclick="filterClub(41)"><img class="sbcclubopt" src="/files/imgs/clubs//41.png">Sport Huancayo</div>
+            <div class="clubfilteroption" onclick="filterClub(42)"><img class="sbcclubopt" src="/files/imgs/clubs//42.png">Talleres</div>
+            <div class="clubfilteroption" onclick="filterClub(43)"><img class="sbcclubopt" src="/files/imgs/clubs//43.png">UTC</div>
+            <div class="clubfilteroption" onclick="filterClub(44)"><img class="sbcclubopt" src="/files/imgs/clubs//44.png">Unión</div>
+            <div class="clubfilteroption" onclick="filterClub(45)"><img class="sbcclubopt" src="/files/imgs/clubs//45.png">Wilstermann</div>
+        </div>
+        <div id="clubselect46" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/46/1.png">Adana Demirspor</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/46/2.png">Alanyaspor</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/46/3.png">Altay SK</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/46/4.png">Antalyaspor</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/46/5.png">Bașakșehir</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/46/6.png">Beșiktaș</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/46/7.png">Fenerbahçe</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/46/8.png">Galatasaray</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/46/9.png">Gaziantep</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/46/10.png">Giresunspor</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/46/11.png">Göztepe</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/46/12.png">Hatayspor</div>
+            <div class="clubfilteroption" onclick="filterClub(13)"><img class="sbcclubopt" src="/files/imgs/clubs/46/13.png">Karagümrük SK</div>
+            <div class="clubfilteroption" onclick="filterClub(14)"><img class="sbcclubopt" src="/files/imgs/clubs/46/14.png">Kasimpașa</div>
+            <div class="clubfilteroption" onclick="filterClub(15)"><img class="sbcclubopt" src="/files/imgs/clubs/46/15.png">Kayserispor</div>
+            <div class="clubfilteroption" onclick="filterClub(16)"><img class="sbcclubopt" src="/files/imgs/clubs/46/16.png">Konyaspor</div>
+            <div class="clubfilteroption" onclick="filterClub(17)"><img class="sbcclubopt" src="/files/imgs/clubs/46/17.png">Sivasspor</div>
+            <div class="clubfilteroption" onclick="filterClub(18)"><img class="sbcclubopt" src="/files/imgs/clubs/46/18.png">Trabzonspor</div>
+            <div class="clubfilteroption" onclick="filterClub(19)"><img class="sbcclubopt" src="/files/imgs/clubs/46/19.png">Yeni Malatyaspor</div>
+            <div class="clubfilteroption" onclick="filterClub(20)"><img class="sbcclubopt" src="/files/imgs/clubs/46/20.png">Çaykur Rizespor</div>
+        </div>
+        <div id="clubselect47" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/47/1.png">Al Ain</div>
+        </div>
+        <div id="clubselect48" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/48/1.png">Dynamo Kyiv</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/48/2.png">Shakhtar Donetsk</div>
+        </div>
+        <div id="clubselect49" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/49/1.png">Admira Wacker</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/49/2.png">Austria Klagenfurt</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/49/3.png">Austria Wien</div>
+            <div class="clubfilteroption" onclick="filterClub(4)"><img class="sbcclubopt" src="/files/imgs/clubs/49/4.png">Hartberg</div>
+            <div class="clubfilteroption" onclick="filterClub(5)"><img class="sbcclubopt" src="/files/imgs/clubs/49/5.png">LASK</div>
+            <div class="clubfilteroption" onclick="filterClub(6)"><img class="sbcclubopt" src="/files/imgs/clubs/49/6.png">RB Salzburg</div>
+            <div class="clubfilteroption" onclick="filterClub(7)"><img class="sbcclubopt" src="/files/imgs/clubs/49/7.png">Rapid Wien</div>
+            <div class="clubfilteroption" onclick="filterClub(8)"><img class="sbcclubopt" src="/files/imgs/clubs/49/8.png">Ried</div>
+            <div class="clubfilteroption" onclick="filterClub(9)"><img class="sbcclubopt" src="/files/imgs/clubs/49/9.png">SCR Altach</div>
+            <div class="clubfilteroption" onclick="filterClub(10)"><img class="sbcclubopt" src="/files/imgs/clubs/49/10.png">Sturm Graz</div>
+            <div class="clubfilteroption" onclick="filterClub(11)"><img class="sbcclubopt" src="/files/imgs/clubs/49/11.png">WSG Tirol</div>
+            <div class="clubfilteroption" onclick="filterClub(12)"><img class="sbcclubopt" src="/files/imgs/clubs/49/12.png">Wolfsberger AC</div>
+        </div>
+        <div id="clubselect50" class="clubselectleague">
+            <div class="clubfilteroption" onclick="filterClub(1)"><img class="sbcclubopt" src="/files/imgs/clubs/50/1.png">Slavia Praha</div>
+            <div class="clubfilteroption" onclick="filterClub(2)"><img class="sbcclubopt" src="/files/imgs/clubs/50/2.png">Sparta Praha</div>
+            <div class="clubfilteroption" onclick="filterClub(3)"><img class="sbcclubopt" src="/files/imgs/clubs/50/3.png">Viktoria Plzen</div>
+        </div>
+    </div>
+
+
+    <div id="typeselectctr" style="padding-left:5vw">
+
+        <input type="text" id="typesbcsearchbar" class="sbcsearchbar" style="margin-left:25vw" onkeyup="typeSearchFilter()" placeholder="Search for a card type.." autocomplete="off">
+
+        <div class="typefilteroption" onclick="filterSbcType(['RG','NRG'])"><img class="sbctypeimg" src="/files/imgs/cards/allgold.png"><br/>All Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RS','NRS'])"><img class="sbctypeimg" src="/files/imgs/cards/allsilver.png"><br/>All Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['FY','MOM','BDAY','OPS','META','FS','BLPOM','CHG','CHS','CLMOM','CLRTTF','CLTOTT','DMOTM','ELMOM','ELRTTF','ELTOTT','ERPOM','FB','FI','GLRTTF','GLTOTT','Hero','HL','Icon','IFG','IFS','L1POM','LLPOM','LOBJ','MFI','NXG','OBJ','OTW','PHERO','PLPOM','PM','PSBC','ReB','RuB','SAPOM','SD','SQD','SS','SUDMOM','TOTY','UP','VSF','VSI','WW'])"><img class="sbctypeimg" src="/files/imgs/cards/allspecial.png"><br/>All Special</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RG'])"><img class="sbctypeimg" src="/files/imgs/cards/RG.png"><br/>Rare Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['NRG'])"><img class="sbctypeimg" src="/files/imgs/cards/NRG.png"><br/>Non-Rare Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RS'])"><img class="sbctypeimg" src="/files/imgs/cards/RS.png"><br/>Rare Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['NRS'])"><img class="sbctypeimg" src="/files/imgs/cards/NRS.png"><br/>Non-Rare Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RB'])"><img class="sbctypeimg" src="/files/imgs/cards/RB.png"><br/>Rare Bronze</div>
+        <div class="typefilteroption" onclick="filterSbcType(['CHG'])"><img class="sbctypeimg" src="/files/imgs/cards/CHG.png"><br/>FUT Champs</div>
+        <div class="typefilteroption" onclick="filterSbcType(['CHS'])"><img class="sbctypeimg" src="/files/imgs/cards/CHS.png"><br/>FUT Champs Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['IFG'])"><img class="sbctypeimg" src="/files/imgs/cards/IFG.png"><br/>TOTW Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['IFS'])"><img class="sbctypeimg" src="/files/imgs/cards/IFS.png"><br/>TOTW Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['TOTY'])"><img class="sbctypeimg" src="/files/imgs/cards/TOTY.png"><br/>TOTY</div>
+        <div class="typefilteroption" onclick="filterSbcType(['TOTYN'])"><img class="sbctypeimg" src="/files/imgs/cards/TOTYN.png"><br/>TOTY Nominee</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Icon.png"><br/>Icons</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LTM1','LTM2','LTM3','LTM4'])"><img class="sbctypeimg" src="/files/imgs/cards/LTM.png"><br/>LTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['MFI'])"><img class="sbctypeimg" src="/files/imgs/cards/MFI.png"><br/>Madfut Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['FI'])"><img class="sbctypeimg" src="/files/imgs/cards/FI.png"><br/>Future Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['META'])"><img class="sbctypeimg" src="/files/imgs/cards/META.png"><br/>FUT META</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Hero'])"><img class="sbctypeimg" src="/files/imgs/cards/Hero.png"><br/>FUT Hero</div>
+        <div class="typefilteroption" onclick="filterSbcType(['PLPOM'])"><img class="sbctypeimg" src="/files/imgs/cards/PLPOM.png"><br/>EPL POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LLPOM'])"><img class="sbctypeimg" src="/files/imgs/cards/LLPOM.png"><br/>La Liga POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SAPOM'])"><img class="sbctypeimg" src="/files/imgs/cards/SAPOM.png"><br/>Serie A POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['BLPOM'])"><img class="sbctypeimg" src="/files/imgs/cards/BLPOM.png"><br/>Bundesliga POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['L1POM'])"><img class="sbctypeimg" src="/files/imgs/cards/L1POM.png"><br/>Ligue 1 POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['ERPOM'])"><img class="sbctypeimg" src="/files/imgs/cards/ERPOM.png"><br/>Eredivisie POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LIB'])"><img class="sbctypeimg" src="/files/imgs/cards/LIB.png"><br/>Libertadores</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SUD'])"><img class="sbctypeimg" src="/files/imgs/cards/SUD.png"><br/>Sudamericana</div>
+        <div class="typefilteroption" onclick="filterSbcType(['CLRTFF'])"><img class="sbctypeimg" src="/files/imgs/cards/CLRTTF.png"><br/>UCL RTTF</div>
+        <div class="typefilteroption" onclick="filterSbcType(['CLTOTT'])"><img class="sbctypeimg" src="/files/imgs/cards/CLTOTT.png"><br/>UCL TOTT</div>
+        <div class="typefilteroption" onclick="filterSbcType(['ELRTTF'])"><img class="sbctypeimg" src="/files/imgs/cards/ELRTTF.png"><br/>UEL RTTF</div>
+        <div class="typefilteroption" onclick="filterSbcType(['ELTOTT'])"><img class="sbctypeimg" src="/files/imgs/cards/ELTOTT.png"><br/>UEL TOTT</div>
+        <div class="typefilteroption" onclick="filterSbcType(['GLRTTF'])"><img class="sbctypeimg" src="/files/imgs/cards/GLRTTF.png"><br/>ECL RTTF</div>
+        <div class="typefilteroption" onclick="filterSbcType(['OTW'])"><img class="sbctypeimg" src="/files/imgs/cards/OTW.png"><br/>Ones to Watch</div>
+        <div class="typefilteroption" onclick="filterSbcType(['FB'])"><img class="sbctypeimg" src="/files/imgs/cards/FB.png"><br/>Flashback</div>
+        <div class="typefilteroption" onclick="filterSbcType(['OBJ'])"><img class="sbctypeimg" src="/files/imgs/cards/OBJ.png"><br/>Objectives</div>
+        <div class="typefilteroption" onclick="filterSbcType(['PSBC'])"><img class="sbctypeimg" src="/files/imgs/cards/PSBC.png"><br/>SBC Premium</div>
+        <div class="typefilteroption" onclick="filterSbcType(['PM'])"><img class="sbctypeimg" src="/files/imgs/cards/PM.png"><br/>Player Moments</div>
+        <div class="typefilteroption" onclick="filterSbcType(['ReB'])"><img class="sbctypeimg" src="/files/imgs/cards/ReB.png"><br/>Record Breaker</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LOBJ'])"><img class="sbctypeimg" src="/files/imgs/cards/LOBJ.png"><br/>League Objectives</div>
+        <div class="typefilteroption" onclick="filterSbcType(['ReB'])"><img class="sbctypeimg" src="/files/imgs/cards/ReB.png"><br/>Rulebreakers</div>
+        <div class="typefilteroption" onclick="filterSbcType(['UP'])"><img class="sbctypeimg" src="/files/imgs/cards/UP.png"><br/>NUMBERSUP</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SQD'])"><img class="sbctypeimg" src="/files/imgs/cards/SQD.png"><br/>Squad Foundations</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SS'])"><img class="sbctypeimg" src="/files/imgs/cards/SS.png"><br/>Signature Signings</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SD'])"><img class="sbctypeimg" src="/files/imgs/cards/SD.png"><br/>Showdown</div>
+        <div class="typefilteroption" onclick="filterSbcType(['NXG'])"><img class="sbctypeimg" src="/files/imgs/cards/NXG.png"><br/>Next Generation</div>
+        <div class="typefilteroption" onclick="filterSbcType(['VSF'])"><img class="sbctypeimg" src="/files/imgs/cards/VSF.png"><br/>Versus Fire</div>
+        <div class="typefilteroption" onclick="filterSbcType(['VSI'])"><img class="sbctypeimg" src="/files/imgs/cards/VSI.png"><br/>Versus Ice</div>
+        <div class="typefilteroption" onclick="filterSbcType(['WW'])"><img class="sbctypeimg" src="/files/imgs/cards/WW.png"><br/>Winter Wildcard</div>
+        <div class="typefilteroption" onclick="filterSbcType(['HL'])"><img class="sbctypeimg" src="/files/imgs/cards/HL.png"><br/>Headliners</div>
+        <div class="typefilteroption" onclick="filterSbcType(['FS'])"><img class="sbctypeimg" src="/files/imgs/cards/FS.png"><br/>Future Stars</div>
+
+
+    </div>
+
+    <div id="ovrselectctr" class="ovrselectctr">
+        <div class="sbcovrctr">MINIMUM:<br/>
+            <input type="number" min="64" max="99" maxlength="2" class="sbcovr" id="ovrmin" placeholder="64">
+        </div>
+        <div class="sbcovrctr">MAXIMUM:<br/>
+            <input type="number" min="64" max="99" maxlength="2" class="sbcovr" id="ovrmax" placeholder="99">
+        </div>
+        <div class="sbcovrbtn" onclick="filterOvr()">FILTER</div>
+    </div>
+
+    <div id="dbctr">
+
+        <% for (i=0;i<cardsOrder.length;i++) { %>
+            <div class="dbcard sbchover" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>')">
+            <div class="dbname"><%=cardsOrder[i].cardName%></div>
+            <div class="dbfullName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
+            <div class="sbcnation"><%=cardsOrder[i].nation%></div>
+            <div class="sbcleague"><%=cardsOrder[i].lg%></div>
+            <div class="sbcclub"><%=cardsOrder[i].club%></div>
+            <div class="sbctype"><%=cardsOrder[i].type%></div>
+            <div class="dbcardbar">
+                <div class="dboverall"><%=cardsOrder[i].ovr%></div>
+                <div class="dbposition"><%=cardsOrder[i].pos%></div>
+                <div class="dbcardflagctr">
+                    <img class="cardflag" loading="lazy" src="<%=`/files/imgs/flags/${cardsOrder[i].nation}.png`%>"/>
+                </div>
+                <div class="dbcardbadgectr">
+                    <img class="cardbadge" loading="lazy" src="<%=`/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png`%>"/>
+                </div>
+            </div>
+            <img class="<%=`dbcard${cardsOrder[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsOrder[i].id}.png`%>"/>
+            </div>
+    <% } %>
+    </div>
+  </div>

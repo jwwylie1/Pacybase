@@ -1,0 +1,49 @@
+@keyframes fadefilterA {
+    from {opacity:0}
+    to {opacity: 1}
+}
+
+.fadefilter {
+    animation-name: fadefilterA;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes sbcsquadbigA {
+    from {width: 38vw;height:8vw;margin: 2vw 4vw;}
+    to {width: 40vw;height:10vw;margin: .999vw 3vw;}
+}
+
+.sbcsquadbig {
+    animation-name: sbcsquadbigA;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes sbcsquadsmallA {
+    from {width: 40vw;height:10vw;margin: .999vw 3vw;}
+    to {width: 38vw;height:8vw;margin: 2vw 4vw;}
+}
+
+.sbcsquadsmall {
+    animation-name: sbcsquadsmallA;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes swapanimA {
+    from {filter: brightness(120%)}
+    to {filter: brightness(90%)}
+}
+
+.swapanim {
+    animation-name: swapanimA;
+    animation-duration: 1s;
+    animation-fill-mode:backwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
