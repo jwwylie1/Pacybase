@@ -14,6 +14,15 @@ body {
   background-size: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(16,16,16,.8);
+  border-radius: 3px;
+}
+
 img {
   border:none;
 }
@@ -1947,8 +1956,8 @@ input[type=number] {
   width: 14vw;
   position: absolute;
   border-radius: 8px;
-  left: 30vw;
-  top: 18vw;
+  left: 38vw;
+  top: 11vw;
   z-index: 50;
   overflow-x: hidden;
   overflow-y: scroll;
