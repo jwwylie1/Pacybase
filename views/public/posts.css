@@ -1,4 +1,4 @@
-@media only screen and (min-width: 680px) and (max-width: 1399px) {
+@media only screen and (min-width: 680px) {
     .rows1 {height:26vw}
     .rows2 {height:36vw}
     .rows3 {height:46vw}
@@ -8,18 +8,6 @@
     .rows1new {height:26vw}
     .rows2new {height:36vw}
     .rows3new {height:46vw}
-  }
-
-  @media only screen and (min-width: 1400px) {
-    .rows1 {height:20vw}
-    .rows2 {height:27vw}
-    .rows3 {height:34vw}
-    .rows1hw {height:13vw}
-    .rows2hw {height:20vw}
-    .rows3hw {height:27vw}
-    .rows1new {height:20vw}
-    .rows2new {height:27vw}
-    .rows3new {height:34vw}
   }
 
   @media only screen and (max-width: 679px) {

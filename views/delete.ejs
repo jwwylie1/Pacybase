@@ -34,7 +34,7 @@
                 <%if (trades[i].has1 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has1 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has1].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has1].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has1].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has1].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has1].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has1].ovr%></div>
@@ -46,7 +46,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has1].lg}/${cardsList[trades[i].has1].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has1].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has1].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has1].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has1].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has1].id%></div>
                       </div>
                   <% } else { %>
@@ -57,7 +57,7 @@
                 <%if (trades[i].has2 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has2 < 10000 && trades[i].has2 != null) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has2].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has2].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has2].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has2].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has2].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has2].ovr%></div>
@@ -69,7 +69,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has2].lg}/${cardsList[trades[i].has2].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has2].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has2].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has2].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has2].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has2].id%></div>
                       </div>
                   <% } else { %>
@@ -80,7 +80,7 @@
                 <%if (trades[i].has3 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has3 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has3].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has3].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has3].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has3].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has3].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has3].ovr%></div>
@@ -92,7 +92,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has3].lg}/${cardsList[trades[i].has3].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has3].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has3].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has3].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has3].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has3].id%></div>
                       </div>
                   <% } else { %>
@@ -103,7 +103,7 @@
                 <%if (trades[i].has4 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has4 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has4].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has4].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has4].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has4].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has4].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has4].ovr%></div>
@@ -115,7 +115,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has4].lg}/${cardsList[trades[i].has4].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has4].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has4].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has4].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has4].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has4].id%></div>
                       </div>
                   <% } else { %>
@@ -126,7 +126,7 @@
                 <%if (trades[i].has5 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has5 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has5].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has5].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has5].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has5].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has5].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has5].ovr%></div>
@@ -138,7 +138,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has5].lg}/${cardsList[trades[i].has5].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has5].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has5].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has5].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has5].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has5].id%></div>
                       </div>
                   <% } else { %>
@@ -149,7 +149,7 @@
                 <%if (trades[i].has6 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has6 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has6].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has6].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has6].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has6].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has6].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has6].ovr%></div>
@@ -161,7 +161,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has6].lg}/${cardsList[trades[i].has6].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has6].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has6].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has6].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has6].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has6].id%></div>
                       </div>
                   <% } else { %>
@@ -172,7 +172,7 @@
                 <%if (trades[i].has7 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has7 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has7].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has7].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has7].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has7].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has7].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has7].ovr%></div>
@@ -184,7 +184,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has7].lg}/${cardsList[trades[i].has7].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has7].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has7].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has7].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has7].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has7].id%></div>
                       </div>
                   <% } else { %>
@@ -195,7 +195,7 @@
                 <%if (trades[i].has8 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has8 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has8].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has8].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has8].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has8].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has8].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has8].ovr%></div>
@@ -207,7 +207,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has8].lg}/${cardsList[trades[i].has8].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has8].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has8].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has8].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has8].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has8].id%></div>
                       </div>
                   <% } else { %>
@@ -218,7 +218,7 @@
                 <%if (trades[i].has9 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has9 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has9].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has9].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has9].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has9].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has9].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has9].ovr%></div>
@@ -230,7 +230,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has9].lg}/${cardsList[trades[i].has9].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has9].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has9].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has9].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has9].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has9].id%></div>
                       </div>
                   <% } else { %>
@@ -241,7 +241,7 @@
                 <%if (trades[i].has10 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has10 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has10].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has10].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has10].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has10].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has10].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has10].ovr%></div>
@@ -253,7 +253,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has10].lg}/${cardsList[trades[i].has10].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has10].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has10].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has10].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has10].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has10].id%></div>
                       </div>
                   <% } else { %>
@@ -264,7 +264,7 @@
                 <%if (trades[i].has11 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has11 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has11].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has11].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has11].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has11].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has11].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has11].ovr%></div>
@@ -276,7 +276,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has11].lg}/${cardsList[trades[i].has11].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has11].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has11].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has11].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has11].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has11].id%></div>
                       </div>
                   <% } else { %>
@@ -287,7 +287,7 @@
                 <%if (trades[i].has12 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].has12 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].has12].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has12].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].has12].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].has12].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].has12].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].has12].ovr%></div>
@@ -299,7 +299,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].has12].lg}/${cardsList[trades[i].has12].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has12].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has12].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].has12].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].has12].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].has12].id%></div>
                       </div>
                   <% } else { %>
@@ -313,7 +313,7 @@
                 <%if (trades[i].want1 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want1 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want1].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want1].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want1].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want1].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want1].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want1].ovr%></div>
@@ -325,7 +325,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want1].lg}/${cardsList[trades[i].want1].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want1].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want1].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want1].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want1].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want1].id%></div>
                       </div>
                   <% } else { %>
@@ -336,7 +336,7 @@
                 <%if (trades[i].want2 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want2 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want2].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want2].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want2].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want2].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want2].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want2].ovr%></div>
@@ -348,7 +348,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want2].lg}/${cardsList[trades[i].want2].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want2].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want2].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want2].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want2].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want2].id%></div>
                       </div>
                   <% } else { %>
@@ -359,7 +359,7 @@
                 <%if (trades[i].want3 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want3 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want3].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want3].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want3].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want3].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want3].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want3].ovr%></div>
@@ -371,7 +371,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want3].lg}/${cardsList[trades[i].want3].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want3].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want3].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want3].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want3].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want3].id%></div>
                       </div>
                   <% } else { %>
@@ -382,7 +382,7 @@
                 <%if (trades[i].want4 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want4 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want4].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want4].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want4].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want4].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want4].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want4].ovr%></div>
@@ -394,7 +394,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want4].lg}/${cardsList[trades[i].want4].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want4].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want4].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want4].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want4].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want4].id%></div>
                       </div>
                   <% } else { %>
@@ -405,7 +405,7 @@
                 <%if (trades[i].want5 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want5 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want5].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want5].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want5].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want5].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want5].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want5].ovr%></div>
@@ -417,7 +417,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want5].lg}/${cardsList[trades[i].want5].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want5].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want5].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want5].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want5].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want5].id%></div>
                       </div>
                   <% } else { %>
@@ -428,7 +428,7 @@
                 <%if (trades[i].want6 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want6 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want6].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want6].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want6].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want6].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want6].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want6].ovr%></div>
@@ -440,7 +440,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want6].lg}/${cardsList[trades[i].want6].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want6].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want6].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want6].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want6].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want6].id%></div>
                       </div>
                   <% } else { %>
@@ -451,7 +451,7 @@
                 <%if (trades[i].want7 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want7 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want7].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want7].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want7].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want7].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want7].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want7].ovr%></div>
@@ -463,7 +463,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want7].lg}/${cardsList[trades[i].want7].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want7].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want7].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want7].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want7].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want7].id%></div>
                       </div>
                   <% } else { %>
@@ -474,7 +474,7 @@
                 <%if (trades[i].want8 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want8 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want8].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want8].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want8].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want8].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want8].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want8].ovr%></div>
@@ -486,7 +486,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want8].lg}/${cardsList[trades[i].want8].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want8].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want8].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want8].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want8].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want8].id%></div>
                       </div>
                   <% } else { %>
@@ -497,7 +497,7 @@
                 <%if (trades[i].want9 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want9 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want9].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want9].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want9].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want9].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want9].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want9].ovr%></div>
@@ -509,7 +509,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want9].lg}/${cardsList[trades[i].want9].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want9].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want9].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want9].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want9].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want9].id%></div>
                       </div>
                   <% } else { %>
@@ -520,7 +520,7 @@
                 <%if (trades[i].want10 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want10 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want10].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want10].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want10].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want10].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want10].cardName%></div>
                         <div class="overall"><%=cardsList[trades[i].want10].ovr%></div>
                         <div class="position"><%=cardsList[trades[i].want10].pos%></div>
@@ -530,7 +530,7 @@
                         <div class="cardbadgectr">
                             <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want10].lg}/${cardsList[trades[i].want10].club}.png` %>"/>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want10].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want10].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want10].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want10].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want10].id%></div>
                       </div>
                   <% } else { %>
@@ -541,7 +541,7 @@
                 <%if (trades[i].want11 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want11 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want11].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want11].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want11].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want11].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want11].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want11].ovr%></div>
@@ -553,7 +553,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want11].lg}/${cardsList[trades[i].want11].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want11].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want11].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want11].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want11].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want11].id%></div>
                       </div>
                   <% } else { %>
@@ -564,7 +564,7 @@
                 <%if (trades[i].want12 != null) { %>
                   <div class="haswantblock displayIB">
                   <% if (trades[i].want12 < 10000) {  %>
-                      <div class="cardctr" style="color:<%=cardsList[trades[i].want12].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want12].type}.png` %>')">
+                      <div class="cardctr" style="color:<%=cardsList[trades[i].want12].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[trades[i].want12].type}.webp` %>')">
                         <div class="name"><%=cardsList[trades[i].want12].cardName%></div>
                         <div class="cardbar">
                           <div class="overall"><%=cardsList[trades[i].want12].ovr%></div>
@@ -576,7 +576,7 @@
                               <img loading="lazy" class="cardbadge" src="<%= `/files/imgs/clubs/${cardsList[trades[i].want12].lg}/${cardsList[trades[i].want12].club}.png` %>"/>
                           </div>
                         </div>
-                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want12].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want12].id}.png` %>"/>
+                        <img loading="lazy" class="<%=`card${cardsList[trades[i].want12].img}`%>" src="<%= `/files/imgs/faces/${cardsList[trades[i].want12].id}.webp` %>"/>
                         <div class="hiddenid"><%=cardsList[trades[i].want12].id%></div>
                       </div>
                   <% } else { %>

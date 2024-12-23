@@ -2,9 +2,9 @@ var express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const Post = require('./models/trades');
-const Report = require('./models/filters')
-const Sbc = require('./models/sbc')
-const Wordle = require('./models/wordle')
+const Report = require('./models/filters');
+const Sbc = require('./models/sbc');
+const Wordle = require('./models/wordle');
 
 const app = express();
 
@@ -13,7 +13,7 @@ var filter = [];
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8081;
 
 //connect to mongoDB
 const dbURI = "mongodb+srv://madfut-user:Madfut4portfoli0@cluster0.6sf6s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -27,6 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const cardsList = require('./views/public/cards');
 const cardsOrder = require('./views/public/ordercards');
+const nations = require('./views/public/nations');
+const clubs = require('./views/public/clubs');
 
 
 cardsOrder.sort(function (a, b) {
@@ -149,7 +151,7 @@ app.get('/delete', (req, res) => {
 })
 
 app.get('/database', (req, res) => {
-	res.render('database', {cardsList, cardsOrder})
+	res.render('database', {cardsList, cardsOrder, nations, clubs})
 })
 
 app.get('/updates', (req, res) => {
