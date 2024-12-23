@@ -1,8 +1,8 @@
 
 @font-face {
-	font-family: "DIN Pro Cond Medium";
+	font-family: "Cruyff Sans Cond Medium";
 	src: url("../files@font-face/f95b71a1cea90a338e422527918d6383.eot");
-	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#DIN Pro Cond Medium") format("svg");
+	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#Cruyff Sans Cond Medium") format("svg");
 }
 body {
 	color:#040402;
@@ -408,7 +408,7 @@ body {
   margin: 2vw 0;
   border: 0;
   background-color: inherit;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 6vw;
@@ -549,7 +549,7 @@ body {
   float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   z-index: 30;
 }
 
@@ -558,7 +558,7 @@ body {
   height: 2vw;
   border-radius: 50%;
   background-color: #0f0f13;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   text-align: center;
   padding-top: 1vw;
   position: absolute;
@@ -607,7 +607,7 @@ body {
 .filterlabel {
   width: 100%;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 1vw;
   color: #fdfdfa;
   font-style: italic;
@@ -617,7 +617,7 @@ body {
 #poscircle {
   color: #4c505d;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 3.5vw;
   line-height: 5vw;
   font-weight: 900;
@@ -626,7 +626,7 @@ body {
 .poslabel {
   font-size: .7vw;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   margin-top: -2vw;
   margin-bottom: 1vw;
   color: #4c505d;
@@ -647,7 +647,7 @@ body {
 #ovrcircle {
   color: #4c505d;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 2.2vw;
   line-height: 5vw;
   font-weight: 900;
@@ -659,7 +659,7 @@ body {
   width: 4vw;
   border-radius: 50%;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   box-shadow: 0 0 2px #4ef7f2;
   position: absolute;
   font-size: 1.8vw;
@@ -713,7 +713,7 @@ body {
 .sbcovr {
   background-color: inherit;
   border: 0;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 3vw;
@@ -777,7 +777,7 @@ body {
 .clubfilteroption {
   width: 100%;
   color: #fdfdfa;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 1vw;
   height: 2vw;
   line-height: 2vw;
