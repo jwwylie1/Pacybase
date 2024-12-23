@@ -66,17 +66,17 @@ input[type=number] {
 	/*28:33 ratio*/
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 100%;
+	width: 90%;
   height: 23.57vw;
   font-family: 'Cruyff Sans Cond Medium';
   display: inline-block;
-  margin: -1.7vw 0 0 .5vw;
+  margin: -1.3vw 0 0 5%;
 }
 
 .name {
 	font-size: 2vw;
 	position: relative;
-	top: 17.7vw;
+	top: 16.7vw;
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
@@ -146,7 +146,7 @@ input[type=number] {
 .cardstd {
 	height: 50%;
   float: left;
-  margin: -11.1vw 0 0 5.66vw;
+  margin: -12.1vw 0 0 5.66vw;
 	z-index: 1;
 }
 
@@ -759,7 +759,7 @@ input[type=number] {
 .filtercardstd { /*fix1*/
 	height: 55%;
   float: left;
-  margin: -12.75vw 0 0 5.66vw;
+  margin: -13.2vw 0 0 5.66vw;
 	z-index: 1;
 }
 
