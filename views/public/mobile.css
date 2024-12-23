@@ -756,7 +756,7 @@ input[type=number] {
   bottom: .3vw;
 }
 
-.filtercardstd {
+.filtercardstd { /*fix1*/
 	height: 50%;
   float: left;
   margin: -12.05vw 0 0 5.66vw;
