@@ -167,7 +167,7 @@ function chooseItem(type) {
 }
 
 function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
-  if (type =="TOTY"|| type=="PSBC" || id==1734 || id==1506 || id==1503 || id==1497 || id==1500 || id==1408 || id==1296 || id==1297) {
+  if (false/*type =="TOTY"|| type=="PSBC" || id==1734 || id==1506 || id==1503 || id==1497 || id==1500 || id==1408 || id==1296 || id==1297*/) {
     alert("That card is untradable.")
   } else {
     document.getElementById(offerBox).children[0].style.display = "none"; 
@@ -176,7 +176,7 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
     cardLocal = document.getElementById(offerBox).children[1];
     if (name != 'COINS' && name != 'PACK1' && name != 'PACK2') {
       document.getElementById(offerBox).style.color = color;
-      cardLocal.style.backgroundImage = "url('/files/imgs/cards/" + type + ".png')";
+      cardLocal.style.backgroundImage = "url('/files/imgs/cards/" + type + ".webp')";
       cardLocal.children[0].classList.remove('coinsNameT')
       cardLocal.children[0].classList.add('name')
       cardLocal.children[0].innerText = name;
@@ -186,7 +186,7 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
       cardLocal.children[1].children[3].children[0].src = "/files/imgs/clubs/" + + lg + '/' + club + ".png";
       cardLocal.children[2].removeAttribute('class');
       cardLocal.children[2].classList.add('card' + img);
-      cardLocal.children[2].src = "/files/imgs/faces/" + id + ".png";
+      cardLocal.children[2].src = "/files/imgs/faces/" + id + ".webp";
 
       document.getElementById('searchBar').style.display = "none";
       document.getElementById('searchTable').style.display = "none";

@@ -93,7 +93,7 @@ input[type=number] {
 
 .overall {
 	position: relative;
-	font-size: 20.95vw;
+	font-size: 3.1vw;
 	width: 100%;
 	text-align: center;
 	padding: 0;
@@ -151,10 +151,10 @@ input[type=number] {
 }
 
 .carddyn {
-	width: 70%;
+	width: 88%;
 	position: relative;
-	left: 17%;
-	bottom: 12.5vw;
+	left: 12%;
+	bottom:16.44vw;
 	z-index: 1;
 }
 
@@ -885,7 +885,8 @@ input[type=number] {
 }
 
 .headerlogo {
-  height: 15vw;
+  height: 10vw;
+  margin: 2.5vw;
   float: left;
 }
 
@@ -986,7 +987,7 @@ input[type=number] {
 }
 
 #dbctr {
-  margin-left: 7vw;
+  margin: 0 0 2vw 7vw;
 }
 
 #dbsearchbar {
@@ -1019,14 +1020,13 @@ input[type=number] {
 }
 
 .dbname {
-	font-size: 1.8vw;
+	font-size: 2.2vw;
 	position: relative;
-	top: 16.96vw;
+	top: 17.58vw;
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
   z-index: 5;
-  letter-spacing: 0px;
 }
 
 .dbcardbar {
@@ -1082,17 +1082,17 @@ input[type=number] {
 }
 
 .dbcardstd {
-	height: 50%;
+	height: 55%;
   float: left;
-  margin: -12.05vw 0 0 5.66vw;
+  margin: -12.89vw 0 0 5.33vw;
 	z-index: 1;
 }
 
 .dbcarddyn {
-	width: 70%;
+	width: 88%;
 	position: relative;
-	left: 17%;
-	bottom:12.3vw;
+	left: 12%;
+	bottom:16.44vw;
 	z-index: 1;
 }
 
@@ -1318,11 +1318,11 @@ input[type=number] {
 }
 
 .latestcards {
-  width: 66vw;
-  margin: 3vw 0 5vw 15vw;
-  padding: 2vw 2vw 0 3vw;
-  /*32,60,87,115,142,170,198,226,253,281,292,320,340,360,394*/
-  height: 292vw;
+  width: 67vw;
+  margin: 3vw 0 5vw 14vw;
+  padding: 2vw 2vw 0 5vw;
+  /*22,60,87,115,142,170,198,226,253,281,292,320,340,360,394*/
+  height: 422vw;
   backdrop-filter: blur(6px);
   background-color: #00000016;
   border-radius: 12px;
@@ -1346,5 +1346,462 @@ input[type=number] {
   background-repeat: no-repeat;
 	background-size: 100%;
   font-family: 'Cruyff Sans Cond Medium';
-  margin: 2vw 2vw 0 0;
+  margin: 2.2vw 2.2vw 0 0;
+  z-index: 30;
 }
+
+.sbcpos {
+  width: 4vw;
+  height: 2vw;
+  border-radius: 50%;
+  background-color: #0f0f13;
+  font-family: 'Cruyff Sans Cond Medium';
+  text-align: center;
+  padding-top: 1vw;
+  position: absolute;
+  z-index: 5;
+  font-size: 1.1vw;
+  font-weight: 900;
+}
+
+.sbclink {
+  height: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+.link0 {
+  background-color: red;
+  box-shadow: 0 0 8px red;
+}
+
+.link1 {
+  background-color: yellow;
+  box-shadow: 0 0 8px orange;
+}
+
+.link2 {
+  background-color: lime;
+  box-shadow: 0 0 4px lime;
+}
+
+.link3 {
+  background-color: lime;
+  box-shadow: 0 0 24px lime;
+}
+
+.chem0 {
+  color: red;
+  text-shadow: 0 0 4px red;
+}
+
+.chem1 {
+  color: yellow;
+  text-shadow: 0 0 2px yellow;
+}
+
+.chem2 {
+  color: yellow;
+  text-shadow: 0 0 2px yellow;
+}
+
+.chem3 {
+  color: lime;
+  text-shadow: 0 0 2px lime;
+}
+
+#sbccards {
+  width: 100vw;
+  overflow-y: scroll;
+  position: absolute;
+  top: 8;
+  left: 0;
+}
+
+#sbcsearchbar {
+  width: 57vw;
+  margin: 5vw 0 6vw 20vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 8vw;
+  background-color: #202127;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  padding-left: 3vw;
+  font-size: 3vw;
+}
+
+.filterbar {
+  margin-left: 5vw;
+  margin-bottom: 16vw;
+}
+
+.filterelement {
+  width: 15vw;
+  height: 10vw;
+  float: left;
+}
+
+.filtercircle {
+  height: 9vw;
+  width: 9vw;
+  border-radius: 50%;
+  background-color: #24262d;
+  margin-left: 3vw;
+  box-shadow: 0 0 4px #4EF7F2;
+  text-align: center;
+}
+
+.filterlabel {
+  width: 100%;
+  text-align: center;
+  font-family: 'Cruyff Sans Cond Medium';
+  font-size: 2.5vw;
+  color: #fdfdfa;
+  font-style: italic;
+  margin-top: 1.5vw;
+}
+
+#poscircle {
+  color: #4c505d;
+  text-align: center;
+  font-family: 'Cruyff Sans Cond Medium';
+  font-size: 7vw;
+  line-height: 9vw;
+  font-weight: 900;
+}
+
+.poslabel {
+  font-size: .7vw;
+  text-align: center;
+  font-family: 'Cruyff Sans Cond Medium';
+  margin-top: -2vw;
+  margin-bottom: 1vw;
+  color: #4c505d;
+  line-height: .8vw;
+  font-weight: 700;
+}
+
+#clubfilterctr {
+  opacity: .4;
+}
+
+.filtercircle:hover, .filtercircle:active {
+  cursor: pointer;
+  box-shadow: 0 0 8px #4ef7f2;
+}
+
+.nohover:hover {
+  cursor: not-allowed;
+  box-shadow: 0 0 4px #4ef7f2;
+}
+
+#ovrcircle {
+  color: #4c505d;
+  text-align: center;
+  font-family: 'Cruyff Sans Cond Medium';
+  font-size: 3.4vw;
+  line-height: 9vw;
+  font-weight: 900;
+}
+
+#posselectctr {
+  width: 98vw;
+  position: absolute;
+  z-index: 50;
+  height: 200vw;
+  display: none;
+  top: 20vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom: 12px solid #4EF7F2e1;
+  background-color: #000000b2;
+}
+
+.sbcnation, .sbcleague, .sbcclub, .sbctype {display:none}
+
+.posfilteroption {
+  height: 10vw;
+  line-height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Cruyff Sans Cond Medium';
+  box-shadow: 0 0 2px #4ef7f2;
+  position: absolute;
+  font-size: 4vw;
+}
+
+.posfilteroption:hover {
+  cursor: pointer;
+  background-color: #2b2e36;
+}
+
+.posfilterconfirm {
+  width: 50vw;
+  line-height: 8vw;
+  height: 8vw;
+  color: black;
+  margin: 100vw 0 0 26vw;
+  border-radius: 24px;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 4vw;
+}
+
+.easybg {background: linear-gradient(90deg, rgba(185,250,12,1) 0%, rgba(21,171,61,1) 100%)}
+
+.posfilterconfirm:hover {cursor: pointer;}
+
+#SToption {top:6vw;left:47.5vw}
+#LWoption {top:9vw;left:22.5vw}
+#RWoption {top:9vw;left:72.5vw}
+#CFoption {top:20vw;left:47.5vw}
+#LFoption {top:20vw;left:27.5vw}
+#RFoption {top:20vw;left:67.5vw}
+#CAMoption {top:34vw;left:47.5vw}
+#LMoption {top:41vw;left:22.5vw}
+#RMoption {top:41vw;left:72.5vw}
+#CMoption {top:48vw;left:47.5vw}
+#LWBoption {top:62vw;left:20vw}
+#RWBoption {top:62vw;left:75vw}
+#CDMoption {top:62vw;left:47.5vw}
+#LBoption {top:76vw;left:22.5vw}
+#RBoption {top:76vw;left:72.5vw}
+#CBoption {top:76vw;left:47.5vw}
+#GKoption {top:90vw;left:47.5vw}
+
+#posselectctr, #nationselectctr, #lgselectctr, #typeselectctr {
+  width: 100vw;
+  background-color: #000000d3;
+  position: absolute;
+  z-index: 50;
+  display: none;
+  top: 0vw;
+  padding-top: 6vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom: 12px solid #4EF7F2e1;
+}
+
+#nationselectctr {padding-left:2vw}
+#lgselectctr {padding-left:2vw}
+#lgselectctr {padding-left:3vw}
+
+#nationsbcsearchbar {
+  margin-bottom: 5vw;
+  margin-left: 18vw;
+}
+#lgsbcsearchbar {margin-left:18vw}
+#typesbcsearchbar {margin-left:20vw}
+
+.clubselectctr {
+  height: 56vw;
+  background-color: #18191f;
+  width: 50vw;
+  position: absolute;
+  border-radius: 8px;
+  left: 2vw;
+  top: 11vw;
+  z-index: 50;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 1.5vw;
+  display: none;
+}
+
+#ovrselectctr {
+  height: 32vw;
+  background-color: #18191f;
+  width: 64vw;
+  padding-left: 16vw;
+  position: absolute;
+  border-radius: 8px;
+  left: 20vw;
+  top: 29vw;
+  z-index: 50;
+  overflow: hidden;
+  font-size: 3vw;
+  display: none;
+}
+
+.sbcovrctr {
+  height: 12vw;
+  margin-top: 4vw;
+  width: 12vw;
+  font-family: Dosis;
+  font-style: italic;
+  font-size: 3vw;
+  float: left;
+  margin-right: 20vw;
+}
+
+.sbcovr {
+  background-color: inherit;
+  border: 0;
+  font-family: 'Cruyff Sans Cond Medium';
+  border-bottom: 3px solid #4ef7f18e;
+  color: #fdfdfa;
+  font-size: 6vw;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2vw;
+}
+
+.sbcovrbtn {
+  display: inline-block;
+  height: 8vw;
+  width: 20vw;
+  text-align: center;
+  font-family: Dosis;
+  font-size: 2.6vw;
+  color: #fdfdfa;
+  line-height: 8vw;
+  border-radius: 50px;
+  margin: 3vw 0 0 12.6vw;
+  background: linear-gradient(100deg, rgba(0,45,126,1) 0%, rgba(0,212,255,1) 71%, rgba(69,236,255,1) 100%);
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+  border: 0;
+}
+
+#clubsbcsearchbar {
+  width: 90%;
+  margin: 0 0 .5vw 5%;
+  height: 10vw;
+  border: 0;
+  border-bottom: .1vw solid #5f5c71;
+  border-radius: 8px 8px 0 0;
+  background-color: inherit;
+  font-family: Lato;
+  color: #fdfdfa;
+}
+
+.nationfilteroption {
+  width: 14vw;
+  margin-right: 2.66vw;
+  float: left;
+  text-align: center;
+  color: #fdfdfa;
+  font-family: Dosis;
+  font-style: italic;
+  font-size: 2.2vw;
+  height: 12vw;
+}
+
+.lgfilteroption {
+  width: 14vw;
+  margin-right: 2.66vw;
+  float: left;
+  text-align: center;
+  color: #fdfdfa;
+  font-family: Dosis;
+  font-style: italic;
+  font-size: 2.5vw;
+  height: 20vw;
+}
+
+.clubfilteroption {
+  width: 100%;
+  color: #fdfdfa;
+  font-family: 'Cruyff Sans Cond Medium';
+  font-size: 3vw;
+  height: 8vw;
+  line-height: 8vw;
+}
+
+.typefilteroption {
+  width: 14vw;
+  margin-right: 2.66vw;
+  float: left;
+  text-align: center;
+  color: #fdfdfa;
+  font-family: Dosis;
+  font-style: italic;
+  font-size: 2.5vw;
+  height: 20vw;
+}
+
+.typefilteroption:hover, .typefilteroption:active {
+  cursor: pointer;
+  background-color: #ffffff11;
+}
+
+.clubselectleague {
+  display: none;
+}
+
+.clubfilteroption:hover, .clubfilteroption:active {
+  cursor: pointer;
+  background-color: #1e1f27;
+}
+
+.nationfilteroption:hover, .nationfilteroption:active, .lgfilteroption:hover, .lgfilteroption:active {
+  color: #4ef7f2;
+  cursor: pointer;
+}
+
+.sbcflag {
+  height: 6vw;
+  box-shadow: 0 0 6px #ffffff88;
+}
+
+.sbclg {
+  height: 9vw;
+}
+
+.lgsml {
+  font-size: 2vw;
+  color: #9cf7f4;
+}
+
+.sbcclubopt {
+  float: left; 
+  height: 6vw;
+  margin: 1vw 3% 0 3%;
+}
+
+.sbctypeimg {
+  height: 12vw;
+}
+
+#circleflag {
+  height: 3.8vw;
+  margin-top: 2.6vw;
+}
+
+#circlelg, #circleclub {
+  height: 5vw;
+  margin-top: 2vw;
+}
+
+#circletype {
+  height: 7vw;
+  margin-top: 1vw;
+}
+
+.sbcsearchbar {
+  width: 57vw;
+  margin: 5vw 0 6vw 20vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 12px;
+  height: 8vw;
+  padding-left: 3vw;
+  background-color: #202127;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  font-size: 3vw;
+}
+
+/*width: 75vw;
+  margin: 5vw 0 2vw 10vw;
+  box-shadow: 0 0 8px #000;
+  border-radius: 50px;
+  height: 10vw;
+  background-color: #202127;
+  border: 0;
+  font-family: Dosis;
+  color: #fdfdfa;
+  padding-left: 5vw;
+  font-size: 4vw;*/

@@ -1785,7 +1785,7 @@ input[type=number] {
 }
 
 #sbcsearchbar {
-  width: 40vw;
+  width: 39vw;
   margin: 5vw 0 2vw 30vw;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
@@ -1866,7 +1866,7 @@ input[type=number] {
   color: #4c505d;
   text-align: center;
   font-family: 'Cruyff Sans Cond Medium';
-  font-size: 2.2vw;
+  font-size: 1.5vw;
   line-height: 5vw;
   font-weight: 900;
 }
@@ -1895,7 +1895,7 @@ input[type=number] {
   font-family: 'Cruyff Sans Cond Medium';
   box-shadow: 0 0 2px #4ef7f2;
   position: absolute;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 
 .posfilteroption:hover {
@@ -1947,6 +1947,14 @@ input[type=number] {
   overflow-x: hidden;
   border-bottom: 12px solid #4EF7F2e1;
 }
+
+#nationselectctr {padding-left:3vw}
+#lgselectctr {padding-left:5vw}
+#typeselectctr {padding-left:5vw}
+
+#nationsbcsearchbar {margin-left:27vw}
+#lgsbcsearchbar {margin-left:25vw}
+#typesbcsearchbar {margin-left:25vw}
 
 .clubselectctr {
   height: 21.3vw;
@@ -2133,7 +2141,7 @@ input[type=number] {
 }
 
 .sbcsearchbar {
-  width: 40vw;
+  width: 39vw;
   margin: -7vw 0 4vw 30vw;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
