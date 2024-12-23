@@ -100,6 +100,7 @@ input[type=number] {
   height: 2.36vw;
   line-height: 2.36vw;
   z-index: 5;
+  margin-top: -1vw
 }
 
 .position {
@@ -111,6 +112,7 @@ input[type=number] {
 	text-align: center;
 	padding: 0;
   z-index: 5;
+  margin-top: 0.2vw;
 }
 
 .cardflagctr {
@@ -146,7 +148,7 @@ input[type=number] {
 .cardstd {
 	height: 50%;
   float: left;
-  margin: -12.1vw 0 0 5.66vw;
+  margin: -13vw 0 0 5.66vw;
 	z-index: 1;
 }
 
