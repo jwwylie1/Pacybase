@@ -121,6 +121,10 @@ app.get('/deleteSuccess', (req, res) => {
 	res.render('deleteSuccess')
 })
 
+app.get('/about', (req, res) => {
+	res.render('about')
+})
+
 app.post('/delete', (req, res) =>  {
 	const dels = req.body;
 	Post.findById(dels.objectid)

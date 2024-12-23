@@ -636,8 +636,9 @@ input[type=number] {
   margin: 5vw 0 0 5vw;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
-  height: 90vw;
+  height: 94vw;
   background-color: #202127;
+  padding-top: .1vw;
 }
 
 .tradesSearchBar {
@@ -1796,14 +1797,6 @@ input[type=number] {
   font-size: 3vw;
 }
 
-/*width: 75vw;
-  margin: 5vw 0 2vw 10vw;
-  box-shadow: 0 0 8px #000;
-  border-radius: 50px;
-  height: 10vw;
-  background-color: #202127;
-  border: 0;
-  font-family: Dosis;
-  color: #fdfdfa;
-  padding-left: 5vw;
-  font-size: 4vw;*/
+.descriptionctr a {
+  color: #4EF6F1;
+}

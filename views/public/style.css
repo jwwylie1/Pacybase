@@ -2356,3 +2356,7 @@ input[type=number] {
   cursor: pointer;
   filter: brightness(120%);
 }
+
+.descriptionctr a {
+  color: #4EF6F1;
+}
