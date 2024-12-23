@@ -1,15 +1,13 @@
-
 @font-face {
-	font-family: "DIN Pro Cond Medium";
-	src: url("../files@font-face/f95b71a1cea90a338e422527918d6383.eot");
-	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#DIN Pro Cond Medium") format("svg");
+  font-family: "Cruyff Sans Cond Medium";
+  src: url("../files/CruyffSans-Medium.ttf");
 }
 body {
 	color:#fdfdfa;
   background-color: #24262d;
   margin: 0;
   overflow-x: hidden;
-  background-image: url('../files/imgs/bg3.png');
+  background-image: url('../files/imgs/bg.png');
   background-repeat: repeat-y;
   background-size: 100%;
 }
@@ -86,18 +84,18 @@ input[type=number] {
 	background-size: 100%;
 	width: 84.84%;
 	height: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   display: inline-block;
   margin: 0 0 0 7.57%;
 }
 
 .name {
-	font-size: .8vw;
+  font-size: .9vw;
 	position: relative;
-	top: 7.2vw;
+	top: 7.55vw;
 	width: 100%;
 	text-align: center;
-	font-weight: 600;
+	font-weight: 500;
   z-index: 5;
 }
 
@@ -161,17 +159,17 @@ input[type=number] {
 }
 
 .cardstd {
-	height: 45%;
+  height: 50%;
   float: left;
-  margin: -4.48vw 0 0 2.8vw;
+  margin: -4.85vw 0 0 2.4vw;
 	z-index: 1;
 }
 
 .carddyn {
-	width: 70%;
+  width: 88%;
 	position: relative;
-	left: 17%;
-	bottom: 5.3vw;
+	left: 12%;
+	bottom: 7.4vw;
 	z-index: 1;
 }
 
@@ -184,13 +182,13 @@ input[type=number] {
 }
 
 .coinsName {
-	font-size: 1.75vw;
+	font-size: 1.45vw;
 	position: relative;
-	top: 3.5vw;
+	top: 4vw;
 	width: 100%;
 	text-align: center;
 	font-weight: 600;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #ffff9e;
   text-shadow: 0 0 3px yellow;
 }
@@ -202,7 +200,7 @@ input[type=number] {
 	width: 100%;
 	text-align: center;
 	font-weight: 600;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #ffff9e;
   text-shadow: 0 0 3px yellow;
 }
@@ -213,7 +211,7 @@ input[type=number] {
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #fdfdfa;
 }
 
@@ -354,7 +352,7 @@ input[type=number] {
 }
 
 .displayName {
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   letter-spacing: .05vw;
   font-weight: 500;
   color: #fdfdfa;
@@ -373,7 +371,7 @@ input[type=number] {
   margin: 0;
   height: 3vw;
   line-height: 3vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-weight: 600;
   font-size: 1.3vw;
   width: 2.4vw;
@@ -640,7 +638,8 @@ input[type=number] {
 
 .postBox {
   width: 90vw;
-  margin: 5vw 0 0 5vw;
+  max-width: 1100px;
+  margin: 4vw auto;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
   height: 26vw;
@@ -728,7 +727,7 @@ input[type=number] {
   float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
 }
 
 .filtername {
@@ -904,9 +903,9 @@ input[type=number] {
 }
 
 .headerlogo {
-  height: 100%;
+  height: 5.8vw;
   float: left;
-  margin-left:1vw;
+  margin:1.1vw 3vw 0 3vw;
 }
 
 .linkBar {
@@ -1026,11 +1025,10 @@ input[type=number] {
 .dbcard {
 	/*28:33 ratio*/
 	width: 9vw;
-  height: 10.61vw;
-  float: left;
+  height: 10.61vw;  float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: "Cruyff Sans Cond Medium";
   margin: 1vw 1vw 0 0;
   z-index: 30;
 }
@@ -1040,12 +1038,12 @@ input[type=number] {
 }
 
 .dbname {
-	font-size: .85vw;
+	font-size: .9vw;
 	position: relative;
-	top: 7.64vw;
+	top: 8vw;
 	width: 100%;
 	text-align: center;
-	font-weight: 600;
+	font-weight: 500;
   z-index: 5;
 }
 
@@ -1057,7 +1055,7 @@ input[type=number] {
 
 .dboverall {
 	position: relative;
-	font-size: 1.32vw;
+	font-size: 1.38vw;
 	width: 100%;
 	text-align: center;
 	padding: 0;
@@ -1100,17 +1098,17 @@ input[type=number] {
 }
 
 .dbcardstd {
-	height: 45%;
+	height: 55%;
   float: left;
-  margin: -4.70vw 0 0 2.98vw;
+  margin: -5.8vw 0 0 2.4vw;
 	z-index: 1;
 }
 
 .dbcarddyn {
-	width: 70%;
+	width: 88%;
 	position: relative;
-	left: 17%;
-	bottom: 5.54vw;
+	left: 12%;
+	bottom: 7.4vw;
 	z-index: 1;
 }
 
@@ -1325,7 +1323,7 @@ input[type=number] {
   margin: 2vw 0;
   border: 0;
   background-color: inherit;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 6vw;
@@ -1359,7 +1357,7 @@ input[type=number] {
   margin: 3vw 0 5vw 19vw;
   padding: 1vw 1vw 1vw 1.5vw;
   /*15,27,38,50,61.5,73,85,96*/
-  height: 73vw;
+  height: 96vw;
   backdrop-filter: blur(6px);
   background-color: #00000016;
   border-radius: 12px;
@@ -1567,7 +1565,7 @@ input[type=number] {
 
 #ratingnum {
   display: inline-block;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   width: 2vw;
 }
 
@@ -1593,7 +1591,7 @@ input[type=number] {
 
 #chemnum {
   display: inline-block;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   width: 2vw;
   margin-left: 1.6vw;
 }
@@ -1628,7 +1626,7 @@ input[type=number] {
   float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   z-index: 30;
 }
 
@@ -1722,7 +1720,7 @@ input[type=number] {
   height: 2vw;
   border-radius: 50%;
   background-color: #0f0f13;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   text-align: center;
   padding-top: 1vw;
   position: absolute;
@@ -1787,7 +1785,7 @@ input[type=number] {
 }
 
 #sbcsearchbar {
-  width: 40vw;
+  width: 39vw;
   margin: 5vw 0 2vw 30vw;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
@@ -1823,7 +1821,7 @@ input[type=number] {
 .filterlabel {
   width: 100%;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 1vw;
   color: #fdfdfa;
   font-style: italic;
@@ -1833,7 +1831,7 @@ input[type=number] {
 #poscircle {
   color: #4c505d;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 3.5vw;
   line-height: 5vw;
   font-weight: 900;
@@ -1842,7 +1840,7 @@ input[type=number] {
 .poslabel {
   font-size: .7vw;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   margin-top: -2vw;
   margin-bottom: 1vw;
   color: #4c505d;
@@ -1867,8 +1865,8 @@ input[type=number] {
 #ovrcircle {
   color: #4c505d;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
-  font-size: 2.2vw;
+  font-family: 'Cruyff Sans Cond Medium';
+  font-size: 1.5vw;
   line-height: 5vw;
   font-weight: 900;
 }
@@ -1894,10 +1892,10 @@ input[type=number] {
   width: 4vw;
   border-radius: 50%;
   text-align: center;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   box-shadow: 0 0 2px #4ef7f2;
   position: absolute;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 
 .posfilteroption:hover {
@@ -1950,6 +1948,14 @@ input[type=number] {
   border-bottom: 12px solid #4EF7F2e1;
 }
 
+#nationselectctr {padding-left:3vw}
+#lgselectctr {padding-left:5vw}
+#typeselectctr {padding-left:5vw}
+
+#nationsbcsearchbar {margin-left:27vw}
+#lgsbcsearchbar {margin-left:25vw}
+#typesbcsearchbar {margin-left:25vw}
+
 .clubselectctr {
   height: 21.3vw;
   background-color: #18191f;
@@ -1994,7 +2000,7 @@ input[type=number] {
 .sbcovr {
   background-color: inherit;
   border: 0;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 3vw;
@@ -2058,7 +2064,7 @@ input[type=number] {
 .clubfilteroption {
   width: 100%;
   color: #fdfdfa;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-size: 1vw;
   height: 2vw;
   line-height: 2vw;
@@ -2135,7 +2141,7 @@ input[type=number] {
 }
 
 .sbcsearchbar {
-  width: 40vw;
+  width: 39vw;
   margin: -7vw 0 4vw 30vw;
   box-shadow: 0 0 8px #000;
   border-radius: 12px;
@@ -2190,7 +2196,7 @@ input[type=number] {
   margin-bottom: 1.2vw;
   border: 0;
   background-color: inherit;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 2vw;
@@ -2217,7 +2223,7 @@ input[type=number] {
   height: 5vw;
   line-height: 5vw;
   font-size: 1.6vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   float: left;
   width: 17vw;
   overflow: hidden;
@@ -2234,7 +2240,7 @@ input[type=number] {
   height: 2vw;
   line-height: 2vw;
   font-size: 1.5vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
 }
 
 .squadcards {
@@ -2245,7 +2251,7 @@ input[type=number] {
 
 .squadcardstext {
   font-size: 1.8vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   float: left;
   width: 5vw;
   float:left;
@@ -2258,7 +2264,7 @@ input[type=number] {
 	background-size: 100%;
 	height: 5vw;
   width: 4.24vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   float:left;
 }
 
@@ -2293,7 +2299,7 @@ input[type=number] {
   height: 3.5vw;
   line-height: 3.5vw;
   font-size: 3vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
 }
 
 #sbcdeletecardbtn {

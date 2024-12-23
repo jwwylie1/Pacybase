@@ -16,13 +16,253 @@
 
   </form>-->
 
+  <div id="sbccards">
+    <input type="text" id="sbcsearchbar" onkeyup="sbcSearchFilter()" placeholder="Search for names.." autocomplete="off">
 
-  <%- include ('public/partials/sbcfilters.ejs') %>
+    <div class="filterbar">
+        <div class="filterelement" id="posfilterctr">
+            <div class="filtercircle" id="poscircle" onclick="showPosFilter()"></div>
+            <!--<div class="poslabel" onclick="showPosFilter()"><i>POSITIONS<br/>SELECTED</i></div>-->
+            <div class="filterlabel">POSITION</div>
+        </div>
+        <div class="filterelement" id="nationfilterctr" onclick="showNationFilter()">
+            <div class="filtercircle" id="nationcircle"><img id="circleflag" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">NATION</div>
+        </div>
+        <div class="filterelement" id="lgfilterctr" onclick="showLeagueFilter()">
+            <div class="filtercircle" id="lgcircle"><img id="circlelg" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">LEAGUE</div>
+        </div>
+        <div class="filterelement" id="clubfilterctr" onclick="showClubFilter()">
+            <div class="filtercircle nohover" id="clubcircle"><img id="circleclub" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">CLUB</div>
+        </div>
+        <div class="filterelement" id="typefilterctr" onclick="showTypeFilter()">
+            <div class="filtercircle" id="typecircle"><img id="circletype" src="/files/imgs/blank.png"></div>
+            <div class="filterlabel">CARD TYPE</div>
+        </div>
+        <div class="filterelement" id="ovrfilterctr" onclick="showOvrFilter()">
+            <div class="filtercircle" id="ovrcircle"></div>
+            <div class="filterlabel">RATING</div>
+        </div>
+    </div>
+
+    <div id="posselectctr">
+        <div id="GKoption" class="posfilteroption" onclick="addPos('GK')">GK</div>
+        <div id="CBoption" class="posfilteroption" onclick="addPos('CB')">CB</div>
+        <div id="LBoption" class="posfilteroption" onclick="addPos('LB')">LB</div>
+        <div id="LWBoption" class="posfilteroption" onclick="addPos('LWB')">LWB</div>
+        <div id="RBoption" class="posfilteroption" onclick="addPos('RB')">RB</div>
+        <div id="RWBoption" class="posfilteroption" onclick="addPos('RWB')">RWB</div>
+        <div id="CDMoption" class="posfilteroption" onclick="addPos('CDM')">CDM</div>
+        <div id="CMoption" class="posfilteroption" onclick="addPos('CM')">CM</div>
+        <div id="CAMoption" class="posfilteroption" onclick="addPos('CAM')">CAM</div>
+        <div id="CFoption" class="posfilteroption" onclick="addPos('CF')">CF</div>
+        <div id="SToption" class="posfilteroption" onclick="addPos('ST')">ST</div>
+        <div id="LMoption" class="posfilteroption" onclick="addPos('LM')">LM</div>
+        <div id="LWoption" class="posfilteroption" onclick="addPos('LW')">LW</div>
+        <div id="LFoption" class="posfilteroption" onclick="addPos('LF')">LF</div>
+        <div id="RMoption" class="posfilteroption" onclick="addPos('RM')">RM</div>
+        <div id="RWoption" class="posfilteroption" onclick="addPos('RW')">RW</div>
+        <div id="RFoption" class="posfilteroption" onclick="addPos('RF')">RF</div>
+        <div class="posfilterconfirm easybg" onclick="sbcfilterpos()">CONFIRM</div>
+    </div>
+
+<!--NATIONS-->
+
+    <div id="nationselectctr">
+
+        <input type="text" id="nationsbcsearchbar" class="sbcsearchbar" onkeyup="nationSearchFilter()" placeholder="Search for a nation.." autocomplete="off">
+        <br/>
+        <% for (i=0;i<nations.length;i++) { %>
+          <div class="nationfilteroption" onclick="filterNation('<%=nations[i]%>')"><img class="sbcflag" src="/files/imgs/flags/<%=nations[i]%>.png"><br/><%=nations[i]%></div>
+        <% } %>
+    </div>
+
+    <!--LEAGUE OPTIONS-->
+
+    <div id="lgselectctr">
+
+        <input type="text" id="lgsbcsearchbar" class="sbcsearchbar" onkeyup="lgSearchFilter()" placeholder="Search for a league.." autocomplete="off">
+        <br/>
+        <div class="lgfilteroption" onclick="filterLeague(1)"><img class="sbclg" src="/files/imgs/clubs/1/0.png"><br/>Premier League<div class="lgsml">ENG 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(2)"><img class="sbclg" src="/files/imgs/clubs/2/0.png"><br/>LaLiga<div class="lgsml">ESP 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(3)"><img class="sbclg" src="/files/imgs/clubs/3/0.png"><br/>Serie A<div class="lgsml">ITA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(4)"><img class="sbclg" src="/files/imgs/clubs/4/0.png"><br/>Bundesliga<div class="lgsml">GER 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(5)"><img class="sbclg" src="/files/imgs/clubs/5/0.png"><br/>Ligue 1<div class="lgsml">FRA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(6)"><img class="sbclg" src="/files/imgs/clubs/6/0.png"><br/>Icons<div class="lgsml">ICONS</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(7)"><img class="sbclg" src="/files/imgs/clubs/7/0.png"><br/>1A Pro League<div class="lgsml">BEL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(8)"><img class="sbclg" src="/files/imgs/clubs/8/0.png"><br/>3. Liga<div class="lgsml">GER 3</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(9)"><img class="sbclg" src="/files/imgs/clubs/9/0.png"><br/>3F Superliga<div class="lgsml">DEN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(10)"><img class="sbclg" src="/files/imgs/clubs/10/0.png"><br/>A-League<div class="lgsml">AUS 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(11)"><img class="sbclg" src="/files/imgs/clubs/11/0.png"><br/>Allsvenskan<div class="lgsml">SWE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(12)"><img class="sbclg" src="/files/imgs/clubs/11/0.png"><br/>Bundesliga 2<div class="lgsml">GER 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(13)"><img class="sbclg" src="/files/imgs/clubs/12/0.png"><br/>CSL<div class="lgsml">CHN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(14)"><img class="sbclg" src="/files/imgs/clubs/13/0.png"><br/>CSSL<div class="lgsml">SUI 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(15)"><img class="sbclg" src="/files/imgs/clubs/15/0.png"><br/>Dutch League<div class="lgsml">NED 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(16)"><img class="sbclg" src="/files/imgs/clubs/16/0.png"><br/>EFL Championship<div class="lgsml">ENG 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(17)"><img class="sbclg" src="/files/imgs/clubs/17/0.png"><br/>EFL League One<div class="lgsml">ENG 3</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(18)"><img class="sbclg" src="/files/imgs/clubs/18/0.png"><br/>EFL League Two<div class="lgsml">ENG 4</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(19)"><img class="sbclg" src="/files/imgs/clubs/19/0.png"><br/>Ekstraklasa<div class="lgsml">POL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(20)"><img class="sbclg" src="/files/imgs/clubs/20/0.png"><br/>Eliteserien<div class="lgsml">NOR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(21)"><img class="sbclg" src="/files/imgs/clubs/21/0.png"><br/>Finnliiga<div class="lgsml">FIN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(22)"><img class="sbclg" src="/files/imgs/clubs/22/0.png"><br/>Hellas Liga<div class="lgsml">GRE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(23)"><img class="sbclg" src="/files/imgs/clubs/23/0.png"><br/>Hero ISL<div class="lgsml">IND 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(24)"><img class="sbclg" src="/files/imgs/clubs/24/0.png"><br/>K League 1<div class="lgsml">KOR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(25)"><img class="sbclg" src="/files/imgs/clubs/25/0.png"><br/>LPF<div class="lgsml">ARG 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(26)"><img class="sbclg" src="/files/imgs/clubs/26/0.png"><br/>LaLiga 2<div class="lgsml">ESP 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(27)"><img class="sbclg" src="/files/imgs/clubs/27/0.png"><br/>Libertadores<div class="lgsml">LIB</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(28)"><img class="sbclg" src="/files/imgs/clubs/28/0.png"><br/>Liga Azerbaijan<div class="lgsml">AZE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(29)"><img class="sbclg" src="/files/imgs/clubs/29/0.png"><br/>Liga Colombia<div class="lgsml">COL 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(30)"><img class="sbclg" src="/files/imgs/clubs/30/0.png"><br/>Liga Cyprus<div class="lgsml">CYP 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(31)"><img class="sbclg" src="/files/imgs/clubs/31/0.png"><br/>Liga Hrvatska<div class="lgsml">CRO 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(32)"><img class="sbclg" src="/files/imgs/clubs/32/0.png"><br/>Liga Portugal<div class="lgsml">POR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(33)"><img class="sbclg" src="/files/imgs/clubs/33/0.png"><br/>Ligue 2<div class="lgsml">FRA 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(34)"><img class="sbclg" src="/files/imgs/clubs/34/0.png"><br/>MLS<div class="lgsml">USA 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(35)"><img class="sbclg" src="/files/imgs/clubs/35/0.png"><br/>Magyar Liga<div class="lgsml">HUN 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(36)"><img class="sbclg" src="/files/imgs/clubs/36/0.png"><br/>Romanian Superliga<div class="lgsml">ROM 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(37)"><img class="sbclg" src="/files/imgs/clubs/37/0.png"><br/>SSE Airtricity PD<div class="lgsml">IRL 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(38)"><img class="sbclg" src="/files/imgs/clubs/38/0.png"><br/>Saudi Pro League<div class="lgsml">SAU 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(39)"><img class="sbclg" src="/files/imgs/clubs/39/0.png"><br/>Scottish League<div class="lgsml">SPFL</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(40)"><img class="sbclg" src="/files/imgs/clubs/40/0.png"><br/>Serie B<div class="lgsml">ITA 2</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(41)"><img class="sbclg" src="/files/imgs/clubs/41/0.png"><br/>Sudamericana<div class="lgsml">SUD</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(42)"><img class="sbclg" src="/files/imgs/clubs/42/0.png"><br/>Süper Lig<div class="lgsml">TUR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(43)"><img class="sbclg" src="/files/imgs/clubs/43/0.png"><br/>UEL<div class="lgsml">UAE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(44)"><img class="sbclg" src="/files/imgs/clubs/44/0.png"><br/>Ukrayina Liha<div class="lgsml">UKR 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(45)"><img class="sbclg" src="/files/imgs/clubs/45/0.png"><br/>Ö. Bundesliga<div class="lgsml">AUT 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(46)"><img class="sbclg" src="/files/imgs/clubs/46/0.png"><br/>Česká Liga<div class="lgsml">CZE 1</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(47)"><img class="sbclg" src="/files/imgs/clubs/47/0.png"><br/>GPFBL<div class="lgsml">GER W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(48)"><img class="sbclg" src="/files/imgs/clubs/48/0.png"><br/>Barclays WSL<div class="lgsml">ENG W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(49)"><img class="sbclg" src="/files/imgs/clubs/49/0.png"><br/>D1 Arkema<div class="lgsml">FRA W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(50)"><img class="sbclg" src="/files/imgs/clubs/50/0.png"><br/>NWSL<div class="lgsml">USA W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(51)"><img class="sbclg" src="/files/imgs/clubs/51/0.png"><br/>Liga F<div class="lgsml">ESP W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(52)"><img class="sbclg" src="/files/imgs/clubs/52/0.png"><br/>Liga Portugal Feminino<div class="lgsml">POR W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(53)"><img class="sbclg" src="/files/imgs/clubs/53/0.png"><br/>Nederland Vrouwen Liga<div class="lgsml">NED W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(54)"><img class="sbclg" src="/files/imgs/clubs/54/0.png"><br/>Ceska Liga Žen<div class="lgsml">CZE W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(55)"><img class="sbclg" src="/files/imgs/clubs/55/0.png"><br/>Schweizer Damen Liga<div class="lgsml">SUI W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(56)"><img class="sbclg" src="/files/imgs/clubs/56/0.png"><br/>Sverige Liga<div class="lgsml">SWE W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(57)"><img class="sbclg" src="/files/imgs/clubs/57/0.png"><br/>Scottish Women's League<div class="lgsml">SCO W</div></div>
+        <div class="lgfilteroption" onclick="filterLeague(58)"><img class="sbclg" src="/files/imgs/clubs/58/0.png"><br/>Calcio A Femminile<div class="lgsml">ITA W</div></div>
+    </div>
+
+    <!--CLUB FILTERS-->
+
+    <div id="clubselectctr" class="clubselectctr">
+        <input type="text" id="clubsbcsearchbar" onkeyup="clubSearchFilter()" placeholder="Search for club.." autocomplete="off">
+
+        <% for (i=0;i<clubs.length;i++) { %>
+          <div id="clubselect<%=i+1%>" class="clubselectleague">
+            <% for (j=0;j<clubs[i].length;j++) { %>
+                <div class="clubfilteroption" onclick="filterClub('<%=clubs[i][j]%>')">
+                  <img class="sbcclubopt" src="/files/imgs/clubs/<%=i+1%>/<%=clubs[i][j]%>.png"><%=clubs[i][j]%>
+                </div>
+            <% } %>
+          </div>
+        <% } %>
+    </div>
+
+
+    <div id="typeselectctr">
+
+        <input type="text" id="typesbcsearchbar" class="sbcsearchbar" onkeyup="typeSearchFilter()" placeholder="Search for a card type.." autocomplete="off">
+        <br/>
+        <div class="typefilteroption" onclick="filterSbcType(['RG','NRG'])"><img class="sbctypeimg" src="/files/imgs/cards/allgold.webp"><br/>All Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RS','NRS'])"><img class="sbctypeimg" src="/files/imgs/cards/allsilver.webp"><br/>All Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['TOTW','Future Icon','META','Icon Throwback','LTM','Icon','Hero','Hero Origin','Hero Prime','EoaE','Flashback','Moments','Objectives','Showdown','Squad Foundations','Rush','EPLPOTM','LLPOTM','BUPOTM','SAPOTM','L1POTM','LFPOTM','UCLRTTK','UELRTTK','UECLRTTK','WW','Trailblazer','Centurions','Cent Icon','OTD Hero','BdO','Track Stars','Thunderstruck','FC Pro','Succession','Succession Icon','Succession Hero','Cover Star','Winter Champs','OTD Icon','Globetrotters','WW Icon','Thunderstruck Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/allspecial.webp"><br/>All Special</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RG'])"><img class="sbctypeimg" src="/files/imgs/cards/RG.webp"><br/>Rare Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['NRG'])"><img class="sbctypeimg" src="/files/imgs/cards/NRG.webp"><br/>Non-Rare Gold</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RS'])"><img class="sbctypeimg" src="/files/imgs/cards/RS.webp"><br/>Rare Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['NRS'])"><img class="sbctypeimg" src="/files/imgs/cards/NRS.webp"><br/>Non-Rare Silver</div>
+        <div class="typefilteroption" onclick="filterSbcType(['RB'])"><img class="sbctypeimg" src="/files/imgs/cards/RB.webp"><br/>Rare Bronze</div>
+        <div class="typefilteroption" onclick="filterSbcType(['TOTW'])"><img class="sbctypeimg" src="/files/imgs/cards/TOTW.webp"><br/>TOTW</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Future Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Future Icon.webp"><br/>Future Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['META'])"><img class="sbctypeimg" src="/files/imgs/cards/META.webp"><br/>Madfut Meta</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Icon Throwback'])"><img class="sbctypeimg" src="/files/imgs/cards/Icon Throwback.webp"><br/>Icon Throwback</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LTM'])"><img class="sbctypeimg" src="/files/imgs/cards/LTM.webp"><br/>LTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Icon.webp"><br/>Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Hero'])"><img class="sbctypeimg" src="/files/imgs/cards/Hero.webp"><br/>Hero</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Hero Origin'])"><img class="sbctypeimg" src="/files/imgs/cards/Hero Origin.webp"><br/>Hero Origin</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Hero Prime'])"><img class="sbctypeimg" src="/files/imgs/cards/Hero Prime.webp"><br/>Hero Prime</div>
+        <div class="typefilteroption" onclick="filterSbcType(['EoaE'])"><img class="sbctypeimg" src="/files/imgs/cards/EoaE.webp"><br/>End of an Era</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Flashback'])"><img class="sbctypeimg" src="/files/imgs/cards/Flashback.webp"><br/>Flashback</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Moments'])"><img class="sbctypeimg" src="/files/imgs/cards/Moments.webp"><br/>Moments</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Objectives'])"><img class="sbctypeimg" src="/files/imgs/cards/Objectives.webp"><br/>Objectives</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Showdown'])"><img class="sbctypeimg" src="/files/imgs/cards/Showdown.webp"><br/>Showdown</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Squad Foundations'])"><img class="sbctypeimg" src="/files/imgs/cards/Squad Foundations.webp"><br/>Squad Foundations</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Rush'])"><img class="sbctypeimg" src="/files/imgs/cards/Rush.webp"><br/>Total Rush</div>
+        <div class="typefilteroption" onclick="filterSbcType(['EPLPOTM'])"><img class="sbctypeimg" src="/files/imgs/cards/EPLPOTM.webp"><br/>EPL POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LLPOTM'])"><img class="sbctypeimg" src="/files/imgs/cards/LLPOTM.webp"><br/>LaLiga POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['SAPOTM'])"><img class="sbctypeimg" src="/files/imgs/cards/SAPOTM.webp"><br/>Serie A POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['BUPOTM'])"><img class="sbctypeimg" src="/files/imgs/cards/BUPOTM.webp"><br/>Bundesliga POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['L1POTM'])"><img class="sbctypeimg" src="/files/imgs/cards/L1POTM.webp"><br/>Ligue 1 POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['LFPOTM'])"><img class="sbctypeimg" src="/files/imgs/cards/LFPOTM.webp"><br/>Liga F POTM</div>
+        <div class="typefilteroption" onclick="filterSbcType(['UCLRTTK'])"><img class="sbctypeimg" src="/files/imgs/cards/UCLRTTK.webp"><br/>UCL RTTK</div>
+        <div class="typefilteroption" onclick="filterSbcType(['UELRTTK'])"><img class="sbctypeimg" src="/files/imgs/cards/UELRTTK.webp"><br/>UEL RTTK</div>
+        <div class="typefilteroption" onclick="filterSbcType(['UECLRTTK'])"><img class="sbctypeimg" src="/files/imgs/cards/UECLRTTK.webp"><br/>ECL RTTK</div>
+        <div class="typefilteroption" onclick="filterSbcType(['WW'])"><img class="sbctypeimg" src="/files/imgs/cards/WW.webp"><br/>Winter Wildcard</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Trailblazer'])"><img class="sbctypeimg" src="/files/imgs/cards/Trailblazer.webp"><br/>Trailblazers</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Centurions'])"><img class="sbctypeimg" src="/files/imgs/cards/Centurions.webp"><br/>Centurions</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Cent Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Cent Icon.webp"><br/>Centurions Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['OTD Hero'])"><img class="sbctypeimg" src="/files/imgs/cards/OTD Hero.webp"><br/>On This Day Hero</div>
+        <div class="typefilteroption" onclick="filterSbcType(['BdO'])"><img class="sbctypeimg" src="/files/imgs/cards/BdO.webp"><br/>Ballon D'Or</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Track Stars'])"><img class="sbctypeimg" src="/files/imgs/cards/Track Stars.webp"><br/>Track Stars</div>
+        <div class="typefilteroption" onclick="filterSbcType(['FC Pro'])"><img class="sbctypeimg" src="/files/imgs/cards/FC Pro.webp"><br/>FC Pro</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Succession Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Succession Icon.webp"><br/>Succession Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Succession'])"><img class="sbctypeimg" src="/files/imgs/cards/Succession.webp"><br/>Succession</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Cover Star'])"><img class="sbctypeimg" src="/files/imgs/cards/Cover Star.webp"><br/>Cover Star</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Winter Champs'])"><img class="sbctypeimg" src="/files/imgs/cards/Winter Champs.webp"><br/>Winter Champions</div>
+        <div class="typefilteroption" onclick="filterSbcType(['OTD Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/OTD Icon.webp"><br/>On This Day Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Thunderstruck'])"><img class="sbctypeimg" src="/files/imgs/cards/Thunderstruck.webp"><br/>Thunderstruck</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Succession Hero'])"><img class="sbctypeimg" src="/files/imgs/cards/Succession Hero.webp"><br/>Succession Hero</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Globetrotters'])"><img class="sbctypeimg" src="/files/imgs/cards/Globetrotters.webp"><br/>Globetrotters</div>
+        <div class="typefilteroption" onclick="filterSbcType(['WW Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/WW Icon.webp"><br/>Winter Wildcard Icon</div>
+        <div class="typefilteroption" onclick="filterSbcType(['Thunderstruck Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/Thunderstruck Icon.webp"><br/>Thunderstruck Icon</div>
+
+
+
+
+    </div>
+
+    <div id="ovrselectctr" class="ovrselectctr">
+        <div class="sbcovrctr">MINIMUM:<br/>
+            <input type="number" min="64" max="99" maxlength="2" class="sbcovr" id="ovrmin" placeholder="64">
+        </div>
+        <div class="sbcovrctr">MAXIMUM:<br/>
+            <input type="number" min="64" max="99" maxlength="2" class="sbcovr" id="ovrmax" placeholder="99">
+        </div>
+        <div class="sbcovrbtn" onclick="filterOvr()">FILTER</div>
+    </div>
+
+    <div id="dbctr">
+
+        <% for (i=0;i<cardsOrder.length;i++) { %>
+            <div class="dbcard sbchover" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.webp` %>')">
+              <div class="dbname"><%=cardsOrder[i].cardName%></div>
+              <div class="dbfullName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
+              <div class="sbcnation"><%=cardsOrder[i].nation%></div>
+              <div class="sbcleague"><%=cardsOrder[i].lg%></div>
+              <div class="sbcclub"><%=cardsOrder[i].club%></div>
+              <div class="sbctype"><%=cardsOrder[i].type%></div>
+              <div class="dbcardbar">
+                  <div class="dboverall"><%=cardsOrder[i].ovr%></div>
+                  <div class="dbposition"><%=cardsOrder[i].pos%></div>
+                  <div class="dbcardflagctr">
+                      <img class="cardflag" loading="lazy" src="<%=`/files/imgs/flags/${cardsOrder[i].nation}.png`%>"/>
+                  </div>
+                  <div class="dbcardbadgectr">
+                      <img class="cardbadge" loading="lazy" src="<%=`/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png`%>"/>
+                  </div>
+              </div>
+              <img class="<%=`dbcard${cardsOrder[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsOrder[i].id}.webp`%>"/>
+            </div>
+    <% } %>
+    </div>
+  </div>
         
 
   <!--<div id="dbctr">
 	<% for (i=0;i<cardsOrder.length;i++) { %>
-    <div class="dbcard" title="<%=cardsOrder[i].ovr%> <%=cardsOrder[i].displayName%>" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.png` %>')">
+    <div class="dbcard" title="<%=cardsOrder[i].ovr%> <%=cardsOrder[i].displayName%>" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.webp` %>')">
       <div class="dbname"><%=cardsOrder[i].cardName%></div>
       <div class="dbfullName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
       <div class="dbcardbar">
@@ -35,7 +275,7 @@
             <img class="cardbadge" loading="lazy" src="<%=`/files/imgs/clubs/${cardsOrder[i].lg}/${cardsOrder[i].club}.png`%>"/>
         </div>
       </div>
-      <img class="<%=`dbcard${cardsOrder[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsOrder[i].id}.png`%>"/>
+      <img class="<%=`dbcard${cardsOrder[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsOrder[i].id}.webp`%>"/>
     </div>
   <% } %>
   </div>-->

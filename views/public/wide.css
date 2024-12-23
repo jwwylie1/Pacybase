@@ -1,8 +1,8 @@
 
 @font-face {
-	font-family: "DIN Pro Cond Medium";
+	font-family: "Cruyff Sans Cond Medium";
 	src: url("../files@font-face/f95b71a1cea90a338e422527918d6383.eot");
-	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#DIN Pro Cond Medium") format("svg");
+	src: url("../files/@font-face/f95b71a1cea90a338e422527918d6383.eot?#iefix") format("embedded-opentype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff2") format("woff2"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.woff") format("woff"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.ttf") format("truetype"), url("../files/@font-face/f95b71a1cea90a338e422527918d6383.svg#Cruyff Sans Cond Medium") format("svg");
 }
 body {
 	color:#fdfdfa;
@@ -77,7 +77,7 @@ input[type=number] {
 	background-size: 100%;
 	width: 84.84%;
 	height: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   display: inline-block;
   margin: 0 0 0 7.57%;
 }
@@ -173,7 +173,7 @@ input[type=number] {
 	width: 100%;
 	text-align: center;
 	font-weight: 600;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #ffff9e;
   text-shadow: 0 0 3px yellow;
 }
@@ -185,7 +185,7 @@ input[type=number] {
 	width: 100%;
 	text-align: center;
 	font-weight: 600;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #ffff9e;
   text-shadow: 0 0 3px yellow;
 }
@@ -196,7 +196,7 @@ input[type=number] {
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   color: #fdfdfa;
 }
 
@@ -337,7 +337,7 @@ input[type=number] {
 }
 
 .displayName {
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   letter-spacing: .05vw;
   font-weight: 500;
   color: #fdfdfa;
@@ -356,7 +356,7 @@ input[type=number] {
   margin: 0;
   height: 3vw;
   line-height: 3vw;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   font-weight: 600;
   font-size: 1.3vw;
   width: 2.4vw;
@@ -711,7 +711,7 @@ input[type=number] {
   float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
 }
 
 .filtername {
@@ -1011,7 +1011,7 @@ input[type=number] {
   float: left;
   background-repeat: no-repeat;
 	background-size: 100%;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   margin: 1vw 1vw 0 0;
 }
 
@@ -1305,7 +1305,7 @@ input[type=number] {
   margin: 2vw 0;
   border: 0;
   background-color: inherit;
-  font-family: 'DIN Pro Cond Medium';
+  font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
   font-size: 6vw;

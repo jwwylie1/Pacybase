@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <%- include ('public/partials/head.ejs') %>
-  <title>Pacybase Trading Hub</title>
-  <meta name="description" content="Pacybase is the world's only dedicated Madfut trading hub website. Post your trades, view others' trades, and complete your collection!">
-  <meta name="keywords" content="madfut, fifa, collection, madfut trading, trades, madfut trades, madfut sbc, pacybits, pacybase, madfut 22, madfut reddit, mad fut, trading hub, hub">
+  <title>MF Trading</title>
+  <meta name="description" content="MF Trading is the world's only dedicated Madfut trading hub website. Post your trades, view others' trades, and complete your collection!">
+  <meta name="keywords" content="madfut, fifa, collection, madfut trading, trades, madfut trades, madfut sbc, pacybits, pacybase, madfut 22, madfut reddit, mad fut, trading hub, hub, madfut 25, madfut 24">
 </head>
 <body>
 
 	<%- include ('public/partials/header.ejs') %>
 
-	<!--<a href="/updates">
+	<a href="/updates">
 		<div class="betactr">
-			<div class="betamsg"><i>ATTENTION: PACYBASE IS STILL IN BETA</i></div>
+			<div class="betamsg"><i>ATTENTION: MF TRADING IS STILL IN BETA</i></div>
 			<div class="betabody">
 				Although all aspects of the website are fully functional, development is
 				still ocurring. You can find the contents of each of these updates
 				by clicking this box. As of now, many base cards have not been added, and glitches may occur. 
-				Thank you for your understanding as I work to make Pacybase the best it can be.
+				Thank you for your understanding as I work to make MF Trading the best it can be.
 			</div>
 		</div>
-	</a>-->
+	</a>
 
 	<div class="greeting">WELCOME TO THE WORLD'S&nbsp;&nbsp;<i style="color:#4ef7f2">ONLY</i>&nbsp;&nbsp;DEDICATED MADFUT TRADING HUB!</div>
 	<div id="hiddentradecount" style="display:none"><%=trades.length%></div>
@@ -28,8 +28,8 @@
 
 	<div class="latestcards">
 		<div class="latesttitle">LATEST CARDS</div>
-		<% for (i=4111;i<=4142;i++) { %>
-			<div class="dbcard" title="<%=cardsList[i].ovr%> <%=cardsList[i].displayName%>" style="color:<%=cardsList[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[i].type}.png` %>')">
+		<% for (i=6098;i<=6143;i++) { %>
+			<div class="dbcard" title="<%=cardsList[i].ovr%> <%=cardsList[i].displayName%>" style="color:<%=cardsList[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsList[i].type}.webp` %>')">
 			  <div class="dbname"><%=cardsList[i].cardName%></div>
 			  <div class="dbfullName"><%=`${cardsList[i].searchName}|${cardsList[i].cardName}`%></div>
 			  <div class="dbcardbar">
@@ -42,31 +42,31 @@
 					<img class="cardbadge" loading="lazy" src="<%=`/files/imgs/clubs/${cardsList[i].lg}/${cardsList[i].club}.png`%>"/>
 				</div>
 			  </div>
-			  <img class="<%=`dbcard${cardsList[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsList[i].id}.png`%>"/>
+			  <img class="<%=`dbcard${cardsList[i].img}`%>" loading="lazy" src="<%=`/files/imgs/faces/${cardsList[i].id}.webp`%>"/>
 			</div>
 		  <% } %>
 	</div>
 
 	<div class="descriptionctr">
-		<div class="descheader">HOW DOES PACYBASE WORK?</div>
-		<div class="descshort">Pacybase uses a format very similar to many other trading hubs. Make posts, view
+		<div class="descheader">HOW DOES MF TRADING WORK?</div>
+		<div class="descshort">MF Trading uses a format very similar to many other trading hubs. Make posts, view
 			others, and get your collection to 100% by following these steps:
 		</div>
 		<div class="descbody">
 			Step 1: Make sure you have a Reddit Account.<br/>
 			<div class="descdesc">
-				Pacybase uses Reddit for users to message each other on posts they
-				are interested in.
+				MF Trading uses Reddit for users to message each other on posts they
+				are interested in. There is no sign in necessary on mf-trading.com!
 			</div>
 			Step 2: Make a post!<br/>
 			<div class="descdesc">
 				Need that one icon left for your collection? Try posting a trade with some of your best items to get
 				other players interested. You can add a maximum of 12 cards to each side of a trade post. Posts
-				automatically get deleted after 5 days, or you can manually delete it using a chosen PIN.
+				automatically get deleted after 5 days, or you can manually delete it using a PIN chosen while posting.
 			</div>
 			Step 3: Look at other posts!<br/>
 			<div class="descdesc">
-				Don't want to wait? See if another player has posted a trade you can complete already! Or, maybe you have
+				Don't want to wait? See if another player has posted a trade you can make already! Or, maybe you have
 				two duplicates and want to see what other players are offering for it. Whatever the case, add up to 3 search
 				filters to find your trade. If any of the cards you specify are in a trade, it will show up.
 			</div>
