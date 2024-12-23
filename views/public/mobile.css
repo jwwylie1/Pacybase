@@ -7,7 +7,7 @@
 body {
 	color:#fdfdfa;
   background-color: #24262d;
-  background-image: url('../files/imgs/bg2.png');
+  background-image: url('../files/imgs/bg.png');
   background-repeat: repeat-y;
   background-size: 100%;
   margin: 25vw 0 0 0;
@@ -148,7 +148,7 @@ input[type=number] {
 .cardstd {
 	height: 50%;
   float: left;
-  margin: -13vw 0 0 5.66vw;
+  margin: -12.2vw 0 0 5.66vw;
 	z-index: 1;
 }
 
