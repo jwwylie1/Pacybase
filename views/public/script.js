@@ -301,14 +301,14 @@ function fillTradeFilter(name, type, ovr, nation, pos, lg, club, id, color, img)
 
     document.getElementById(filterSlot).style.color = color;
     cardLocal = document.getElementById(filterSlot);
-    cardLocal.style.backgroundImage = "url('/files/imgs/cards/" + type + ".png')";
+    cardLocal.style.backgroundImage = "url('/files/imgs/cards/" + type + ".webp')";
     cardLocal.children[0].innerText = name;
     cardLocal.children[1].children[0].innerText = ovr;
     cardLocal.children[1].children[1].innerText = pos;
     cardLocal.children[1].children[2].children[0].src = "/files/imgs/flags/" + nation + ".png";
     cardLocal.children[1].children[3].children[0].src = "/files/imgs/clubs/" + lg + '/' + club + ".png";
     cardLocal.children[2].classList.add('filtercard' + img);
-    cardLocal.children[2].src = "/files/imgs/faces/" + id + ".png";
+    cardLocal.children[2].src = "/files/imgs/faces/" + id + ".webp";
     cardLocal.children[3].innerText = id;
 
     document.getElementById('searchBar').value = "";
