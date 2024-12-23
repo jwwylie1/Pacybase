@@ -432,7 +432,7 @@ function filterSbcType(cards) {
         circletype = 'LTM';
     } else {circletype = cards[0]}
 
-    document.getElementById('circletype').src = "/files/imgs/cards/"+circletype+".png";
+    document.getElementById('circletype').src = "/files/imgs/cards/"+circletype+".webp";
     typeFilter = cards;
     typeDown = false;
     filterSbcCards();

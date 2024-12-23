@@ -70,10 +70,10 @@
 
 <!--NATIONS-->
 
-    <div id="nationselectctr" style="padding-left:3vw">
+    <div id="nationselectctr">
 
-        <input type="text" id="nationsbcsearchbar" style="margin-left:27vw" class="sbcsearchbar" onkeyup="nationSearchFilter()" placeholder="Search for a nation.." autocomplete="off">
-
+        <input type="text" id="nationsbcsearchbar" class="sbcsearchbar" onkeyup="nationSearchFilter()" placeholder="Search for a nation.." autocomplete="off">
+        <br/>
         <% for (i=0;i<nations.length;i++) { %>
           <div class="nationfilteroption" onclick="filterNation('<%=nations[i]%>')"><img class="sbcflag" src="/files/imgs/flags/<%=nations[i]%>.png"><br/><%=nations[i]%></div>
         <% } %>
@@ -81,10 +81,10 @@
 
     <!--LEAGUE OPTIONS-->
 
-    <div id="lgselectctr" style="padding-left: 5vw">
+    <div id="lgselectctr">
 
-        <input type="text" id="lgsbcsearchbar" class="sbcsearchbar" style="margin-left:25vw" onkeyup="lgSearchFilter()" placeholder="Search for a league.." autocomplete="off">
-
+        <input type="text" id="lgsbcsearchbar" class="sbcsearchbar" onkeyup="lgSearchFilter()" placeholder="Search for a league.." autocomplete="off">
+        <br/>
         <div class="lgfilteroption" onclick="filterLeague(1)"><img class="sbclg" src="/files/imgs/clubs/1/0.png"><br/>Premier League<div class="lgsml">ENG 1</div></div>
         <div class="lgfilteroption" onclick="filterLeague(2)"><img class="sbclg" src="/files/imgs/clubs/2/0.png"><br/>LaLiga<div class="lgsml">ESP 1</div></div>
         <div class="lgfilteroption" onclick="filterLeague(3)"><img class="sbclg" src="/files/imgs/clubs/3/0.png"><br/>Serie A<div class="lgsml">ITA 1</div></div>
@@ -162,10 +162,10 @@
     </div>
 
 
-    <div id="typeselectctr" style="padding-left:5vw">
+    <div id="typeselectctr">
 
-        <input type="text" id="typesbcsearchbar" class="sbcsearchbar" style="margin-left:25vw" onkeyup="typeSearchFilter()" placeholder="Search for a card type.." autocomplete="off">
-
+        <input type="text" id="typesbcsearchbar" class="sbcsearchbar" onkeyup="typeSearchFilter()" placeholder="Search for a card type.." autocomplete="off">
+        <br/>
         <div class="typefilteroption" onclick="filterSbcType(['RG','NRG'])"><img class="sbctypeimg" src="/files/imgs/cards/allgold.webp"><br/>All Gold</div>
         <div class="typefilteroption" onclick="filterSbcType(['RS','NRS'])"><img class="sbctypeimg" src="/files/imgs/cards/allsilver.webp"><br/>All Silver</div>
         <div class="typefilteroption" onclick="filterSbcType(['TOTW','Future Icon','META','Icon Throwback','LTM','Icon','Hero','Hero Origin','Hero Prime','EoaE','Flashback','Moments','Objectives','Showdown','Squad Foundations','Rush','EPLPOTM','LLPOTM','BUPOTM','SAPOTM','L1POTM','LFPOTM','UCLRTTK','UELRTTK','UECLRTTK','WW','Trailblazer','Centurions','Cent Icon','OTD Hero','BdO','Track Stars','Thunderstruck','FC Pro','Succession','Succession Icon','Succession Hero','Cover Star','Winter Champs','OTD Icon','Globetrotters','WW Icon','Thunderstruck Icon'])"><img class="sbctypeimg" src="/files/imgs/cards/allspecial.webp"><br/>All Special</div>
