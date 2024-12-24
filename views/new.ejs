@@ -501,7 +501,6 @@
       <% }; %>
 
       <% for (i=0; i<cardsOrder.length-3; i++) { %>
-          <% if (cardsOrder[i].type != "ITB" && cardsOrder[i].type != "TOTY" && cardsOrder[i].type != "PSBC" && cardsOrder[i].type.slice(0,3) != "LTM" && cardsOrder[i].id!=1734 && cardsOrder[i].id!=1506 && cardsOrder[i].id!=1503 && cardsOrder[i].id!=1497 && cardsOrder[i].id!=1500 && cardsOrder[i].id!=1408 && cardsOrder[i].id!=1296 && cardsOrder[i].id!=1297) { %>
             <div class="searchRow" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
                 <div class="searchPlayerCtr">
                     <img class="searchPlayer" loading="lazy" src="<%= `/files/imgs/faces/${cardsOrder[i].id}.webp` %>" />
@@ -514,7 +513,6 @@
                 <div class="searchName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
                 <div class="searchOvr" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.webp` %>')"><%=cardsOrder[i].ovr%></div>
             </div>
-          <% } %>
       <% }; %>
 
       </div>
