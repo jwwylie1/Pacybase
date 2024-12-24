@@ -32,9 +32,13 @@ function dropMenu() {
 }
 
 function resetSearchTable() {
-  alert('temporary alert')
+  searchTable = document.getElementById("searchTable");
+  searchRow = searchTable.getElementsByClassName('searchRow');
   for (i=0;i<100;i++) { //show the first 100 items
-    document.getElementById("searchTable").getElementsByClassName('searchRow')[i].style.display = "";
+    searchRow[i].style.display = "";
+  }
+  for (i=100; i<searchRow.length; i++) {
+    searchRow[i].style.display = "none";
   }
 }
 
@@ -49,25 +53,19 @@ function searchFilter() {
   searchRow = searchTable.getElementsByClassName('searchRow');
 
   // Loop through all searchRowst items, and hide those who don't match the search query
-  for (i = 0; i < searchRow.length; i++) {
-    a = searchRow[i].getElementsByClassName("searchName")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      searchRow[i].style.display = "";
-    } else {
-      searchRow[i].style.display = "none";
-    }
-  }
-
   if (input.value == "") {
     resetSearchTable();
   } else {
-    searchTable.style.display = 'block';
+    for (i = 0; i < searchRow.length; i++) {
+      a = searchRow[i].getElementsByClassName("searchName")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        searchRow[i].style.display = "";
+      } else {
+        searchRow[i].style.display = "none";
+      }
+    }
   }
-}
-
-function resetSearchFilter() {
-  
 }
 
 function packFilter() {
