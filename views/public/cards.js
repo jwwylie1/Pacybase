@@ -6145,7 +6145,10 @@ const cardsList = [
   {cardName:"CARD OFFER",type:"cardoffer",img:'std',ovr: null,nation:"blank",pos:"",lg:1,club:'blank',displayName:"Card Offer",id:6144},
   {cardName:"COIN OFFER",type:"coinoffer",img:'std',ovr: null,nation:"blank",pos:"",lg:1,club:'blank',displayName:"Coin Offer",id:6145},
   {cardName:"PACK OFFER",type:"packoffer",img:'std',ovr: null,nation:"blank",pos:"",lg:1,club:'blank',displayName:"Pack Offer",id:6146},
-  
+  {cardName:"Son",type:"META",img:"std",ovr:95,nation:"Korea Republic",pos:"LM",lg:1,club:"Spurs",displayName:"Heung Min Son",id:6147},
+  {cardName:"Bale",type:"META",img:"std",ovr:88,nation:"Wales",pos:"LB",lg:1,club:"Spurs",displayName:"Gareth Bale",id:6148},
+
+
 ]
 
 for (i=0;i<cardsList.length;i++) {
