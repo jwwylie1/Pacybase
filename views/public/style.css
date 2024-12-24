@@ -1005,7 +1005,6 @@ input[type=number] {
 #dbctr {
   margin: 10vw 0 5vw 10vw;
   width: 84vw;
-  height: auto;
 }
 
 #dbsearchbar {
@@ -1326,7 +1325,7 @@ input[type=number] {
   font-family: 'Cruyff Sans Cond Medium';
   border-bottom: 3px solid #4ef7f18e;
   color: #fdfdfa;
-  font-size: 6vw;
+  font-size: 5.8vw;
   letter-spacing: 1.5vw;
 }
 
@@ -1776,7 +1775,6 @@ input[type=number] {
 }
 
 #sbccards {
-  height: 60vw;
   width: 100vw;
   overflow-y: scroll;
   position: absolute;
@@ -1939,7 +1937,7 @@ input[type=number] {
   background-color: #000000d3;
   position: absolute;
   z-index: 50;
-  height: 100vw;
+  height: 150vw;
   display: none;
   top: 0;
   padding-top: 12vw;
