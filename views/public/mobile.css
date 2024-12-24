@@ -32,8 +32,9 @@ input[type=number] {
 }
 
 .betactr {
-  width: 80vw;
+  width: 70vw;
   margin-left: 10vw;
+  padding: 2vw 5vw;
   background-color: #4EF7F2ee;
   border-radius: 16px;
   color: #24262d;
