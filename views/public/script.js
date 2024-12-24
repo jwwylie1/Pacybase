@@ -17,6 +17,7 @@ var searchedName = '';
 let filterType = '';
 let filteredList = [];
 
+var isFirstCardAdded = true;
 
 
 function dropMenu() {
@@ -160,12 +161,17 @@ function showOfferType(box) {
 }
 
 function chooseItem(type) {
+
   document.getElementById('offerType').style.display = 'none';
   document.getElementById('removeItem').style.display = "none";
   if (type=='card') {
     document.getElementById('searchBar').style.display = "block";
     document.getElementById('searchTable').style.display = "block";
     document.getElementById('searchBar').scrollIntoView();
+    if (isFirstCardAdded) { // set table to the first 100 if its the first time table is opened
+      resetSearchTable();
+      isFirstCardAdded = false;
+    }
   } else if (type=='coins') {
     document.getElementById('coinsAmount').style.display = "block";
     document.getElementById('coinsAmount').scrollIntoView();
