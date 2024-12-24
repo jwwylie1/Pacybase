@@ -32,6 +32,7 @@ function dropMenu() {
 }
 
 function resetSearchTable() {
+  alert('temporary alert')
   for (i=0;i<100;i++) { //show the first 100 items
     document.getElementById("searchTable").getElementsByClassName('searchRow')[i].style.display = "";
   }
