@@ -57,6 +57,10 @@ function searchFilter() {
   }
 }
 
+function resetSearchFilter() {
+  
+}
+
 function packFilter() {
 
   
@@ -167,14 +171,10 @@ function chooseItem(type) {
 }
 
 function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
-  if (false/*type =="TOTY"|| type=="PSBC" || id==1734 || id==1506 || id==1503 || id==1497 || id==1500 || id==1408 || id==1296 || id==1297*/) {
-    alert("That card is untradable.")
-  } else {
     document.getElementById(offerBox).children[0].style.display = "none"; 
     document.getElementById('searchBar').value = '';
-    searchFilter();
     cardLocal = document.getElementById(offerBox).children[1];
-    if (name != 'COINS' && name != 'PACK1' && name != 'PACK2') {
+    if (name != 'COINS'/* && name != 'PACK1' && name != 'PACK2'*/) {
       document.getElementById(offerBox).style.color = color;
       cardLocal.style.backgroundImage = "url('/files/imgs/cards/" + type + ".webp')";
       cardLocal.children[0].classList.remove('coinsNameT')
@@ -225,7 +225,7 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
       document.getElementById('coinsAmount').style.display = 'none';
       document.getElementById('coinsNumberInput').value = '';
       document.getElementById(offerBox + 'form').value = Math.ceil(coins);
-    } else if (name == 'PACK1') {
+    }/* else if (name == 'PACK1') {
       document.getElementById(offerBox).style.color = '#fdfdfa';
       cardLocal.style.backgroundImage = "";
       cardLocal.children[1].children[0].innerText = '';
@@ -240,7 +240,7 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
 
       document.getElementById('packBar').style.display = "none";
       document.getElementById('packTable').style.display = "none";
-    }
+    }*/
     
     if (offerBox[0] == 'h') {
       if (offerBox[3] == '4' && document.getElementById('newPostBox').classList[0] != 'rows3new') {
@@ -284,8 +284,8 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
       }
       tradeOffers[1].push(parseInt(id))
     }
+    //searchFilter();
   }
-}
 
 
 function fillTradeFilter(name, type, ovr, nation, pos, lg, club, id, color, img) {
