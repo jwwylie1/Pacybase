@@ -17,6 +17,8 @@ var searchedName = '';
 let filterType = '';
 let filteredList = [];
 
+//$('#searchTable').lazyload(options);
+
 function dropMenu() {
   if (drop == true) {
     document.getElementById('headerCtr').classList.add('dropUp');
