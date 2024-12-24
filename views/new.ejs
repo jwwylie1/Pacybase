@@ -501,7 +501,7 @@
       <% }; %>
 
       <% for (i=0; i<cardsOrder.length-3; i++) { %>
-            <div class="searchRow" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
+            <div class="searchRow" style="display:none" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
                 <div class="searchPlayerCtr">
                     <img class="searchPlayer" loading="lazy" src="<%= `/files/imgs/faces/${cardsOrder[i].id}.webp` %>" />
                 </div>
@@ -526,4 +526,6 @@
 
 </body>
 </html>
-<script>searchFilter()</script>
+<script>
+  resetSearchTable();
+</script>
