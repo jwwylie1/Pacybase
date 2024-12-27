@@ -18,6 +18,7 @@ let filterType = '';
 let filteredList = [];
 
 var isFirstCardAdded = true;
+var isFirstCardFiltered = true;
 
 
 function dropMenu() {
@@ -44,7 +45,6 @@ function resetSearchTable() {
 }
 
 function searchFilter() {
-
   
   // Declare variables
   var input, filter, searchTable, searchRow, a, i, txtValue;
@@ -56,7 +56,9 @@ function searchFilter() {
   // Loop through all searchRowst items, and hide those who don't match the search query
   if (input.value == "") {
     resetSearchTable();
+    searchTable.style.display = "none";
   } else {
+    searchTable.style.display = "block";
     for (i = 0; i < searchRow.length; i++) {
       a = searchRow[i].getElementsByClassName("searchName")[0];
       txtValue = a.textContent || a.innerText;
@@ -67,6 +69,7 @@ function searchFilter() {
       }
     }
   }
+  console.log(input.value)
 }
 
 function packFilter() {
