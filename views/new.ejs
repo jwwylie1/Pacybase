@@ -485,7 +485,7 @@
     
       <div id="searchTable" class="newSearchTable">
 
-      <% for (i=cardsOrder.length-3; i<cardsOrder.length; i++) { %> <!--CARD COIN AND PACK OFFERS-->
+      <% for (i=cardsOrder.length-1; i<cardsOrder.length; i++) { %> <!--CARD OFFER-->
           <div class="searchRow" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
               <div class="searchPlayerCtr" style="text-align: center">
                   <img class="searchPlayer" src="<%= `/files/imgs/cards/${cardsOrder[i].type}.webp` %>" />
@@ -500,7 +500,8 @@
           </div>
       <% }; %>
 
-      <% for (i=0; i<cardsOrder.length-3; i++) { %>
+      <% for (i=0; i<cardsOrder.length-1; i++) { %>
+        <% if (cardsOrder[i].isTradeable) { %>
             <div class="searchRow" style="display:none" onclick="fillPostBox('<%=cardsOrder[i].cardName%>', '<%=cardsOrder[i].type%>', '<%=cardsOrder[i].ovr%>', '<%=cardsOrder[i].nation%>', '<%=cardsOrder[i].pos%>', '<%=cardsOrder[i].lg%>', '<%=cardsOrder[i].club%>', '<%=cardsOrder[i].id%>', '<%=cardsOrder[i].color%>', '<%=cardsOrder[i].img%>')">
                 <div class="searchPlayerCtr">
                     <img class="searchPlayer" loading="lazy" src="<%= `/files/imgs/faces/${cardsOrder[i].id}.webp` %>" />
@@ -513,6 +514,7 @@
                 <div class="searchName"><%=`${cardsOrder[i].searchName}|${cardsOrder[i].cardName}`%></div>
                 <div class="searchOvr" style="color:<%=cardsOrder[i].color%>;background-image:url('<%= `/files/imgs/cards/${cardsOrder[i].type}.webp` %>')"><%=cardsOrder[i].ovr%></div>
             </div>
+        <% } %>
       <% }; %>
 
       </div>

@@ -6318,6 +6318,12 @@ for (i=0;i<cardsList.length;i++) {
           cardsList[i].color = "#ffffff";
           break;
    }
+
+   if (cardsList[i].type == "LTM" || cardsList[i].type == "META" || cardsList[i].type == "Icon Throwback" || cardsList[i].type == "Future Icon" || cardsList[i].type == "BdO" || cardsList[i].type == "Cover Star") {
+    cardsList[i].isTradeable = false;
+   } else {
+    cardsList[i].isTradeable = true;
+   }
   }
   
   module.exports = cardsList;
