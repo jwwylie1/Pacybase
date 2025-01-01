@@ -129,7 +129,7 @@
           <%if (trades[i].has5 == null && trades[i].want5 == null) {postheight = 'rows1'} else if (trades[i].has9 == null && trades[i].want9 == null) {postheight = 'rows2'} else {postheight = 'rows3'}%>
           <%var hasheight=1;var wantheight=1; if (trades[i].has5 != null) {hasheight+=1}; if (trades[i].has9 != null) {hasheight+=1}; if (trades[i].want5 != null) {wantheight+=1}; if (trades[i].want9 != null) {wantheight+=1};%>
           <div class="postBox <%=postheight%>" id="<%=`post${i}`%>">
-              <div class="tradeUsername"><a href="<%=`https://www.reddit.com/message/compose/?to=${trades[i].username}`%>" target="_blank"><i class="fab fa-reddit-alien"></i>&nbsp;&nbsp;<%=trades[i].username%></a>
+              <div class="tradeUsername"><img src="./files/imgs/<%=trades[i].platform%>.png" class="platformtradesymbol">&nbsp;&nbsp;<%=trades[i].username%>
                 <div class="tradecan" onclick="promptDelete('<%=trades[i].id%>')"><i class="fas fa-trash"></i></div></div>
               <div class="haveSide <%=postheight%>hw">
                 <div class="haswanttext">OFFERING...</div>

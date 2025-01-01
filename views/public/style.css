@@ -682,6 +682,12 @@ input[type=number] {
   color: #AFF7FF;
 }
 
+.platformtradesymbol {
+  height: 3vw;
+  margin-top:1vw;
+  float: left;
+}
+
 #filterBox {
   width: 90vw;
   margin: 5vw 0 0 5vw;

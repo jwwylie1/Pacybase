@@ -7,6 +7,10 @@ const tradeSchema = new Schema({
     type: String,
     required: false
   },
+  platform: {
+    type: String,
+    required: false
+  },
   caption: {
     type: String,
     required: false
