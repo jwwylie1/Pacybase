@@ -6252,6 +6252,9 @@ const cardsList = [
   {cardName:"Shevchenko",type:"WW Icon",img:"dyn",ovr:89,nation:"Ukraine",pos:"ST",lg:6,club:"ICON",displayName:"Andriy Shevchenko",id:6251},
   {cardName:"Vidić",type:"WW Icon",img:"dyn",ovr:88,nation:"Serbia",pos:"CB",lg:6,club:"ICON",displayName:"Nemanja Vidić",id:6252},
   {cardName:"Dalglish",type:"WW Icon",img:"dyn",ovr:88,nation:"Scotland",pos:"ST",lg:6,club:"ICON",displayName:"Kenny Dalglish",id:6253},
+  {cardName:"Jesús Navas",type:"Future Icon",img:"std",ovr:97,nation:"Spain",pos:"RB",lg:6,club:"ICON",displayName:"Jesús Navas",id:6254},
+  {cardName:"Jesús Navas",type:"Future Icon",img:"std",ovr:94,nation:"Spain",pos:"RB",lg:6,club:"ICON",displayName:"Jesús Navas",id:6255},
+  {cardName:"Jesús Navas",type:"Future Icon",img:"std",ovr:91,nation:"Spain",pos:"RB",lg:6,club:"ICON",displayName:"Jesús Navas",id:6256},
 
 
 ]
@@ -6314,7 +6317,7 @@ for (i=0;i<cardsList.length;i++) {
         case "EoaE":
         case "Trailblazer":
         case "OTD Hero":
-        case "NumeroFUTT":
+        case "NumeroFUT":
           cardsList[i].color = "#ffffff";
           break;
    }
