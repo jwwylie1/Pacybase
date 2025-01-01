@@ -140,6 +140,21 @@ function sbcSearchFilter() {
   }
 }
 
+function resetPlatforms() { // make all symbols on new trade page white again
+  var platforms = ['Reddit','Instagram','Madfut'];
+  for (i=0;i<3;i++) {
+    document.getElementById(platforms[i] + 'symbol').style.filter = "brightness(200%)";
+  }
+}
+
+
+function choosePlatform(platform) {
+  resetPlatforms()
+  document.getElementById(platform + 'symbol').style.filter = "brightness(100%)";
+  document.getElementById('postUsername').placeholder = "Enter your " + platform + " username";
+  document.getElementById('platform').value = platform; // send platform type to database form
+  
+}
 
 
 function showOfferType(box) {
@@ -206,7 +221,7 @@ function fillPostBox(name, type, ovr, nation, pos, lg, club, id, color, img) {
 
       document.getElementById('searchBar').style.display = "none";
       document.getElementById('searchTable').style.display = "none";
-      document.getElementById(offerBox + 'form').value = id;
+      document.getElementById(offerBox + 'form').value = id; // send chosen card to database form
     } else if (name == 'COINS') {
       
       coins = document.getElementById('coinsNumberInput').value; //get coin value
@@ -338,8 +353,8 @@ function fillTradeFilter(name, type, ovr, nation, pos, lg, club, id, color, img)
 }
 
 function checkFieldsNew() {
-  if (document.getElementById('has1form').value == '' || document.getElementById('want1form').value == '' || document.getElementById('postUsername').value == '') {
-    alert('Make sure you have entered a Username, at least 1 item on each side, and your device type.')
+  if (document.getElementById('has1form').value == '' || document.getElementById('want1form').value == '' || document.getElementById('postUsername').value == '' || document.getElementById('platform').value == '') {
+    alert('Make sure you have entered a Username, at least 1 item on each side, and your platform type.')
   } else {
     document.getElementById('pinctr').style.display = "block";
   }

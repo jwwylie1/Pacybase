@@ -15,7 +15,12 @@
   <form action="/trades" method="POST">
     <div id="newPostBox">
       <div class="usernameCtr">Username:
-        <input id="postUsername" placeholder="Enter your Reddit username (don't include u/)" name="username" required></input>
+        <input id="postUsername" placeholder="Choose a platform first" name="username" required>
+        <img src="./files/imgs/Reddit.png" id="Redditsymbol" class="platformsymbol newps" onclick="choosePlatform('Reddit')" style="margin-right:4vw">
+        <img src="./files/imgs/Instagram.png" id="Instagramsymbol" class="platformsymbol newps" onclick="choosePlatform('Instagram')">
+        <img src="./files/imgs/Madfut.png" id="Madfutsymbol" class="platformsymbol newps" onclick="choosePlatform('Madfut')">
+        <span class="platformcaption">Username Platform:&emsp;</span>
+        <input id="platform" hidden name="platform" required value="tester">
       </div>
       <div id="haveSide">
         <div class="haswanttext">I HAVE...</div>
@@ -431,7 +436,7 @@
           </div>
         </div>
       </div>
-      <input id="has1form" hidden name="has1"  required>
+      <input id="has1form" hidden name="has1" required>
         <input id="has2form" hidden name="has2" >
         <input id="has3form" hidden name="has3" >
         <input id="has4form" hidden name="has4" >
@@ -443,7 +448,7 @@
         <input id="has10form" hidden name="has10" >
         <input id="has11form" hidden name="has11" >
         <input id="has12form" hidden name="has12" >
-        <input id="want1form" hidden name="want1"  required>
+        <input id="want1form" hidden name="want1" required>
         <input id="want2form" hidden name="want2" >
         <input id="want3form" hidden name="want3" >
         <input id="want4form" hidden name="want4" >
@@ -456,7 +461,7 @@
         <input id="want11form" hidden name="want11" >
         <input id="want12form" hidden name="want12" >
       <div class="bottomNewCtr">Message:
-        <input id="postCaption" placeholder="Add a message to your post" name="caption" maxlength="70"></input>
+        <input id="postCaption" placeholder="Add a message to your post" name="caption" maxlength="70">
         <div id="postBtn" onclick="checkFieldsNew()">POST</div>
       </div>
 

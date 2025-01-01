@@ -419,6 +419,25 @@ input[type=number] {
   font-style: italic;
 }
 
+.platformcaption {
+  float: right;
+}
+
+.platformsymbol {
+  height:3vw;
+  margin: 1vw;
+  filter: brightness(200%);
+}
+
+.platformsymbol:hover {
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+.newps {
+  float: right;
+}
+
 .timestampHide {
   display: none;
 }
